@@ -1,0 +1,339 @@
+
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*       BEGAN ATLAS3.10.0 INSTALL OF SECTION 2-2-3 ON 08/07/2019 AT 13:17     *
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+
+
+
+make[2]: Entering directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/tune/blas/gemm ; make res/sXover.h pre=s nb=88
+make[3]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+make sRun_tfc pre=s
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+make xstfc pre=s typ=SREAL
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+/usr/bin/x86_64-redhat-linux-gcc -o stfc.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL /data/user/eesen/tools/ATLAS/build/..//tune/blas/gemm/tfc.c \
+                 -DSM_FOUT=/data/user/eesen/tools/ATLAS/build/include/sXover.h
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make slib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make auxillib scleanuplib susergemm
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd /data/user/eesen/tools/ATLAS/build/src/auxil ; make lib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+make[8]: Nothing to be done for `lib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+cd KERNEL ; make -f sMakefile slib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm/KERNEL'
+make[8]: Nothing to be done for `slib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm/KERNEL'
+make[7]: Nothing to be done for `susergemm'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make -j 56 slib.grd
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[7]: `slib.grd' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make ATL_sbig_mm.o ATL_ssmall_mm.o \
+           pre=s typ=SREAL
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[6]: `ATL_sbig_mm.o' is up to date.
+make[6]: `ATL_ssmall_mm.o' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o xstfc stfc.o \
+              /data/user/eesen/tools/ATLAS/build/src/blas/gemm/ATL_sbig_mm.o /data/user/eesen/tools/ATLAS/build/src/blas/gemm/ATL_ssmall_mm.o \
+              /data/user/eesen/tools/ATLAS/build/lib/libatlas.a -lpthread -lm
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+/data/user/eesen/tools/ATLAS/build/bin/ATLrun.sh /data/user/eesen/tools/ATLAS/build/tune/blas/gemm xstfc
+
+
+Finding crossover point for small case algorithms:
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+   1   N   N   72   10   10    1.0    1.0    0.76 4293.4  1.00
+   1   N   N   72   10   10    1.0    1.0    0.72 4508.0  1.05
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+   2   N   N   10   72   10    1.0    1.0    0.96 3395.2  1.00
+   2   N   N   10   72   10    1.0    1.0    0.86 3756.7  1.11
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+   3   N   N   72   72   10    1.0    1.0    0.74 4410.1  1.00
+   3   N   N   72   72   10    1.0    1.0    0.64 5071.6  1.15
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+   4   N   N   10   10   72    1.0    1.0    0.90 3622.5  1.00
+   4   N   N   10   10   72    1.0    1.0    1.06 3062.1  0.85
+   5   N   N  750  750   72    1.0    1.0    0.59 5473.0  1.00
+   5   N   N  750  750   72    1.0    1.0    0.09 35217.4  6.43
+   6   N   N  380  380   72    1.0    1.0    0.59 5479.4  1.00
+   6   N   N  380  380   72    1.0    1.0    0.09 35258.7  6.43
+   7   N   N  195  195   72    1.0    1.0    0.60 5448.0  1.00
+   7   N   N  195  195   72    1.0    1.0    0.25 12885.0  2.37
+   8   N   N  102  102   72    1.0    1.0    0.59 5484.0  1.00
+   8   N   N  102  102   72    1.0    1.0    0.16 19796.0  3.61
+   9   N   N   56   56   72    1.0    1.0    0.62 5235.5  1.00
+   9   N   N   56   56   72    1.0    1.0    0.64 5071.9  0.97
+  10   N   N   79   79   72    1.0    1.0    0.60 5374.4  1.00
+  10   N   N   79   79   72    1.0    1.0    0.17 18872.8  3.51
+  11   N   N   67   67   72    1.0    1.0    0.60 5374.7  1.00
+  11   N   N   67   67   72    1.0    1.0    0.62 5270.0  0.98
+  12   N   N   73   73   72    1.0    1.0    0.60 5410.0  1.00
+  12   N   N   73   73   72    1.0    1.0    0.13 24590.9  4.55
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  13   N   N   10   10   10    1.0    1.0    1.06 3062.1  1.00
+  13   N   N   10   10   10    1.0    1.0    1.14 2837.2  0.93
+  14   N   N  750  750  750    1.0    1.0    0.60 5587.7  1.00
+  14   N   N  750  750  750    1.0    1.0    0.12 29094.8  5.21
+  15   N   N  380  380  380    1.0    1.0    0.59 5599.2  1.00
+  15   N   N  380  380  380    1.0    1.0    0.10 32923.2  5.88
+  16   N   N  195  195  195    1.0    1.0    0.59 5523.3  1.00
+  16   N   N  195  195  195    1.0    1.0    0.35 9226.5  1.67
+  17   N   N  102  102  102    1.0    1.0    0.59 5522.6  1.00
+  17   N   N  102  102  102    1.0    1.0    0.30 10824.3  1.96
+  18   N   N   56   56   56    1.0    1.0    0.62 5202.1  1.00
+  18   N   N   56   56   56    1.0    1.0    0.64 5072.0  0.97
+  19   N   N   79   79   79    1.0    1.0    0.60 5410.3  1.00
+  19   N   N   79   79   79    1.0    1.0    0.22 14755.3  2.73
+  20   N   N   67   67   67    1.0    1.0    0.61 5338.5  1.00
+  20   N   N   67   67   67    1.0    1.0    0.62 5201.7  0.97
+  21   N   N   73   73   73    1.0    1.0    0.60 5409.9  1.00
+  21   N   N   73   73   73    1.0    1.0    0.15 21932.1  4.05
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  22   N   T   72   10   10    1.0    1.0    0.67 4859.0  1.00
+  22   N   T   72   10   10    1.0    1.0    0.72 4483.1  0.92
+  23   N   T   72  750  750    1.0    1.0    0.62 5259.7  1.00
+  23   N   T   72  750  750    1.0    1.0    0.13 25312.5  4.81
+  24   N   T   72  380  380    1.0    1.0    0.59 5479.4  1.00
+  24   N   T   72  380  380    1.0    1.0    0.12 27963.8  5.10
+  25   N   T   72  195  195    1.0    1.0    0.59 5484.8  1.00
+  25   N   T   72  195  195    1.0    1.0    0.26 12683.7  2.31
+  26   N   T   72  102  102    1.0    1.0    0.59 5521.3  1.00
+  26   N   T   72  102  102    1.0    1.0    0.26 12297.5  2.23
+  27   N   T   72   56   56    1.0    1.0    0.59 5483.1  1.00
+  27   N   T   72   56   56    1.0    1.0    0.61 5303.9  0.97
+  28   N   T   72   79   79    1.0    1.0    0.60 5374.4  1.00
+  28   N   T   72   79   79    1.0    1.0    0.17 18872.8  3.51
+  29   N   T   72   67   67    1.0    1.0    0.60 5410.5  1.00
+  29   N   T   72   67   67    1.0    1.0    0.61 5339.3  0.99
+  30   N   T   72   73   73    1.0    1.0    0.60 5446.3  1.00
+  30   N   T   72   73   73    1.0    1.0    0.13 24590.9  4.52
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  31   N   T   10   72   10    1.0    1.0    0.97 3353.1  1.00
+  31   N   T   10   72   10    1.0    1.0    0.80 4077.6  1.22
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  32   N   T   72   72   10    1.0    1.0    0.64 5071.6  1.00
+  32   N   T   72   72   10    1.0    1.0    0.62 5269.2  1.04
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  33   N   T   10   10   72    1.0    1.0    0.97 3353.1  1.00
+  33   N   T   10   10   72    1.0    1.0    1.11 2918.9  0.87
+  34   N   T  750  750   72    1.0    1.0    0.72 4525.1  1.00
+  34   N   T  750  750   72    1.0    1.0    0.09 36818.2  8.14
+  35   N   T  380  380   72    1.0    1.0    0.59 5479.4  1.00
+  35   N   T  380  380   72    1.0    1.0    0.09 35258.7  6.43
+  36   N   T  195  195   72    1.0    1.0    0.61 5305.6  1.00
+  36   N   T  195  195   72    1.0    1.0    0.25 12885.0  2.43
+  37   N   T  102  102   72    1.0    1.0    0.59 5521.3  1.00
+  37   N   T  102  102   72    1.0    1.0    0.17 19324.7  3.50
+  38   N   T   56   56   72    1.0    1.0    0.62 5269.5  1.00
+  38   N   T   56   56   72    1.0    1.0    0.64 5103.8  0.97
+  39   N   T   79   79   72    1.0    1.0    0.60 5374.4  1.00
+  39   N   T   79   79   72    1.0    1.0    0.17 18872.8  3.51
+  40   N   T   67   67   72    1.0    1.0    0.60 5410.5  1.00
+  40   N   T   67   67   72    1.0    1.0    0.62 5270.0  0.97
+  41   N   T   73   73   72    1.0    1.0    0.60 5410.0  1.00
+  41   N   T   73   73   72    1.0    1.0    0.13 24590.9  4.55
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  42   N   T   10   10   10    1.0    1.0    1.11 2929.4  1.00
+  42   N   T   10   10   10    1.0    1.0    1.14 2857.2  0.98
+  43   N   T  750  750  750    1.0    1.0    0.75 4488.0  1.00
+  43   N   T  750  750  750    1.0    1.0    0.12 29094.8  6.48
+  44   N   T  380  380  380    1.0    1.0    0.61 5415.0  1.00
+  44   N   T  380  380  380    1.0    1.0    0.10 31656.9  5.85
+  45   N   T  195  195  195    1.0    1.0    0.62 5238.3  1.00
+  45   N   T  195  195  195    1.0    1.0    0.35 9226.5  1.76
+  46   N   T  102  102  102    1.0    1.0    0.58 5560.4  1.00
+  46   N   T  102  102  102    1.0    1.0    0.30 10824.3  1.95
+  47   N   T   56   56   56    1.0    1.0    0.61 5304.1  1.00
+  47   N   T   56   56   56    1.0    1.0    0.63 5136.2  0.97
+  48   N   T   79   79   79    1.0    1.0    0.60 5374.5  1.00
+  48   N   T   79   79   79    1.0    1.0    0.22 15028.6  2.80
+  49   N   T   67   67   67    1.0    1.0    0.60 5373.9  1.00
+  49   N   T   67   67   67    1.0    1.0    0.62 5269.2  0.98
+  50   N   T   73   73   73    1.0    1.0    0.60 5409.9  1.00
+  50   N   T   73   73   73    1.0    1.0    0.15 21355.0  3.95
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  51   T   N   72   10   10    1.0    1.0    0.87 3739.4  1.00
+  51   T   N   72   10   10    1.0    1.0    0.78 4140.0  1.11
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  52   T   N   10   72   10    1.0    1.0    0.90 3590.5  1.00
+  52   T   N   10   72   10    1.0    1.0    0.86 3774.2  1.05
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  53   T   N   72   72   10    1.0    1.0    0.82 3958.3  1.00
+  53   T   N   72   72   10    1.0    1.0    0.64 5040.1  1.27
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  54   T   N   10   10   72    1.0    1.0    0.82 3958.3  1.00
+  54   T   N   10   10   72    1.0    1.0    0.98 3312.0  0.84
+  55   T   N  750  750   72    1.0    1.0    0.62 5259.7  1.00
+  55   T   N  750  750   72    1.0    1.0    0.09 35217.4  6.70
+  56   T   N  380  380   72    1.0    1.0    0.62 5265.9  1.00
+  56   T   N  380  380   72    1.0    1.0    0.09 36861.4  7.00
+  57   T   N  195  195   72    1.0    1.0    0.62 5203.6  1.00
+  57   T   N  195  195   72    1.0    1.0    0.25 12885.0  2.48
+  58   T   N  102  102   72    1.0    1.0    0.61 5304.8  1.00
+  58   T   N  102  102   72    1.0    1.0    0.17 19324.7  3.64
+  59   T   N   56   56   72    1.0    1.0    0.63 5136.1  1.00
+  59   T   N   56   56   72    1.0    1.0    0.63 5136.1  1.00
+  60   T   N   79   79   72    1.0    1.0    0.62 5235.7  1.00
+  60   T   N   79   79   72    1.0    1.0    0.17 18872.8  3.60
+  61   T   N   67   67   72    1.0    1.0    0.62 5202.4  1.00
+  61   T   N   67   67   72    1.0    1.0    0.61 5304.4  1.02
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  62   T   N   10   10   10    1.0    1.0    1.02 3194.7  1.00
+  62   T   N   10   10   10    1.0    1.0    1.14 2847.2  0.89
+  63   T   N  750  750  750    1.0    1.0    0.62 5443.5  1.00
+  63   T   N  750  750  750    1.0    1.0    0.11 30133.9  5.54
+  64   T   N  380  380  380    1.0    1.0    0.60 5450.9  1.00
+  64   T   N  380  380  380    1.0    1.0    0.10 32923.2  6.04
+  65   T   N  195  195  195    1.0    1.0    0.61 5306.7  1.00
+  65   T   N  195  195  195    1.0    1.0    0.35 9332.5  1.76
+  66   T   N  102  102  102    1.0    1.0    0.60 5376.3  1.00
+  66   T   N  102  102  102    1.0    1.0    0.30 10824.3  2.01
+  67   T   N   56   56   56    1.0    1.0    0.63 5168.9  1.00
+  67   T   N   56   56   56    1.0    1.0    0.64 5103.9  0.99
+  68   T   N   79   79   79    1.0    1.0    0.62 5235.8  1.00
+  68   T   N   79   79   79    1.0    1.0    0.22 15028.6  2.87
+  69   T   N   67   67   67    1.0    1.0    0.63 5135.8  1.00
+  69   T   N   67   67   67    1.0    1.0    0.62 5235.2  1.02
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  70   T   T   72   10   10    1.0    1.0    0.78 4140.0  1.00
+  70   T   T   72   10   10    1.0    1.0    0.80 4077.6  0.98
+  71   T   T   72  750  750    1.0    1.0    0.63 5126.6  1.00
+  71   T   T   72  750  750    1.0    1.0    0.13 25312.5  4.94
+  72   T   T   72  380  380    1.0    1.0    0.61 5335.2  1.00
+  72   T   T   72  380  380    1.0    1.0    0.11 28962.5  5.43
+  73   T   T   72  195  195    1.0    1.0    0.62 5237.1  1.00
+  73   T   T   72  195  195    1.0    1.0    0.27 12115.8  2.31
+  74   T   T   72  102  102    1.0    1.0    0.61 5339.7  1.00
+  74   T   T   72  102  102    1.0    1.0    0.26 12486.7  2.34
+  75   T   T   72   56   56    1.0    1.0    0.60 5374.1  1.00
+  75   T   T   72   56   56    1.0    1.0    0.62 5269.5  0.98
+  76   T   T   72   79   79    1.0    1.0    0.61 5304.1  1.00
+  76   T   T   72   79   79    1.0    1.0    0.17 18872.8  3.56
+  77   T   T   72   67   67    1.0    1.0    0.62 5270.0  1.00
+  77   T   T   72   67   67    1.0    1.0    0.61 5339.3  1.01
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  78   T   T   10   72   10    1.0    1.0    0.97 3353.1  1.00
+  78   T   T   10   72   10    1.0    1.0    0.79 4098.2  1.22
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  79   T   T   72   72   10    1.0    1.0    0.72 4483.2  1.00
+  79   T   T   72   72   10    1.0    1.0    0.64 5103.5  1.14
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  80   T   T   10   10   72    1.0    1.0    0.92 3512.8  1.00
+  80   T   T   10   10   72    1.0    1.0    1.05 3085.4  0.88
+  81   T   T  750  750   72    1.0    1.0    0.61 5294.1  1.00
+  81   T   T  750  750   72    1.0    1.0    0.09 36818.2  6.95
+  82   T   T  380  380   72    1.0    1.0    0.61 5300.3  1.00
+  82   T   T  380  380   72    1.0    1.0    0.09 35258.7  6.65
+  83   T   T  195  195   72    1.0    1.0    0.62 5237.1  1.00
+  83   T   T  195  195   72    1.0    1.0    0.25 12885.0  2.46
+  84   T   T  102  102   72    1.0    1.0    0.62 5270.4  1.00
+  84   T   T  102  102   72    1.0    1.0    0.16 19796.0  3.76
+  85   T   T   56   56   72    1.0    1.0    0.64 5071.9  1.00
+  85   T   T   56   56   72    1.0    1.0    0.64 5071.9  1.00
+  86   T   T   79   79   72    1.0    1.0    0.63 5169.0  1.00
+  86   T   T   79   79   72    1.0    1.0    0.17 18872.8  3.65
+  87   T   T   67   67   72    1.0    1.0    0.62 5202.4  1.00
+  87   T   T   67   67   72    1.0    1.0    0.62 5236.0  1.01
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  88   T   T   10   10   10    1.0    1.0    1.10 2940.0  1.00
+  88   T   T   10   10   10    1.0    1.0    1.14 2837.2  0.97
+  89   T   T  750  750  750    1.0    1.0    0.64 5240.7  1.00
+  89   T   T  750  750  750    1.0    1.0    0.12 29094.8  5.55
+  90   T   T  380  380  380    1.0    1.0    0.62 5344.7  1.00
+  90   T   T  380  380  380    1.0    1.0    0.10 32923.2  6.16
+  91   T   T  195  195  195    1.0    1.0    0.62 5272.3  1.00
+  91   T   T  195  195  195    1.0    1.0    0.35 9332.5  1.77
+  92   T   T  102  102  102    1.0    1.0    0.60 5376.3  1.00
+  92   T   T  102  102  102    1.0    1.0    0.30 10824.3  2.01
+  93   T   T   56   56   56    1.0    1.0    0.63 5168.9  1.00
+  93   T   T   56   56   56    1.0    1.0    0.64 5040.5  0.98
+  94   T   T   79   79   79    1.0    1.0    0.62 5235.8  1.00
+  94   T   T   79   79   79    1.0    1.0    0.22 15028.6  2.87
+  95   T   T   67   67   67    1.0    1.0    0.63 5168.5  1.00
+  95   T   T   67   67   67    1.0    1.0    0.62 5269.2  1.02
+cp -f /data/user/eesen/tools/ATLAS/build/include/sXover.h res/.
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+make[3]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+cp /data/user/eesen/tools/ATLAS/build/tune/blas/gemm/res/sXover.h INSTALL_LOG/.
+make[2]: Leaving directory `/data/user/eesen/tools/ATLAS/build/bin'
+
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*      FINISHED ATLAS3.10.0 INSTALL OF SECTION 2-2-3 ON 08/07/2019 AT 13:18   *
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+
+
+

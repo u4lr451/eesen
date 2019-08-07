@@ -1,0 +1,38 @@
+#
+#  This file generated at line 274 of /data/user/eesen/tools/ATLAS/build/..//tune/blas/gemv/mvthgen.c
+#
+include Make.inc
+
+MVTCC = $(SKC)
+MVTFLAGS = $(CDEFS) $(SKCFLAGS) -DSREAL
+
+obj = ATL_smvtk__900002.o ATL_smvtk__900002_b0.o ATL_smvtk__900008.o ATL_smvtk__900008_b0.o ATL_smvtk__900005.o ATL_smvtk__900005_b0.o
+lib : slib
+slib : smvtk.grd
+smvtk.grd : $(obj)
+	$(ARCHIVER) $(ARFLAGS) $(ATLASlib) $(obj)
+	$(RANLIB) $(ATLASlib)
+	touch smvtk.grd
+sclean : clean
+clean :
+	- rm -f $(obj) smvtk.grd
+
+skilllib : killlib
+killlib : 
+	- $(ARCHIVER) d $(ATLASlib) $(obj)
+	$(RANLIB) $(ATLASlib)
+killall : killlib clean
+	 rm -f ATL_smvtk__900002.c ATL_smvtk__900008.c ATL_smvtk__900005.c
+
+ATL_smvtk__900002.o : ATL_smvtk__900002.c
+	 $(GOODGCC) -o ATL_smvtk__900002.o -c -DATL_UGEMV=ATL_smvtk__900002 -x assembler-with-cpp -DPFIA=prefetcht2 -DPFIX=prefetchnta -DPFIY=prefetchnta -DPFADIST=256 -DPFXDIST=128 -DSREAL $(CDEFS) -fPIC ATL_smvtk__900002.c
+ATL_smvtk__900002_b0.o : ATL_smvtk__900002.c
+	 $(GOODGCC) -o ATL_smvtk__900002_b0.o -c -DATL_UGEMV=ATL_smvtk__900002_b0 -DBETA0 -x assembler-with-cpp -DPFIA=prefetcht2 -DPFIX=prefetchnta -DPFIY=prefetchnta -DPFADIST=256 -DPFXDIST=128 -DSREAL $(CDEFS) -fPIC ATL_smvtk__900002.c
+ATL_smvtk__900008.o : ATL_smvtk__900008.c
+	 $(GOODGCC) -o ATL_smvtk__900008.o -c -DATL_UGEMV=ATL_smvtk__900008 -x assembler-with-cpp -DSREAL $(CDEFS) -fPIC ATL_smvtk__900008.c
+ATL_smvtk__900008_b0.o : ATL_smvtk__900008.c
+	 $(GOODGCC) -o ATL_smvtk__900008_b0.o -c -DATL_UGEMV=ATL_smvtk__900008_b0 -DBETA0 -x assembler-with-cpp -DSREAL $(CDEFS) -fPIC ATL_smvtk__900008.c
+ATL_smvtk__900005.o : ATL_smvtk__900005.c
+	 $(GOODGCC) -o ATL_smvtk__900005.o -c -DATL_UGEMV=ATL_smvtk__900005 -x assembler-with-cpp -DPFIX=prefetchnta -DPFADIST=128 -DPFYDIST=128 -DSREAL $(CDEFS) -fPIC ATL_smvtk__900005.c
+ATL_smvtk__900005_b0.o : ATL_smvtk__900005.c
+	 $(GOODGCC) -o ATL_smvtk__900005_b0.o -c -DATL_UGEMV=ATL_smvtk__900005_b0 -DBETA0 -x assembler-with-cpp -DPFIX=prefetchnta -DPFADIST=128 -DPFYDIST=128 -DSREAL $(CDEFS) -fPIC ATL_smvtk__900005.c

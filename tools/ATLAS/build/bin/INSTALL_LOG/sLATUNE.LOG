@@ -1,0 +1,1951 @@
+
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*       BEGAN ATLAS3.10.0 INSTALL OF SECTION 4-3-2 ON 08/07/2019 AT 16:34     *
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+
+
+
+make[2]: Entering directory `/data/user/eesen/tools/ATLAS/build/bin'
+if [ -s "/data/user/eesen/tools/ATLAS/build/include/atlas_sGetNB_geqrf.h" ]; then \
+           echo "Arch Defaults allow us to skip tuning" ; \
+        else \
+    cd /data/user/eesen/tools/ATLAS/build/tune/lapack ; make res/ATL_sGetNB_geqrf.h ; \
+    cp /data/user/eesen/tools/ATLAS/build/tune/lapack/res/ATL_sGetNB_geqrf.h \
+               /data/user/eesen/tools/ATLAS/build/include/atlas_sGetNB_geqrf.h ; \
+        fi
+make[3]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/lapack'
+/usr/bin/x86_64-redhat-linux-gcc -o slanbsrch.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DATLCINT  -DSREAL /data/user/eesen/tools/ATLAS/build/..//tune/lapack/lanbsrch.c
+cd /data/user/eesen/tools/ATLAS/build/bin ; make slapack
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/src/lapack ; make slib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/lapack'
+make -j 56 slib.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/lapack'
+ar r /data/user/eesen/tools/ATLAS/build/lib/liblapack.a ATL_ilaenv.o ATL_sgelq2.o ATL_sgelqf.o ATL_sgelqr.o ATL_sgels.o ATL_sgeql2.o ATL_sgeqlf.o ATL_sgeqlr.o ATL_sgeqr2.o ATL_sgeqrf.o ATL_sgeqrr.o ATL_sgerq2.o ATL_sgerqf.o ATL_sgerqr.o ATL_sgetf2.o ATL_sgetrf.o ATL_sgetrfC.o ATL_sgetrfR.o ATL_sgetri.o ATL_sgetriC.o ATL_sgetriR.o ATL_sgetrs.o ATL_slamch.o ATL_slapy2.o ATL_slarf.o ATL_slarfb.o ATL_slarfg.o ATL_slarft.o ATL_slascl.o ATL_slaswp.o ATL_slauum.o ATL_slauumCL.o ATL_slauumCU.o ATL_slauumRL.o ATL_slauumRU.o ATL_sormlq.o ATL_sormql.o ATL_sormqr.o ATL_sormrq.o ATL_spotrf.o ATL_spotrfL.o ATL_spotrfU.o ATL_spotrs.o ATL_strtri.o ATL_strtriCL.o ATL_strtriCU.o ATL_strtriRL.o ATL_strtriRU.o ATL_strtrs.o
+echo /data/user/eesen/tools/ATLAS/build/lib/liblapack.a
+/data/user/eesen/tools/ATLAS/build/lib/liblapack.a
+touch slib.grd
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/lapack'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/lapack'
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/bin ; make ststlib
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/src/testing ; make slib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/testing'
+make -j 56 slib.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/testing'
+make[6]: `slib.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/testing'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/testing'
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/bin ; make sl3lib
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/src/auxil ; make lib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+make[5]: Nothing to be done for `lib'.
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make slib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make auxillib scleanuplib susergemm
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd /data/user/eesen/tools/ATLAS/build/src/auxil ; make lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+cd KERNEL ; make -f sMakefile slib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm/KERNEL'
+make[7]: Nothing to be done for `slib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm/KERNEL'
+make[6]: Nothing to be done for `susergemm'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make -j 56 slib.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[6]: `slib.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/level3 ; make slib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3'
+( cd kernel; make slib )
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3/kernel'
+make -j 56 slib.grd
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3/kernel'
+make[7]: `slib.grd' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3/kernel'
+make sl3ref
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3/kernel'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/reference/level3 ; make slib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/reference/level3'
+make[8]: Nothing to be done for `slib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/reference/level3'
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3/kernel'
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3/kernel'
+( cd rblas;  make slib )
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3/rblas'
+make[6]: Nothing to be done for `slib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3/rblas'
+cd ../pklevel3 ; make slib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/pklevel3'
+cd gpmm ; make slib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/pklevel3/gpmm'
+make -j 56 slib.grd
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/pklevel3/gpmm'
+make[8]: `slib.grd' is up to date.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/pklevel3/gpmm'
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/pklevel3/gpmm'
+cd sprk ; make slib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/pklevel3/sprk'
+make -j 56 slib.grd
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/pklevel3/sprk'
+make[8]: `slib.grd' is up to date.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/pklevel3/sprk'
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/pklevel3/sprk'
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/pklevel3'
+make -j 56 sblas3.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3'
+make[6]: `sblas3.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3'
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/bin ; make sl2lib
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/src/auxil ; make lib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+make[5]: Nothing to be done for `lib'.
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/level1 ; make slvl1
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make sgen
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_srot
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_srot' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_srot lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_saxpby
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_saxpby' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_saxpby lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_scpsc
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_scpsc' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_scpsc lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sset
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_sset' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sset lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_snrm2
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_snrm2' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_snrm2 lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sasum
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_sasum' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sasum lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sdot
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_sdot' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sdot lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sswap
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_sswap' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sswap lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sscal
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_sscal' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sscal lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_scopy
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_scopy' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_scopy lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_saxpy
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_saxpy' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_saxpy lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_siamax
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_siamax' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_siamax lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -j 56 slib.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[6]: `slib.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemv ; make slib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemv'
+make -j 56 -f Make_smvt slib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemv'
+make[6]: Nothing to be done for `slib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemv'
+make -j 56 -f Make_smvn slib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemv'
+make[6]: Nothing to be done for `slib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemv'
+make -j 56 slib.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemv'
+make[6]: `slib.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemv'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemv'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/ger ; make slib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/ger'
+make -j 56 slib.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/ger'
+make[6]: `slib.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/ger'
+make -j 56 -f Make_sr1 lib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/ger'
+make[6]: Nothing to be done for `lib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/ger'
+make -j 56 -f Make_sr2 lib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/ger'
+make[6]: Nothing to be done for `lib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/ger'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/ger'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/level2 ; make slib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level2'
+make[5]: Nothing to be done for `slib'.
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level2'
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/bin ; make sl1lib
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/src/auxil ; make lib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+make[5]: Nothing to be done for `lib'.
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/level1 ; make slvl1
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make sgen
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_srot
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_srot' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_srot lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_saxpby
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_saxpby' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_saxpby lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_scpsc
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_scpsc' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_scpsc lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sset
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_sset' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sset lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_snrm2
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_snrm2' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_snrm2 lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sasum
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_sasum' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sasum lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sdot
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_sdot' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sdot lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sswap
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_sswap' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sswap lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sscal
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_sscal' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sscal lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_scopy
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_scopy' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_scopy lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_saxpy
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_saxpy' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_saxpy lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_siamax
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_siamax' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_siamax lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -j 56 slib.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[6]: `slib.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/bin ; make scblas
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/interfaces/blas/C/src ; make slib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/interfaces/blas/C/src'
+make -j 56 slvl3.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/interfaces/blas/C/src'
+make[6]: `slvl3.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/interfaces/blas/C/src'
+make -j 56 slvl2.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/interfaces/blas/C/src'
+make[6]: `slvl2.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/interfaces/blas/C/src'
+make -j 56 slvl1.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/interfaces/blas/C/src'
+make[6]: `slvl1.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/interfaces/blas/C/src'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/interfaces/blas/C/src'
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/bin'
+/usr/bin/gfortran -O -mavx -m64 -fPIC -o xslanbsrch slanbsrch.o \
+                   /data/user/eesen/tools/ATLAS/build/lib/libtstatlas.a /data/user/eesen/tools/ATLAS/build/lib/liblapack.a /data/user/eesen/tools/ATLAS/build/lib/libcblas.a /data/user/eesen/tools/ATLAS/build/lib/libf77blas.a \
+                   /data/user/eesen/tools/ATLAS/build/lib/libatlas.a -lpthread -lm
+./xslanbsrch -oc res/ATL_sGetNB_geqrf
+maxN = 4464
+   FINDING NB FOR M=25, N=25, LDA=25:
+      nb=12: inf inf inf --> inf MFLOP.
+
+      NB refinement search:
+      *** i=1, nbB=12, NB=72, mul1=4, mul2=0 ***
+      nb=1: inf inf inf  --> inf MFLOP.
+      nb=2: inf inf inf  --> inf MFLOP.
+      nb=3: inf inf inf  --> inf MFLOP.
+      nb=4: inf inf inf  --> inf MFLOP.
+      nb=5: inf inf inf  --> inf MFLOP.
+      nb=6: inf inf inf  --> inf MFLOP.
+      nb=7: inf inf inf  --> inf MFLOP.
+      nb=8: inf inf inf  --> inf MFLOP.
+      nb=9: inf inf inf  --> inf MFLOP.
+      nb=10: inf inf inf  --> inf MFLOP.
+      nb=11: inf inf inf  --> inf MFLOP.
+      nb=1: inf inf inf  --> inf MFLOP.
+      nb=12: inf inf inf  --> inf MFLOP.
+   FOR M=25, N=25, LDA=25, BEST NB=12
+
+   FINDING NB FOR M=4464, N=4464, LDA=4464:
+      nb=72: 28384.48 --> 28384.48 MFLOP.
+      nb=144: 29223.43 --> 29223.43 MFLOP.
+      nb=216: 29543.61 --> 29543.61 MFLOP.
+      nb=288: 29661.79 --> 29661.79 MFLOP.
+      nb=360: 29602.58 --> 29602.58 MFLOP.
+      nb=432: 29368.11 --> 29368.11 MFLOP.
+      nb=504: 29080.18 --> 29080.18 MFLOP.
+      nb=576: 28881.97 --> 28881.97 MFLOP.
+      nb=648: 28658.73 --> 28658.73 MFLOP.
+      nb=720: 28249.32 --> 28249.32 MFLOP.
+
+      NB refinement search:
+      *** i=160, nbB=216, NB=72, mul1=16, mul2=0 ***
+      nb=160: 28520.95  --> 28520.95 MFLOP.
+      nb=176: 27877.62  --> 27877.62 MFLOP.
+      nb=192: 27413.85  --> 27413.85 MFLOP.
+      nb=208: 26770.57  --> 26770.57 MFLOP.
+      nb=224: 29368.11  --> 29368.11 MFLOP.
+      nb=240: 29080.18  --> 29080.18 MFLOP.
+      nb=256: 28062.24  --> 28062.24 MFLOP.
+      nb=272: 27262.67  --> 27262.67 MFLOP.
+      nb=12: 9661.82  --> 9661.82 MFLOP.
+   FOR M=4464, N=4464, LDA=4464, BEST NB=216
+
+   FINDING NB FOR M=2232, N=2232, LDA=2232:
+      nb=72: 23928.85 23474.50 24892.42 --> 24892.42 MFLOP.
+      nb=144: 24401.13 24562.72 24892.42 --> 24892.42 MFLOP.
+      nb=216: 24562.72 24241.64 23326.86 --> 24562.72 MFLOP.
+
+      NB refinement search:
+      *** i=8, nbB=72, NB=72, mul1=8, mul2=0 ***
+      nb=8: 10844.94 10418.46 10973.29  --> 10973.29 MFLOP.
+      nb=16: 14835.88 15263.26 15782.86  --> 15782.86 MFLOP.
+      nb=24: 15518.71 14895.47 14602.25  --> 15518.71 MFLOP.
+      nb=32: 16632.16 15986.94 17013.63  --> 17013.63 MFLOP.
+      nb=40: 18004.71 17331.64 17413.01  --> 18004.71 MFLOP.
+      nb=48: 18361.24 18361.24 18827.26  --> 18827.26 MFLOP.
+      nb=56: 17331.64 17413.01 17413.01  --> 17413.01 MFLOP.
+      nb=64: 15918.33 15454.05 16267.42  --> 16267.42 MFLOP.
+      nb=80: 22894.88 22894.88 21817.48  --> 22894.88 MFLOP.
+      nb=88: 21073.70 22209.41 22343.20  --> 22343.20 MFLOP.
+      nb=96: 21946.57 21817.48 22209.41  --> 22209.41 MFLOP.
+      nb=104: 20836.92 19834.07 19624.19  --> 20836.92 MFLOP.
+      nb=112: 20267.60 19940.71 20378.96  --> 20378.96 MFLOP.
+      nb=120: 19520.90 20048.49 19834.07  --> 20048.49 MFLOP.
+      nb=128: 18827.26 18923.32 18923.32  --> 18923.32 MFLOP.
+      nb=136: 18270.79 18638.05 18732.18  --> 18732.18 MFLOP.
+      nb=12: 10447.81 10302.70 10507.00  --> 10507.00 MFLOP.
+   FOR M=2232, N=2232, LDA=2232, BEST NB=72
+
+   M=2232, N=2232, lda=2232, NB=72
+   FINDING NB FOR M=1080, N=1080, LDA=1080:
+      nb=72: 19113.12 19113.12 20023.27 --> 20023.27 MFLOP.
+
+      NB refinement search:
+      *** i=8, nbB=72, NB=72, mul1=8, mul2=0 ***
+      nb=8: 11680.24 11065.49 11065.49  --> 11680.24 MFLOP.
+      nb=16: 12367.32 14016.29 13140.27  --> 14016.29 MFLOP.
+      nb=24: 13564.15 13564.15 12367.32  --> 13564.15 MFLOP.
+      nb=32: 14016.29 13564.15 13140.27  --> 14016.29 MFLOP.
+      nb=40: 13564.15 14016.29 13564.15  --> 14016.29 MFLOP.
+      nb=48: 14016.29 13140.27 13564.15  --> 14016.29 MFLOP.
+      nb=56: 12367.32 12013.96 12367.32  --> 12367.32 MFLOP.
+      nb=64: 11680.24 12013.96 12013.96  --> 12013.96 MFLOP.
+      nb=80: 17520.36 16172.64 16172.64  --> 17520.36 MFLOP.
+      nb=88: 15573.66 14016.29 15017.45  --> 15573.66 MFLOP.
+      nb=96: 15017.45 15573.66 13564.15  --> 15573.66 MFLOP.
+      nb=104: 14499.61 13140.27 13564.15  --> 14499.61 MFLOP.
+      nb=112: 12742.08 12013.96 13140.27  --> 13140.27 MFLOP.
+      nb=120: 12742.08 14016.29 14016.29  --> 14016.29 MFLOP.
+      nb=128: 13140.27 13140.27 13140.27  --> 13140.27 MFLOP.
+      nb=136: 12742.08 12742.08 12742.08  --> 12742.08 MFLOP.
+      nb=12: 11680.24 11680.24 12013.96  --> 12013.96 MFLOP.
+      nb=72: 20023.27 20023.27 19113.12  --> 20023.27 MFLOP.
+   FOR M=1080, N=1080, LDA=1080, BEST NB=72
+
+   M=1080, N=1080, lda=1080, NB=72
+   FINDING NB FOR M=504, N=504, LDA=504:
+      nb=72: 10700.60 14267.47 14267.47 --> 14267.47 MFLOP.
+
+      NB refinement search:
+      *** i=4, nbB=72, NB=72, mul1=4, mul2=0 ***
+      nb=4: 7133.73 6114.63 6114.63  --> 7133.73 MFLOP.
+      nb=8: 8560.48 10700.60 8560.48  --> 10700.60 MFLOP.
+      nb=12: 8560.48 14267.47 8560.48  --> 14267.47 MFLOP.
+      nb=16: 10700.60 10700.60 10700.60  --> 10700.60 MFLOP.
+      nb=20: 8560.48 8560.48 8560.48  --> 8560.48 MFLOP.
+      nb=24: 8560.48 10700.60 10700.60  --> 10700.60 MFLOP.
+      nb=28: 10700.60 8560.48 8560.48  --> 10700.60 MFLOP.
+      nb=32: 8560.48 10700.60 8560.48  --> 10700.60 MFLOP.
+      nb=36: 8560.48 10700.60 8560.48  --> 10700.60 MFLOP.
+      nb=40: 10700.60 8560.48 8560.48  --> 10700.60 MFLOP.
+      nb=44: 8560.48 7133.73 7133.73  --> 8560.48 MFLOP.
+      nb=48: 8560.48 8560.48 8560.48  --> 8560.48 MFLOP.
+      nb=52: 7133.73 8560.48 7133.73  --> 8560.48 MFLOP.
+      nb=56: 8560.48 7133.73 8560.48  --> 8560.48 MFLOP.
+      nb=60: 7133.73 7133.73 7133.73  --> 7133.73 MFLOP.
+      nb=64: 8560.48 7133.73 8560.48  --> 8560.48 MFLOP.
+      nb=68: 7133.73 7133.73 7133.73  --> 7133.73 MFLOP.
+      nb=76: 10700.60 10700.60 10700.60  --> 10700.60 MFLOP.
+      nb=80: 10700.60 10700.60 10700.60  --> 10700.60 MFLOP.
+      nb=84: 10700.60 8560.48 10700.60  --> 10700.60 MFLOP.
+      nb=88: 8560.48 10700.60 8560.48  --> 10700.60 MFLOP.
+      nb=92: 8560.48 8560.48 10700.60  --> 10700.60 MFLOP.
+      nb=96: 10700.60 8560.48 8560.48  --> 10700.60 MFLOP.
+      nb=100: 8560.48 8560.48 8560.48  --> 8560.48 MFLOP.
+      nb=104: 8560.48 8560.48 8560.48  --> 8560.48 MFLOP.
+      nb=108: 8560.48 8560.48 8560.48  --> 8560.48 MFLOP.
+      nb=112: 8560.48 7133.73 7133.73  --> 8560.48 MFLOP.
+      nb=116: 7133.73 7133.73 7133.73  --> 7133.73 MFLOP.
+      nb=120: 8560.48 8560.48 8560.48  --> 8560.48 MFLOP.
+      nb=124: 7133.73 7133.73 7133.73  --> 7133.73 MFLOP.
+      nb=128: 7133.73 7133.73 8560.48  --> 8560.48 MFLOP.
+      nb=132: 7133.73 6114.63 6114.63  --> 7133.73 MFLOP.
+      nb=136: 6114.63 6114.63 6114.63  --> 6114.63 MFLOP.
+      nb=140: 8560.48 8560.48 10700.60  --> 10700.60 MFLOP.
+      nb=72: 14267.47 10700.60 14267.47  --> 14267.47 MFLOP.
+   FOR M=504, N=504, LDA=504, BEST NB=72
+
+   M=504, N=504, lda=504, NB=72
+         N     NB
+==========  =====
+        25    12
+       504    72
+      1080    72
+      2232    72
+      4464   216
+GEQRF: Side='RIGHT', Uplo='UPPER', M=25, N=25, bestNB=12
+GEQRF: Side='RIGHT', Uplo='UPPER', M=504, N=504, bestNB=72
+GEQRF: Side='RIGHT', Uplo='UPPER', M=1080, N=1080, bestNB=72
+GEQRF: Side='RIGHT', Uplo='UPPER', M=2232, N=2232, bestNB=72
+GEQRF: Side='RIGHT', Uplo='UPPER', M=4464, N=4464, bestNB=216
+make[3]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/lapack'
+if [ -s "/data/user/eesen/tools/ATLAS/build/include/atlas_stGetNB_geqrf.h" ]; then \
+           echo "Arch Defaults allow us to skip threaded tuning" ; \
+        elif [ -s "/data/user/eesen/tools/ATLAS/build/include/atlas_pthreads.h" ]; then \
+    cd /data/user/eesen/tools/ATLAS/build/tune/lapack ; make res/ATL_stGetNB_geqrf.h ; \
+    cp /data/user/eesen/tools/ATLAS/build/tune/lapack/res/ATL_stGetNB_geqrf.h \
+               /data/user/eesen/tools/ATLAS/build/include/atlas_stGetNB_geqrf.h ; \
+        fi
+make[3]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/lapack'
+/usr/bin/x86_64-redhat-linux-gcc -o slanbsrch_pt.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DATLCINT -DATL_USEPTHREADS -DSREAL /data/user/eesen/tools/ATLAS/build/..//tune/lapack/lanbsrch.c
+cd /data/user/eesen/tools/ATLAS/build/bin ; make slapack
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/src/lapack ; make slib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/lapack'
+make -j 56 slib.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/lapack'
+/usr/bin/x86_64-redhat-linux-gcc -O -fomit-frame-pointer -mavx -m64 -fPIC -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -c -o ATL_ilaenv.o  \
+               /data/user/eesen/tools/ATLAS/build/..//src/lapack/ATL_ilaenv.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/liblapack.a ATL_ilaenv.o ATL_sgelq2.o ATL_sgelqf.o ATL_sgelqr.o ATL_sgels.o ATL_sgeql2.o ATL_sgeqlf.o ATL_sgeqlr.o ATL_sgeqr2.o ATL_sgeqrf.o ATL_sgeqrr.o ATL_sgerq2.o ATL_sgerqf.o ATL_sgerqr.o ATL_sgetf2.o ATL_sgetrf.o ATL_sgetrfC.o ATL_sgetrfR.o ATL_sgetri.o ATL_sgetriC.o ATL_sgetriR.o ATL_sgetrs.o ATL_slamch.o ATL_slapy2.o ATL_slarf.o ATL_slarfb.o ATL_slarfg.o ATL_slarft.o ATL_slascl.o ATL_slaswp.o ATL_slauum.o ATL_slauumCL.o ATL_slauumCU.o ATL_slauumRL.o ATL_slauumRU.o ATL_sormlq.o ATL_sormql.o ATL_sormqr.o ATL_sormrq.o ATL_spotrf.o ATL_spotrfL.o ATL_spotrfU.o ATL_spotrs.o ATL_strtri.o ATL_strtriCL.o ATL_strtriCU.o ATL_strtriRL.o ATL_strtriRU.o ATL_strtrs.o
+echo /data/user/eesen/tools/ATLAS/build/lib/liblapack.a
+/data/user/eesen/tools/ATLAS/build/lib/liblapack.a
+touch slib.grd
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/lapack'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/lapack'
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/bin ; make ststlib_pt
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/src/testing ; make slib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/testing'
+make -j 56 slib.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/testing'
+make[6]: `slib.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/testing'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/testing'
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/bin ; make sl3lib_pt
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/src/auxil ; make lib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+make[5]: Nothing to be done for `lib'.
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make slib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make auxillib scleanuplib susergemm
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd /data/user/eesen/tools/ATLAS/build/src/auxil ; make lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+cd KERNEL ; make -f sMakefile slib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm/KERNEL'
+make[7]: Nothing to be done for `slib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm/KERNEL'
+make[6]: Nothing to be done for `susergemm'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make -j 56 slib.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[6]: `slib.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/level3 ; make slib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3'
+( cd kernel; make slib )
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3/kernel'
+make -j 56 slib.grd
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3/kernel'
+make[7]: `slib.grd' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3/kernel'
+make sl3ref
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3/kernel'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/reference/level3 ; make slib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/reference/level3'
+make[8]: Nothing to be done for `slib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/reference/level3'
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3/kernel'
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3/kernel'
+( cd rblas;  make slib )
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3/rblas'
+make[6]: Nothing to be done for `slib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3/rblas'
+cd ../pklevel3 ; make slib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/pklevel3'
+cd gpmm ; make slib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/pklevel3/gpmm'
+make -j 56 slib.grd
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/pklevel3/gpmm'
+make[8]: `slib.grd' is up to date.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/pklevel3/gpmm'
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/pklevel3/gpmm'
+cd sprk ; make slib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/pklevel3/sprk'
+make -j 56 slib.grd
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/pklevel3/sprk'
+make[8]: `slib.grd' is up to date.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/pklevel3/sprk'
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/pklevel3/sprk'
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/pklevel3'
+make -j 56 sblas3.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3'
+make[6]: `sblas3.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/auxil ; make ptlib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+make[5]: Nothing to be done for `ptlib'.
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make slib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make auxillib scleanuplib susergemm
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd /data/user/eesen/tools/ATLAS/build/src/auxil ; make lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+cd KERNEL ; make -f sMakefile slib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm/KERNEL'
+make[7]: Nothing to be done for `slib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm/KERNEL'
+make[6]: Nothing to be done for `susergemm'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make -j 56 slib.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[6]: `slib.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd /data/user/eesen/tools/ATLAS/build/src/threads ; make lib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+cd blas/level3 ; make dlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[6]: Nothing to be done for `dlib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make dtlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[6]: Nothing to be done for `dtlib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make zlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[6]: Nothing to be done for `zlib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make ztlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[6]: Nothing to be done for `ztlib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make clib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[6]: Nothing to be done for `clib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make ctlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[6]: Nothing to be done for `ctlib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make slib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[6]: Nothing to be done for `slib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make stlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[6]: Nothing to be done for `stlib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level2 ; make dlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[6]: Nothing to be done for `dlib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make zlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[6]: Nothing to be done for `zlib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make clib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[6]: Nothing to be done for `clib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make slib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[6]: Nothing to be done for `slib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+cd /data/user/eesen/tools/ATLAS/build/src/threads/blas/level3 ; make slib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[5]: Nothing to be done for `slib'.
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/threads ; make slib3
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+cd blas/level3 ; make slib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[6]: Nothing to be done for `slib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make stlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[6]: Nothing to be done for `stlib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/bin ; make sl2lib_pt
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/src/auxil ; make lib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+make[5]: Nothing to be done for `lib'.
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/level1 ; make slvl1
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make sgen
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_srot
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_srot' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_srot lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_saxpby
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_saxpby' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_saxpby lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_scpsc
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_scpsc' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_scpsc lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sset
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_sset' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sset lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_snrm2
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_snrm2' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_snrm2 lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sasum
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_sasum' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sasum lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sdot
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_sdot' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sdot lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sswap
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_sswap' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sswap lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sscal
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_sscal' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sscal lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_scopy
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_scopy' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_scopy lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_saxpy
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_saxpy' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_saxpy lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_siamax
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_siamax' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_siamax lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -j 56 slib.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[6]: `slib.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemv ; make slib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemv'
+make -j 56 -f Make_smvt slib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemv'
+make[6]: Nothing to be done for `slib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemv'
+make -j 56 -f Make_smvn slib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemv'
+make[6]: Nothing to be done for `slib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemv'
+make -j 56 slib.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemv'
+make[6]: `slib.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemv'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemv'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/ger ; make slib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/ger'
+make -j 56 slib.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/ger'
+make[6]: `slib.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/ger'
+make -j 56 -f Make_sr1 lib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/ger'
+make[6]: Nothing to be done for `lib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/ger'
+make -j 56 -f Make_sr2 lib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/ger'
+make[6]: Nothing to be done for `lib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/ger'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/ger'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/level2 ; make slib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level2'
+make[5]: Nothing to be done for `slib'.
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level2'
+cd /data/user/eesen/tools/ATLAS/build/src/threads/blas/level2 ; make slib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[5]: Nothing to be done for `slib'.
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd /data/user/eesen/tools/ATLAS/build/src/threads ; make lib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+cd blas/level3 ; make dlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[6]: Nothing to be done for `dlib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make dtlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[6]: Nothing to be done for `dtlib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make zlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[6]: Nothing to be done for `zlib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make ztlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[6]: Nothing to be done for `ztlib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make clib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[6]: Nothing to be done for `clib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make ctlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[6]: Nothing to be done for `ctlib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make slib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[6]: Nothing to be done for `slib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make stlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[6]: Nothing to be done for `stlib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level2 ; make dlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[6]: Nothing to be done for `dlib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make zlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[6]: Nothing to be done for `zlib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make clib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[6]: Nothing to be done for `clib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make slib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[6]: Nothing to be done for `slib'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/bin ; make sl1lib_pt
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/src/auxil ; make ptlib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+make[5]: Nothing to be done for `ptlib'.
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+cd /data/user/eesen/tools/ATLAS/build/src/auxil ; make lib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+make[5]: Nothing to be done for `lib'.
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/level1 ; make slvl1
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make sgen
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_srot
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_srot' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_srot lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_saxpby
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_saxpby' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_saxpby lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_scpsc
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_scpsc' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_scpsc lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sset
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_sset' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sset lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_snrm2
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_snrm2' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_snrm2 lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sasum
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_sasum' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sasum lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sdot
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_sdot' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sdot lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sswap
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_sswap' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sswap lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sscal
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_sscal' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sscal lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_scopy
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_scopy' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_scopy lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_saxpy
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_saxpy' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_saxpy lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_siamax
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: `Make_siamax' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_siamax lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -j 56 slib.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[6]: `slib.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/bin ; make scblas_pt
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/interfaces/blas/C/src ; make sptlib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/interfaces/blas/C/src'
+make -j 56 sptlvl3.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/interfaces/blas/C/src'
+make[6]: `sptlvl3.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/interfaces/blas/C/src'
+make -j 56 sptlvl2.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/interfaces/blas/C/src'
+make[6]: `sptlvl2.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/interfaces/blas/C/src'
+make -j 56 sptlvl1.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/interfaces/blas/C/src'
+make[6]: `sptlvl1.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/interfaces/blas/C/src'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/interfaces/blas/C/src'
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/bin'
+/usr/bin/gfortran -O -mavx -m64 -fPIC -o xslanbsrch_pt slanbsrch_pt.o \
+                   /data/user/eesen/tools/ATLAS/build/lib/libtstatlas.a /data/user/eesen/tools/ATLAS/build/lib/libptlapack.a /data/user/eesen/tools/ATLAS/build/lib/libptcblas.a /data/user/eesen/tools/ATLAS/build/lib/libptf77blas.a \
+                   /data/user/eesen/tools/ATLAS/build/lib/libatlas.a -lpthread -lm
+./xslanbsrch_pt -oc res/ATL_stGetNB_geqrf
+maxN = 10000
+   FINDING NB FOR M=25, N=25, LDA=25:
+      nb=12: 24.08 653.68 694.53 --> 694.53 MFLOP.
+
+      NB refinement search:
+      *** i=1, nbB=12, NB=72, mul1=4, mul2=0 ***
+      nb=1: 326.84 716.94 516.86  --> 716.94 MFLOP.
+      nb=2: 555.63 694.53 716.94  --> 716.94 MFLOP.
+      nb=3: 542.07 505.11 444.50  --> 542.07 MFLOP.
+      nb=4: 472.87 472.87 542.07  --> 542.07 MFLOP.
+      nb=5: 542.07 569.87 463.02  --> 569.87 MFLOP.
+      nb=6: 505.11 516.86 516.86  --> 516.86 MFLOP.
+      nb=7: 472.87 505.11 463.02  --> 505.11 MFLOP.
+      nb=8: 505.11 635.00 516.86  --> 635.00 MFLOP.
+      nb=9: 444.50 463.02 516.86  --> 516.86 MFLOP.
+      nb=10: 505.11 542.07 463.02  --> 542.07 MFLOP.
+      nb=11: 427.40 472.87 463.02  --> 472.87 MFLOP.
+      nb=12: 483.15 463.02 653.68  --> 653.68 MFLOP.
+   FOR M=25, N=25, LDA=25, BEST NB=1
+
+   FINDING NB FOR M=10000, N=10000, LDA=10000:
+      nb=72: 17487.26 --> 17487.26 MFLOP.
+      nb=144: 66703.30 --> 66703.30 MFLOP.
+      nb=216: 163479.45 --> 163479.45 MFLOP.
+      nb=288: 204727.10 --> 204727.10 MFLOP.
+      nb=360: 205572.18 --> 205572.18 MFLOP.
+      nb=432: 228391.61 --> 228391.61 MFLOP.
+      nb=504: 173054.23 --> 173054.23 MFLOP.
+      nb=1: 1152.95  --> 1152.95 MFLOP.
+      nb=720: 201139.32  --> 201139.32 MFLOP.
+   FOR M=10000, N=10000, LDA=10000, BEST NB=432
+
+   FINDING NB FOR M=4968, N=4968, LDA=4968:
+      nb=72: 26907.30 --> 26907.30 MFLOP.
+      nb=144: 91179.32 95424.72 --> 95424.72 MFLOP.
+      nb=216: 59234.90 --> 59234.90 MFLOP.
+
+      NB refinement search:
+      *** i=80, nbB=144, NB=72, mul1=8, mul2=0 ***
+      nb=80: 18028.98  --> 18028.98 MFLOP.
+      nb=88: 52183.98  --> 52183.98 MFLOP.
+      nb=96: 56893.84  --> 56893.84 MFLOP.
+      nb=104: 57551.98  --> 57551.98 MFLOP.
+      nb=112: 45609.58  --> 45609.58 MFLOP.
+      nb=120: 50228.28  --> 50228.28 MFLOP.
+      nb=128: 40748.73  --> 40748.73 MFLOP.
+      nb=136: 53501.98  --> 53501.98 MFLOP.
+      nb=152: 69659.66 72853.40  --> 72853.40 MFLOP.
+      nb=160: 66361.71  --> 66361.71 MFLOP.
+      nb=168: 65163.72 70637.93  --> 70637.93 MFLOP.
+      nb=176: 86411.07 98364.09  --> 98364.09 MFLOP.
+      nb=184: 70449.69  --> 70449.69 MFLOP.
+      nb=192: 74322.47  --> 74322.47 MFLOP.
+      nb=200: 93145.24 103399.73  --> 103399.73 MFLOP.
+      nb=208: 119520.54 102035.51  --> 119520.54 MFLOP.
+      nb=1: 1074.87  --> 1074.87 MFLOP.
+      nb=432: 84430.29 75009.41  --> 84430.29 MFLOP.
+   FOR M=4968, N=4968, LDA=4968, BEST NB=208
+
+   M=4968, N=4968, lda=4968, NB=208
+   FINDING NB FOR M=2448, N=2448, LDA=2448:
+      nb=72: 13980.77 14308.78 14071.60 --> 14308.78 MFLOP.
+      nb=144: 24280.79 24068.67 22565.89 --> 24280.79 MFLOP.
+
+      NB refinement search:
+      *** i=80, nbB=144, NB=72, mul1=8, mul2=0 ***
+      nb=80: 26089.01 20586.26 21113.51  --> 26089.01 MFLOP.
+      nb=88: 28294.50 28997.25 23500.17  --> 28997.25 MFLOP.
+      nb=96: 27908.51 25214.15 19446.17  --> 27908.51 MFLOP.
+      nb=104: 20186.08 20044.06 21030.77  --> 21030.77 MFLOP.
+      nb=112: 25921.91 19472.70 27149.39  --> 27149.39 MFLOP.
+      nb=120: 29922.27 21667.52 32267.62  --> 32267.62 MFLOP.
+      nb=128: 33365.98 31204.46 37201.63  --> 37201.63 MFLOP.
+      nb=136: 36306.71 30496.34 26136.99  --> 36306.71 MFLOP.
+      nb=144: 22321.68 20689.70 24924.31  --> 24924.31 MFLOP.
+      nb=152: 29942.64 29315.70 21653.11  --> 29942.64 MFLOP.
+      nb=160: 19718.93 20325.51 23742.14  --> 23742.14 MFLOP.
+      nb=168: 20743.60 30612.77 29106.30  --> 30612.77 MFLOP.
+      nb=176: 24999.69 25596.00 27755.23  --> 27755.23 MFLOP.
+      nb=184: 23379.77 31491.04 38334.67  --> 38334.67 MFLOP.
+      nb=192: 36554.42 39736.04 32076.82  --> 39736.04 MFLOP.
+      nb=200: 33245.83 32240.99 33254.92  --> 33254.92 MFLOP.
+      nb=208: 36635.29 34633.99 38173.76  --> 38173.76 MFLOP.
+      nb=1: 1911.81  --> 1911.81 MFLOP.
+   FOR M=2448, N=2448, LDA=2448, BEST NB=192
+
+   M=2448, N=2448, lda=2448, NB=192
+   FINDING NB FOR M=1224, N=1224, LDA=1224:
+      nb=72: 5243.76 6419.08 7153.29 --> 7153.29 MFLOP.
+      nb=144: 7579.40 11298.72 11996.01 --> 11996.01 MFLOP.
+
+      NB refinement search:
+      *** i=80, nbB=144, NB=72, mul1=8, mul2=0 ***
+      nb=80: 7498.43 10235.59 11490.38  --> 11490.38 MFLOP.
+      nb=88: 9468.40 8650.67 11076.74  --> 11076.74 MFLOP.
+      nb=96: 14097.64 8611.35 11906.28  --> 14097.64 MFLOP.
+      nb=104: 13451.43 11204.04 11849.63  --> 13451.43 MFLOP.
+      nb=112: 9873.18 9770.53 8676.88  --> 9873.18 MFLOP.
+      nb=120: 12153.54 15019.95 11036.39  --> 15019.95 MFLOP.
+      nb=128: 9514.92 11581.93 14601.48  --> 14601.48 MFLOP.
+      nb=136: 12788.57 16737.04 14906.27  --> 16737.04 MFLOP.
+      nb=144: 13699.16 18698.79 10753.89  --> 18698.79 MFLOP.
+      nb=152: 16844.49 16128.14 11573.12  --> 16844.49 MFLOP.
+      nb=160: 12313.89 11631.29 17634.03  --> 17634.03 MFLOP.
+      nb=168: 18694.65 19913.18 14902.55  --> 19913.18 MFLOP.
+      nb=176: 12272.78 18269.40 25415.29  --> 25415.29 MFLOP.
+      nb=184: 17314.98 15462.03 16981.43  --> 17314.98 MFLOP.
+      nb=192: 16686.27 13570.89 18192.69  --> 18192.69 MFLOP.
+      nb=200: 22140.66 15493.54 22792.27  --> 22792.27 MFLOP.
+      nb=208: 14033.07 12835.44 12084.25  --> 14033.07 MFLOP.
+      nb=1: 2126.84 2186.12 2188.47  --> 2188.47 MFLOP.
+   FOR M=1224, N=1224, LDA=1224, BEST NB=176
+
+   M=1224, N=1224, lda=1224, NB=176
+   FINDING NB FOR M=576, N=576, LDA=576:
+      nb=72: 10185.83 3123.53 3588.98 --> 10185.83 MFLOP.
+      nb=144: 4582.44 6954.61 5085.21 --> 6954.61 MFLOP.
+
+      NB refinement search:
+      *** i=4, nbB=72, NB=72, mul1=4, mul2=0 ***
+      nb=4: 6457.48 5831.73 6747.95  --> 6747.95 MFLOP.
+      nb=8: 7719.55 7921.82 10288.38  --> 10288.38 MFLOP.
+      nb=12: 4500.82 11959.68 7997.46  --> 11959.68 MFLOP.
+      nb=16: 4112.47 1903.20 3602.09  --> 4112.47 MFLOP.
+      nb=20: 2927.16 3746.40 3391.31  --> 3746.40 MFLOP.
+      nb=24: 4162.93 3507.67 3212.38  --> 4162.93 MFLOP.
+      nb=28: 3528.85 3864.86 3211.85  --> 3864.86 MFLOP.
+      nb=32: 2343.90 3597.72 3223.00  --> 3597.72 MFLOP.
+      nb=36: 3524.22 4056.96 1659.82  --> 4056.96 MFLOP.
+      nb=40: 3750.31 5110.95 2349.37  --> 5110.95 MFLOP.
+      nb=44: 4665.71 3241.81 4575.54  --> 4665.71 MFLOP.
+      nb=48: 5857.00 4011.22 4099.54  --> 5857.00 MFLOP.
+      nb=52: 5925.47 4242.22 3787.61  --> 5925.47 MFLOP.
+      nb=56: 3279.60 3940.20 2235.13  --> 3940.20 MFLOP.
+      nb=60: 5372.45 3561.76 3372.91  --> 5372.45 MFLOP.
+      nb=64: 2540.15 3621.23 2806.91  --> 3621.23 MFLOP.
+      nb=68: 3159.11 3292.96 3855.12  --> 3855.12 MFLOP.
+      nb=72: 3731.68 4425.35 3728.96  --> 4425.35 MFLOP.
+      nb=76: 11653.09 4351.33 4653.72  --> 11653.09 MFLOP.
+      nb=80: 7073.42 5605.99 6267.22  --> 7073.42 MFLOP.
+      nb=84: 3326.18 5623.15 6902.94  --> 6902.94 MFLOP.
+      nb=88: 3518.88 3528.26 3926.21  --> 3926.21 MFLOP.
+      nb=92: 8345.17 4564.91 15417.67  --> 15417.67 MFLOP.
+      nb=96: 7382.91 5395.03 7788.03  --> 7788.03 MFLOP.
+      nb=100: 6078.73 2655.35 4638.68  --> 6078.73 MFLOP.
+      nb=104: 4956.75 6068.77 2291.38  --> 6068.77 MFLOP.
+      nb=108: 7122.33 5461.81 4347.55  --> 7122.33 MFLOP.
+      nb=112: 6221.89 5614.62 6493.75  --> 6493.75 MFLOP.
+      nb=116: 7841.82 7751.87 12197.80  --> 12197.80 MFLOP.
+      nb=120: 7460.74 8248.44 8208.69  --> 8248.44 MFLOP.
+      nb=124: 6280.63 10838.81 12462.60  --> 12462.60 MFLOP.
+      nb=128: 9797.54 6376.41 6715.49  --> 9797.54 MFLOP.
+      nb=132: 4941.22 4747.12 7502.37  --> 7502.37 MFLOP.
+      nb=136: 8141.46 12349.34 6195.93  --> 12349.34 MFLOP.
+      nb=140: 8557.05 4400.80 5802.46  --> 8557.05 MFLOP.
+      nb=1: 3116.60 3144.95 3133.88  --> 3144.95 MFLOP.
+      nb=176: 6934.04 6765.29 9909.65  --> 9909.65 MFLOP.
+   FOR M=576, N=576, LDA=576, BEST NB=92
+
+   M=576, N=576, lda=576, NB=92
+   FINDING NB FOR M=288, N=288, LDA=288:
+      nb=72: 10351.77 8946.08 10570.49 --> 10570.49 MFLOP.
+
+      NB refinement search:
+      *** i=4, nbB=72, NB=72, mul1=4, mul2=0 ***
+      nb=4: 5714.44 5370.35 5758.64  --> 5758.64 MFLOP.
+      nb=8: 5959.06 5907.38 5843.77  --> 5959.06 MFLOP.
+      nb=12: 5570.29 6061.72 6218.30  --> 6218.30 MFLOP.
+      nb=16: 1345.07 6166.80 6147.85  --> 6166.80 MFLOP.
+      nb=20: 4769.55 6096.35 2681.35  --> 6096.35 MFLOP.
+      nb=24: 3888.99 6819.60 6716.60  --> 6819.60 MFLOP.
+      nb=28: 5333.67 1522.42 6001.50  --> 6001.50 MFLOP.
+      nb=32: 1286.33 1393.91 2453.30  --> 2453.30 MFLOP.
+      nb=36: 6073.22 6166.80 4287.36  --> 6166.80 MFLOP.
+      nb=40: 5028.74 5278.27 5364.05  --> 5364.05 MFLOP.
+      nb=44: 1579.65 5472.23 2900.18  --> 5472.23 MFLOP.
+      nb=48: 4860.79 6308.97 5754.50  --> 6308.97 MFLOP.
+      nb=52: 3869.71 3053.11 2531.47  --> 3869.71 MFLOP.
+      nb=56: 3394.98 5664.90 5037.45  --> 5664.90 MFLOP.
+      nb=60: 5724.66 1687.47 1448.06  --> 5724.66 MFLOP.
+      nb=64: 2373.99 2017.39 2474.73  --> 2474.73 MFLOP.
+      nb=68: 5527.02 1458.75 5407.54  --> 5527.02 MFLOP.
+      nb=76: 7113.53 7130.96 4573.35  --> 7130.96 MFLOP.
+      nb=80: 3090.84 6875.25 7015.34  --> 7015.34 MFLOP.
+      nb=84: 5960.17 6681.56 4227.92  --> 6681.56 MFLOP.
+      nb=88: 2398.89 6740.63 3419.27  --> 6740.63 MFLOP.
+      nb=92: 2196.93 2510.82 2176.91  --> 2510.82 MFLOP.
+      nb=96: 7544.30 7409.86 6759.13  --> 7544.30 MFLOP.
+      nb=100: 4237.43 2368.55 6055.99  --> 6055.99 MFLOP.
+      nb=104: 7357.08 6921.32 2179.88  --> 7357.08 MFLOP.
+      nb=108: 7075.80 6927.31 7486.09  --> 7486.09 MFLOP.
+      nb=112: 6860.51 6457.85 6352.78  --> 6860.51 MFLOP.
+      nb=116: 5869.48 6112.64 6199.04  --> 6199.04 MFLOP.
+      nb=120: 4839.48 4555.78 6106.81  --> 6106.81 MFLOP.
+      nb=124: 6007.13 1805.56 4197.43  --> 6007.13 MFLOP.
+      nb=128: 6166.80 6193.04 5534.66  --> 6193.04 MFLOP.
+      nb=132: 6183.47 5971.28 2042.36  --> 6183.47 MFLOP.
+      nb=136: 3176.71 3945.05 5900.85  --> 5900.85 MFLOP.
+      nb=140: 6337.69 2268.53 5405.71  --> 6337.69 MFLOP.
+      nb=1: 2337.25 3498.09 3628.10  --> 3628.10 MFLOP.
+   FOR M=288, N=288, LDA=288, BEST NB=72
+
+   M=288, N=288, lda=288, NB=72
+   FINDING NB FOR M=144, N=144, LDA=144:
+      nb=72: 5301.19 5459.43 5496.72 --> 5496.72 MFLOP.
+
+      NB refinement search:
+      *** i=4, nbB=72, NB=72, mul1=4, mul2=0 ***
+      nb=4: 4694.98 4614.22 4608.93  --> 4694.98 MFLOP.
+      nb=8: 3810.23 3778.03 3806.62  --> 3810.23 MFLOP.
+      nb=12: 3817.46 3832.00 3839.31  --> 3839.31 MFLOP.
+      nb=16: 3667.82 3687.99 3641.27  --> 3687.99 MFLOP.
+      nb=20: 3287.25 3395.44 3325.29  --> 3395.44 MFLOP.
+      nb=24: 3300.74 3311.60 3372.67  --> 3372.67 MFLOP.
+      nb=28: 3221.46 3237.01 3300.74  --> 3300.74 MFLOP.
+      nb=32: 3355.80 3392.58 3306.16  --> 3392.58 MFLOP.
+      nb=36: 3336.32 3292.64 3319.80  --> 3336.32 MFLOP.
+      nb=40: 3344.64 3218.88 3183.23  --> 3344.64 MFLOP.
+      nb=44: 3160.72 3020.72 3036.68  --> 3160.72 MFLOP.
+      nb=48: 3211.17 3255.34 3347.42  --> 3347.42 MFLOP.
+      nb=52: 3121.49 2973.84 3173.19  --> 3173.19 MFLOP.
+      nb=56: 3102.24 3018.45 3073.80  --> 3102.24 MFLOP.
+      nb=60: 3034.39 3069.11 3195.87  --> 3195.87 MFLOP.
+      nb=64: 3165.70 3178.20 3158.24  --> 3178.20 MFLOP.
+      nb=68: 2980.44 3055.13 3032.10  --> 3055.13 MFLOP.
+      nb=1: 4152.32 4235.37 4244.30  --> 4244.30 MFLOP.
+      nb=72: 5259.61 5350.53 5534.53  --> 5534.53 MFLOP.
+   FOR M=144, N=144, LDA=144, BEST NB=72
+
+   M=144, N=144, lda=144, NB=72
+   FINDING NB FOR M=432, N=432, LDA=432:
+      nb=72: 3760.15 6522.23 5508.97 --> 6522.23 MFLOP.
+
+      NB refinement search:
+      *** i=4, nbB=72, NB=72, mul1=4, mul2=0 ***
+      nb=4: 6117.57 4641.22 6098.20  --> 6117.57 MFLOP.
+      nb=8: 4110.16 7197.65 5850.48  --> 7197.65 MFLOP.
+      nb=12: 8647.68 8869.52 9207.95  --> 9207.95 MFLOP.
+      nb=16: 9421.88 6834.21 5368.59  --> 9421.88 MFLOP.
+      nb=20: 3692.57 3776.74 3568.46  --> 3776.74 MFLOP.
+      nb=24: 2632.74 3427.74 1847.77  --> 3427.74 MFLOP.
+      nb=28: 1962.04 7084.67 2885.57  --> 7084.67 MFLOP.
+      nb=32: 3624.46 2399.06 1883.82  --> 3624.46 MFLOP.
+      nb=36: 2789.67 4648.62 2033.73  --> 4648.62 MFLOP.
+      nb=40: 904.11 2103.08 1997.87  --> 2103.08 MFLOP.
+      nb=44: 1504.77 1462.96 2110.98  --> 2110.98 MFLOP.
+      nb=48: 3028.39 1742.47 1823.69  --> 3028.39 MFLOP.
+      nb=52: 2088.02 3925.73 2055.00  --> 3925.73 MFLOP.
+      nb=56: 4012.32 2697.45 2601.69  --> 4012.32 MFLOP.
+      nb=60: 4578.76 1673.72 3310.45  --> 4578.76 MFLOP.
+      nb=64: 2498.46 1683.20 2983.49  --> 2983.49 MFLOP.
+      nb=68: 3978.28 3768.29 4884.58  --> 4884.58 MFLOP.
+      nb=72: 4012.76 4438.23 3652.56  --> 4438.23 MFLOP.
+      nb=76: 7287.60 4317.09 11086.45  --> 11086.45 MFLOP.
+      nb=80: 4061.41 7782.35 3215.04  --> 7782.35 MFLOP.
+      nb=84: 6937.94 5544.93 11186.47  --> 11186.47 MFLOP.
+      nb=88: 3401.05 3288.15 4906.80  --> 4906.80 MFLOP.
+      nb=92: 2975.34 10887.27 4859.94  --> 10887.27 MFLOP.
+      nb=96: 6201.63 4781.95 5025.44  --> 6201.63 MFLOP.
+      nb=100: 3316.46 3708.19 5426.11  --> 5426.11 MFLOP.
+      nb=104: 7400.09 5882.06 4688.42  --> 7400.09 MFLOP.
+      nb=108: 6286.56 6248.69 5487.67  --> 6286.56 MFLOP.
+      nb=112: 9452.43 3593.79 6577.51  --> 9452.43 MFLOP.
+      nb=116: 6200.92 10936.95 9384.18  --> 10936.95 MFLOP.
+      nb=120: 10921.45 5219.74 4084.79  --> 10921.45 MFLOP.
+      nb=124: 3292.27 9696.28 8423.48  --> 9696.28 MFLOP.
+      nb=128: 9688.44 7436.82 7922.96  --> 9688.44 MFLOP.
+      nb=132: 4742.63 10167.89 4569.26  --> 10167.89 MFLOP.
+      nb=136: 4942.32 3421.87 4792.78  --> 4942.32 MFLOP.
+      nb=140: 5571.86 3702.59 5661.93  --> 5661.93 MFLOP.
+   FOR M=432, N=432, LDA=432, BEST NB=76
+
+   M=432, N=432, lda=432, NB=76
+   FINDING NB FOR M=360, N=360, LDA=360:
+      nb=72: 10469.12 4986.37 5750.64 --> 10469.12 MFLOP.
+
+      NB refinement search:
+      *** i=4, nbB=72, NB=72, mul1=4, mul2=0 ***
+      nb=4: 5822.47 5712.26 5883.33  --> 5883.33 MFLOP.
+      nb=8: 3743.14 6644.25 2695.43  --> 6644.25 MFLOP.
+      nb=12: 7053.89 7309.76 7157.34  --> 7309.76 MFLOP.
+      nb=16: 2727.32 8214.23 7151.60  --> 8214.23 MFLOP.
+      nb=20: 1544.62 5615.21 4951.59  --> 5615.21 MFLOP.
+      nb=24: 1226.69 1497.78 2143.32  --> 2143.32 MFLOP.
+      nb=28: 2703.71 1898.18 1507.50  --> 2703.71 MFLOP.
+      nb=32: 1506.48 6864.75 2508.40  --> 6864.75 MFLOP.
+      nb=36: 2164.11 7571.11 3138.53  --> 7571.11 MFLOP.
+      nb=40: 5680.57 1642.50 3126.90  --> 5680.57 MFLOP.
+      nb=44: 3244.65 3418.85 3675.09  --> 3675.09 MFLOP.
+      nb=48: 2156.19 3091.16 2409.52  --> 3091.16 MFLOP.
+      nb=52: 2333.73 2631.50 4918.84  --> 4918.84 MFLOP.
+      nb=56: 6611.90 3416.23 3502.42  --> 6611.90 MFLOP.
+      nb=60: 6659.83 5118.75 5128.84  --> 6659.83 MFLOP.
+      nb=64: 3565.19 5147.01 4800.53  --> 5147.01 MFLOP.
+      nb=68: 2512.03 2501.17 6574.33  --> 6574.33 MFLOP.
+      nb=76: 9557.72 2206.69 2968.79  --> 9557.72 MFLOP.
+      nb=80: 3620.78 4924.65 2208.80  --> 4924.65 MFLOP.
+      nb=84: 3180.23 9469.34 10185.76  --> 10185.76 MFLOP.
+      nb=88: 9300.17 6067.33 8916.53  --> 9300.17 MFLOP.
+      nb=92: 3175.22 7761.12 3504.59  --> 7761.12 MFLOP.
+      nb=96: 5326.05 9996.68 3342.57  --> 9996.68 MFLOP.
+      nb=100: 7354.51 7285.89 8813.38  --> 8813.38 MFLOP.
+      nb=104: 9178.55 7556.46 5783.65  --> 9178.55 MFLOP.
+      nb=108: 6123.83 2164.04 8449.78  --> 8449.78 MFLOP.
+      nb=112: 6393.99 7888.53 6970.46  --> 7888.53 MFLOP.
+      nb=116: 4861.80 4681.10 5399.71  --> 5399.71 MFLOP.
+      nb=120: 6766.60 8837.07 8353.74  --> 8837.07 MFLOP.
+      nb=124: 8630.73 8652.25 8544.55  --> 8652.25 MFLOP.
+      nb=128: 8388.51 8355.97 8010.93  --> 8388.51 MFLOP.
+      nb=132: 5685.22 8457.79 3657.66  --> 8457.79 MFLOP.
+      nb=136: 4977.23 3384.95 6337.55  --> 6337.55 MFLOP.
+      nb=140: 8251.12 8642.67 8611.70  --> 8642.67 MFLOP.
+      nb=72: 9837.68 2472.66 4387.19  --> 9837.68 MFLOP.
+   FOR M=360, N=360, LDA=360, BEST NB=72
+
+   M=360, N=360, lda=360, NB=72
+   FINDING NB FOR M=864, N=864, LDA=864:
+      nb=72: 4126.68 6033.78 4894.33 --> 6033.78 MFLOP.
+      nb=144: 10346.27 9774.01 8000.05 --> 10346.27 MFLOP.
+
+      NB refinement search:
+      *** i=80, nbB=144, NB=72, mul1=8, mul2=0 ***
+      nb=80: 6386.87 3497.75 5135.60  --> 6386.87 MFLOP.
+      nb=88: 5440.17 6195.74 6888.33  --> 6888.33 MFLOP.
+      nb=96: 5272.94 8854.21 9029.90  --> 9029.90 MFLOP.
+      nb=104: 9703.87 7169.23 12433.05  --> 12433.05 MFLOP.
+      nb=112: 5799.99 9712.08 12297.10  --> 12297.10 MFLOP.
+      nb=120: 12794.42 11579.87 15714.07  --> 15714.07 MFLOP.
+      nb=128: 11055.57 13733.72 7160.82  --> 13733.72 MFLOP.
+      nb=136: 7163.74 12542.39 11442.06  --> 12542.39 MFLOP.
+      nb=144: 10405.76 10499.61 8822.56  --> 10499.61 MFLOP.
+      nb=152: 12559.94 9117.25 10239.52  --> 12559.94 MFLOP.
+      nb=160: 15209.42 13061.35 17772.72  --> 17772.72 MFLOP.
+      nb=168: 12985.94 8972.25 9902.42  --> 12985.94 MFLOP.
+      nb=176: 17682.24 13300.72 21589.43  --> 21589.43 MFLOP.
+      nb=184: 13553.73 23448.78 19002.12  --> 23448.78 MFLOP.
+      nb=192: 13395.24 12998.48 14074.09  --> 14074.09 MFLOP.
+      nb=200: 9334.49 14802.25 18441.57  --> 18441.57 MFLOP.
+      nb=208: 18336.38 15419.31 9441.91  --> 18336.38 MFLOP.
+      nb=92: 9420.13 7551.25 8816.51  --> 9420.13 MFLOP.
+   FOR M=864, N=864, LDA=864, BEST NB=184
+
+   M=864, N=864, lda=864, NB=184
+   FINDING NB FOR M=720, N=720, LDA=720:
+      nb=72: 4192.70 7875.70 8194.43 --> 8194.43 MFLOP.
+      nb=144: 9136.97 8440.04 7210.26 --> 9136.97 MFLOP.
+
+      NB refinement search:
+      *** i=80, nbB=144, NB=72, mul1=8, mul2=0 ***
+      nb=80: 5609.35 5735.27 8713.59  --> 8713.59 MFLOP.
+      nb=88: 11824.10 6272.15 5236.79  --> 11824.10 MFLOP.
+      nb=96: 5451.88 7141.19 4751.38  --> 7141.19 MFLOP.
+      nb=104: 5649.00 6445.30 6587.04  --> 6587.04 MFLOP.
+      nb=112: 8992.64 7700.94 6217.10  --> 8992.64 MFLOP.
+      nb=120: 3826.42 5708.42 7432.82  --> 7432.82 MFLOP.
+      nb=128: 6443.63 5633.94 6523.45  --> 6523.45 MFLOP.
+      nb=136: 5437.13 3166.28 5692.46  --> 5692.46 MFLOP.
+      nb=144: 4644.08 8995.24 7387.89  --> 8995.24 MFLOP.
+      nb=152: 11049.18 10188.67 7235.16  --> 11049.18 MFLOP.
+      nb=160: 14448.93 10501.26 5882.48  --> 14448.93 MFLOP.
+      nb=168: 8942.17 8315.77 9521.99  --> 9521.99 MFLOP.
+      nb=176: 8527.79 6545.03 16015.96  --> 16015.96 MFLOP.
+      nb=184: 13364.37 10965.61 6415.70  --> 13364.37 MFLOP.
+      nb=192: 7338.97 13463.59 10604.65  --> 13463.59 MFLOP.
+      nb=200: 5184.47 6286.62 15112.73  --> 15112.73 MFLOP.
+      nb=208: 7067.71 7080.86 6175.38  --> 7080.86 MFLOP.
+      nb=92: 2811.79 3114.51 4198.98  --> 4198.98 MFLOP.
+   FOR M=720, N=720, LDA=720, BEST NB=176
+
+   M=720, N=720, lda=720, NB=176
+   FINDING NB FOR M=648, N=648, LDA=648:
+      nb=72: 2111.05 2890.37 3109.37 --> 3109.37 MFLOP.
+      nb=144: 4236.06 13481.15 4478.39 --> 13481.15 MFLOP.
+
+      NB refinement search:
+      *** i=80, nbB=144, NB=72, mul1=8, mul2=0 ***
+      nb=80: 4889.61 6477.39 5505.70  --> 6477.39 MFLOP.
+      nb=88: 3800.23 5687.30 5044.47  --> 5687.30 MFLOP.
+      nb=96: 9395.91 7144.78 7010.75  --> 9395.91 MFLOP.
+      nb=104: 8921.94 9183.77 5691.76  --> 9183.77 MFLOP.
+      nb=112: 9573.77 10978.16 4119.59  --> 10978.16 MFLOP.
+      nb=120: 9235.78 7371.74 7131.60  --> 9235.78 MFLOP.
+      nb=128: 9005.02 6994.97 5148.60  --> 9005.02 MFLOP.
+      nb=136: 3878.54 6152.03 7225.12  --> 7225.12 MFLOP.
+      nb=152: 8187.34 8800.59 6810.13  --> 8800.59 MFLOP.
+      nb=160: 11677.23 5724.55 7916.59  --> 11677.23 MFLOP.
+      nb=168: 14898.42 7335.31 12457.71  --> 14898.42 MFLOP.
+      nb=176: 8105.58 17063.51 16279.74  --> 17063.51 MFLOP.
+      nb=184: 9471.29 10714.53 11829.17  --> 11829.17 MFLOP.
+      nb=192: 13555.53 9057.50 9000.11  --> 13555.53 MFLOP.
+      nb=200: 6134.08 11357.38 6977.66  --> 11357.38 MFLOP.
+      nb=208: 11785.47 12394.44 11383.69  --> 12394.44 MFLOP.
+      nb=92: 4958.49 6558.94 7616.47  --> 7616.47 MFLOP.
+   FOR M=648, N=648, LDA=648, BEST NB=176
+
+   M=648, N=648, lda=648, NB=176
+   FINDING NB FOR M=792, N=792, LDA=792:
+      nb=144: 13647.20 7122.16 6248.70 --> 13647.20 MFLOP.
+
+      NB refinement search:
+      *** i=80, nbB=144, NB=72, mul1=8, mul2=0 ***
+      nb=80: 6005.77 7020.30 4252.86  --> 7020.30 MFLOP.
+      nb=88: 3960.53 8149.44 5572.21  --> 8149.44 MFLOP.
+      nb=96: 5134.50 4914.14 5827.98  --> 5827.98 MFLOP.
+      nb=104: 11528.70 7815.74 8474.00  --> 11528.70 MFLOP.
+      nb=112: 6635.77 5264.51 6110.11  --> 6635.77 MFLOP.
+      nb=120: 7202.78 6544.29 4797.83  --> 7202.78 MFLOP.
+      nb=128: 11889.53 7435.19 11451.12  --> 11889.53 MFLOP.
+      nb=136: 9893.56 4949.88 12598.71  --> 12598.71 MFLOP.
+      nb=152: 10175.87 10298.40 12591.78  --> 12591.78 MFLOP.
+      nb=160: 6177.45 12544.18 10397.31  --> 12544.18 MFLOP.
+      nb=168: 14883.71 8623.08 7179.72  --> 14883.71 MFLOP.
+      nb=176: 11574.95 10572.89 10361.76  --> 11574.95 MFLOP.
+      nb=184: 6832.31 11000.15 13472.93  --> 13472.93 MFLOP.
+      nb=192: 5393.25 18299.00 12464.31  --> 18299.00 MFLOP.
+      nb=200: 13781.53 11009.64 6456.37  --> 13781.53 MFLOP.
+      nb=208: 9594.61 12148.53 16976.18  --> 16976.18 MFLOP.
+   FOR M=792, N=792, LDA=792, BEST NB=192
+
+   M=792, N=792, lda=792, NB=192
+   FINDING NB FOR M=1800, N=1800, LDA=1800:
+      nb=144: 21413.88 18898.62 26970.56 --> 26970.56 MFLOP.
+
+      NB refinement search:
+      *** i=80, nbB=144, NB=72, mul1=8, mul2=0 ***
+      nb=80: 11771.84 17471.27 12895.79  --> 17471.27 MFLOP.
+      nb=88: 11555.22 11519.90 13072.24  --> 13072.24 MFLOP.
+      nb=96: 17279.18 16318.16 13814.93  --> 17279.18 MFLOP.
+      nb=104: 14731.64 18639.31 23521.15  --> 23521.15 MFLOP.
+      nb=112: 18358.26 22768.80 16442.69  --> 22768.80 MFLOP.
+      nb=120: 18783.54 18984.65 21182.55  --> 21182.55 MFLOP.
+      nb=128: 19092.56 15928.08 16085.21  --> 19092.56 MFLOP.
+      nb=136: 14288.56 17090.21 15870.45  --> 17090.21 MFLOP.
+      nb=152: 13784.22 17418.36 17336.99  --> 17418.36 MFLOP.
+      nb=160: 27010.72 19448.01 33828.53  --> 33828.53 MFLOP.
+      nb=168: 24603.92 23551.54 23919.63  --> 24603.92 MFLOP.
+      nb=176: 21511.07 25457.02 22419.07  --> 25457.02 MFLOP.
+      nb=184: 32498.13 19564.96 17910.17  --> 32498.13 MFLOP.
+      nb=192: 16053.12 17392.63 18647.66  --> 18647.66 MFLOP.
+      nb=200: 20891.25 26506.49 25912.53  --> 26506.49 MFLOP.
+      nb=208: 22307.84 27894.03 24625.09  --> 27894.03 MFLOP.
+   FOR M=1800, N=1800, LDA=1800, BEST NB=160
+
+   M=1800, N=1800, lda=1800, NB=160
+   FINDING NB FOR M=2088, N=2088, LDA=2088:
+      nb=144: 18606.71 20408.36 24565.14 --> 24565.14 MFLOP.
+
+      NB refinement search:
+      *** i=80, nbB=144, NB=72, mul1=8, mul2=0 ***
+      nb=80: 19645.56 17534.81 16185.77  --> 19645.56 MFLOP.
+      nb=88: 20023.27 18325.76 16331.59  --> 20023.27 MFLOP.
+      nb=96: 21330.33 28285.99 23891.90  --> 28285.99 MFLOP.
+      nb=104: 20985.71 25198.61 21119.04  --> 25198.61 MFLOP.
+      nb=112: 22081.74 22599.50 21751.12  --> 22599.50 MFLOP.
+      nb=120: 25189.41 27985.80 18985.38  --> 27985.80 MFLOP.
+      nb=128: 17438.09 18532.62 20476.20  --> 20476.20 MFLOP.
+      nb=136: 20588.31 19536.57 25927.34  --> 25927.34 MFLOP.
+      nb=144: 23072.40 20620.78 23853.52  --> 23853.52 MFLOP.
+      nb=152: 35663.56 25042.95 21422.12  --> 35663.56 MFLOP.
+      nb=160: 29868.85 33558.76 31822.90  --> 33558.76 MFLOP.
+      nb=168: 25764.66 26646.58 36053.33  --> 36053.33 MFLOP.
+      nb=176: 37557.89 30581.40 29678.88  --> 37557.89 MFLOP.
+      nb=184: 26136.89 38170.45 29248.85  --> 38170.45 MFLOP.
+      nb=192: 37178.40 25526.90 52251.19  --> 52251.19 MFLOP.
+      nb=200: 24973.80 40278.48 22296.61  --> 40278.48 MFLOP.
+      nb=208: 27365.50 32590.87 32617.30  --> 32617.30 MFLOP.
+   FOR M=2088, N=2088, LDA=2088, BEST NB=192
+
+   M=2088, N=2088, lda=2088, NB=192
+   FINDING NB FOR M=1944, N=1944, LDA=1944:
+      nb=144: 13647.17 23805.29 14224.92 --> 23805.29 MFLOP.
+
+      NB refinement search:
+      *** i=80, nbB=144, NB=72, mul1=8, mul2=0 ***
+      nb=80: 11207.48 10561.49 13697.47  --> 13697.47 MFLOP.
+      nb=88: 16377.82 16202.60 14544.36  --> 16377.82 MFLOP.
+      nb=96: 18749.66 19862.81 23207.74  --> 23207.74 MFLOP.
+      nb=104: 21639.42 21333.00 29556.31  --> 29556.31 MFLOP.
+      nb=112: 23298.70 26516.91 18179.52  --> 26516.91 MFLOP.
+      nb=120: 22662.85 28876.61 32081.11  --> 32081.11 MFLOP.
+      nb=128: 22886.34 19924.66 25851.76  --> 25851.76 MFLOP.
+      nb=136: 24721.00 25637.97 25125.88  --> 25637.97 MFLOP.
+      nb=144: 19351.13 22793.32 15771.32  --> 22793.32 MFLOP.
+      nb=152: 19022.09 14728.71 21734.51  --> 21734.51 MFLOP.
+      nb=160: 27502.70 22223.13 20634.04  --> 27502.70 MFLOP.
+      nb=168: 18696.38 18377.26 27351.30  --> 27351.30 MFLOP.
+      nb=176: 21937.87 17287.88 26247.61  --> 26247.61 MFLOP.
+      nb=184: 27116.39 22803.45 31731.58  --> 31731.58 MFLOP.
+      nb=192: 21388.20 30140.63 28844.15  --> 30140.63 MFLOP.
+      nb=200: 30624.61 28441.22 28758.18  --> 30624.61 MFLOP.
+      nb=208: 33661.80 29952.76 37229.52  --> 37229.52 MFLOP.
+   FOR M=1944, N=1944, LDA=1944, BEST NB=208
+
+   M=1944, N=1944, lda=1944, NB=208
+   FINDING NB FOR M=1872, N=1872, LDA=1872:
+      nb=144: 44761.96 20538.36 22802.24 --> 44761.96 MFLOP.
+
+      NB refinement search:
+      *** i=80, nbB=144, NB=72, mul1=8, mul2=0 ***
+      nb=80: 15440.88 20364.11 14419.45  --> 20364.11 MFLOP.
+      nb=88: 18949.53 18302.01 10751.12  --> 18949.53 MFLOP.
+      nb=96: 13874.85 15598.34 15757.26  --> 15757.26 MFLOP.
+      nb=104: 16338.11 16143.39 15071.96  --> 16338.11 MFLOP.
+      nb=112: 16385.61 21286.59 19946.82  --> 21286.59 MFLOP.
+      nb=120: 18854.92 14444.48 28149.33  --> 28149.33 MFLOP.
+      nb=128: 23619.84 20836.66 27702.41  --> 27702.41 MFLOP.
+      nb=136: 21057.25 23140.26 24213.72  --> 24213.72 MFLOP.
+      nb=152: 21141.87 28610.34 27461.69  --> 28610.34 MFLOP.
+      nb=160: 19110.87 30074.08 25641.44  --> 30074.08 MFLOP.
+      nb=168: 26631.50 24866.10 19318.19  --> 26631.50 MFLOP.
+      nb=176: 33200.20 23342.72 37742.19  --> 37742.19 MFLOP.
+      nb=184: 32166.65 31274.20 23392.30  --> 32166.65 MFLOP.
+      nb=192: 29818.89 18793.59 22118.20  --> 29818.89 MFLOP.
+      nb=200: 17586.32 14351.63 21322.89  --> 21322.89 MFLOP.
+      nb=208: 21972.69 22943.64 23702.92  --> 23702.92 MFLOP.
+   FOR M=1872, N=1872, LDA=1872, BEST NB=144
+
+   M=1872, N=1872, lda=1872, NB=144
+   FINDING NB FOR M=3672, N=3672, LDA=3672:
+      nb=144: 36619.48 38651.04 --> 38651.04 MFLOP.
+
+      NB refinement search:
+      *** i=80, nbB=144, NB=72, mul1=8, mul2=0 ***
+      nb=80: 35007.42 42168.63  --> 42168.63 MFLOP.
+      nb=88: 40106.65 35435.97  --> 40106.65 MFLOP.
+      nb=96: 48719.34 36454.78  --> 48719.34 MFLOP.
+      nb=104: 28235.51 35066.70  --> 35066.70 MFLOP.
+      nb=112: 39561.23 48075.50  --> 48075.50 MFLOP.
+      nb=120: 55087.62 46115.22  --> 55087.62 MFLOP.
+      nb=128: 55167.09 52360.21  --> 55167.09 MFLOP.
+      nb=136: 54049.56 57134.44  --> 57134.44 MFLOP.
+      nb=144: 40455.29 40397.63  --> 40455.29 MFLOP.
+      nb=152: 30539.66 45693.86  --> 45693.86 MFLOP.
+      nb=160: 53948.85 44178.88  --> 53948.85 MFLOP.
+      nb=168: 51973.70 50835.09  --> 51973.70 MFLOP.
+      nb=176: 55631.56 66188.83  --> 66188.83 MFLOP.
+      nb=184: 49604.04 43761.00  --> 49604.04 MFLOP.
+      nb=192: 51140.64 54855.50  --> 54855.50 MFLOP.
+      nb=200: 52482.46 59733.94  --> 59733.94 MFLOP.
+      nb=208: 66748.75 70027.90 69026.49  --> 70027.90 MFLOP.
+   FOR M=3672, N=3672, LDA=3672, BEST NB=208
+
+   M=3672, N=3672, lda=3672, NB=208
+   FINDING NB FOR M=3024, N=3024, LDA=3024:
+      nb=144: 38164.19 37590.30 39870.34 --> 39870.34 MFLOP.
+
+      NB refinement search:
+      *** i=80, nbB=144, NB=72, mul1=8, mul2=0 ***
+      nb=80: 25640.07 21240.53  --> 25640.07 MFLOP.
+      nb=88: 26719.08 16358.38  --> 26719.08 MFLOP.
+      nb=96: 23300.50 36258.13  --> 36258.13 MFLOP.
+      nb=104: 31948.80 33953.36 37608.15  --> 37608.15 MFLOP.
+      nb=112: 47882.85 38641.96 41862.64  --> 47882.85 MFLOP.
+      nb=120: 44457.56 43740.95 27483.95  --> 44457.56 MFLOP.
+      nb=128: 37252.90 37849.94 38377.88  --> 38377.88 MFLOP.
+      nb=136: 42205.38 45530.46 39719.36  --> 45530.46 MFLOP.
+      nb=144: 41992.02 44675.99 32091.75  --> 44675.99 MFLOP.
+      nb=152: 44096.13 41416.38 41431.36  --> 44096.13 MFLOP.
+      nb=160: 46298.48 48154.06 36458.55  --> 48154.06 MFLOP.
+      nb=168: 35782.52 35127.62 40352.97  --> 40352.97 MFLOP.
+      nb=176: 34525.84 45289.15 51679.71  --> 51679.71 MFLOP.
+      nb=184: 50236.74 53725.45 37884.19  --> 53725.45 MFLOP.
+      nb=192: 46337.67 46556.22 49006.42  --> 49006.42 MFLOP.
+      nb=200: 43716.28 60326.41 44041.33  --> 60326.41 MFLOP.
+      nb=208: 49394.16 35277.07 30246.08  --> 49394.16 MFLOP.
+   FOR M=3024, N=3024, LDA=3024, BEST NB=200
+
+   M=3024, N=3024, lda=3024, NB=200
+   FINDING NB FOR M=2736, N=2736, LDA=2736:
+      nb=144: 35674.91 21608.35 30376.60 --> 35674.91 MFLOP.
+
+      NB refinement search:
+      *** i=80, nbB=144, NB=72, mul1=8, mul2=0 ***
+      nb=80: 16874.50 25804.35 22258.71  --> 25804.35 MFLOP.
+      nb=88: 24790.35 32426.09 27310.46  --> 32426.09 MFLOP.
+      nb=96: 31797.40 29277.93 33800.46  --> 33800.46 MFLOP.
+      nb=104: 37940.70 22442.02 21474.62  --> 37940.70 MFLOP.
+      nb=112: 32059.31 32115.42 27711.15  --> 32115.42 MFLOP.
+      nb=120: 35167.20 27357.03 36573.68  --> 36573.68 MFLOP.
+      nb=128: 34085.80 37174.19 37465.71  --> 37465.71 MFLOP.
+      nb=136: 44269.83 42285.68 45151.59  --> 45151.59 MFLOP.
+      nb=144: 28184.52 40809.00 35189.35  --> 40809.00 MFLOP.
+      nb=152: 26111.64 30000.70 27197.51  --> 30000.70 MFLOP.
+      nb=160: 34686.29 30622.33 27925.32  --> 34686.29 MFLOP.
+      nb=168: 31392.43 26252.16 36123.93  --> 36123.93 MFLOP.
+      nb=176: 38442.00 40210.04 45397.13  --> 45397.13 MFLOP.
+      nb=184: 46464.75 37006.12 47772.74  --> 47772.74 MFLOP.
+      nb=192: 54709.84 43489.09 57283.52  --> 57283.52 MFLOP.
+      nb=200: 47262.79 40344.29 28551.88  --> 47262.79 MFLOP.
+      nb=208: 32290.89 34496.58 45200.74  --> 45200.74 MFLOP.
+   FOR M=2736, N=2736, LDA=2736, BEST NB=192
+
+   M=2736, N=2736, lda=2736, NB=192
+   FINDING NB FOR M=2880, N=2880, LDA=2880:
+      nb=144: 32070.62 33482.88 34973.67 --> 34973.67 MFLOP.
+
+      NB refinement search:
+      *** i=80, nbB=144, NB=72, mul1=8, mul2=0 ***
+      nb=80: 24477.34 31242.41 26096.62  --> 31242.41 MFLOP.
+      nb=88: 27818.02 38122.55 29936.92  --> 38122.55 MFLOP.
+      nb=96: 39967.07 34022.57 31330.69  --> 39967.07 MFLOP.
+      nb=104: 22312.33 31369.46 21132.14  --> 31369.46 MFLOP.
+      nb=112: 34931.96 25313.81 38248.25  --> 38248.25 MFLOP.
+      nb=120: 35077.61 48852.47 42241.93  --> 48852.47 MFLOP.
+      nb=128: 40981.67 55990.39 43408.69  --> 55990.39 MFLOP.
+      nb=136: 40842.38 39412.12 43617.00  --> 43617.00 MFLOP.
+      nb=144: 30566.50 24792.64 29092.25  --> 30566.50 MFLOP.
+      nb=152: 36897.18 34288.19 29412.24  --> 36897.18 MFLOP.
+      nb=160: 43329.95 38883.18 53716.23  --> 53716.23 MFLOP.
+      nb=168: 50039.57 44306.57 40696.02  --> 50039.57 MFLOP.
+      nb=176: 44052.14 55794.82 40575.96  --> 55794.82 MFLOP.
+      nb=184: 44121.80 53946.57 33287.41  --> 53946.57 MFLOP.
+      nb=192: 39998.87 37150.84 30774.45  --> 39998.87 MFLOP.
+      nb=200: 31295.80 35594.76 43259.08  --> 43259.08 MFLOP.
+      nb=208: 38283.49 46714.04 44499.29  --> 46714.04 MFLOP.
+   FOR M=2880, N=2880, LDA=2880, BEST NB=128
+
+   M=2880, N=2880, lda=2880, NB=128
+   FINDING NB FOR M=2952, N=2952, LDA=2952:
+      nb=72: 29493.42 27594.84 25072.99 --> 29493.42 MFLOP.
+      nb=144: 36232.71 26003.18 22863.85 --> 36232.71 MFLOP.
+
+      NB refinement search:
+      *** i=80, nbB=144, NB=72, mul1=8, mul2=0 ***
+      nb=80: 15396.79 23756.05  --> 23756.05 MFLOP.
+      nb=88: 21573.37 26504.22  --> 26504.22 MFLOP.
+      nb=96: 33102.07 38539.44 29709.43  --> 38539.44 MFLOP.
+      nb=104: 31105.43 28718.36 33781.34  --> 33781.34 MFLOP.
+      nb=112: 36973.17 37972.98 39381.44  --> 39381.44 MFLOP.
+      nb=120: 27130.66 30986.43 30086.30  --> 30986.43 MFLOP.
+      nb=128: 40574.51 38145.66 45377.18  --> 45377.18 MFLOP.
+      nb=136: 30966.66 39958.58 40719.28  --> 40719.28 MFLOP.
+      nb=144: 40468.10 31050.61 34778.81  --> 40468.10 MFLOP.
+      nb=152: 41633.39 41964.31 40665.77  --> 41964.31 MFLOP.
+      nb=160: 44334.91 31180.90 29939.86  --> 44334.91 MFLOP.
+      nb=168: 30344.11 32835.16 34136.16  --> 34136.16 MFLOP.
+      nb=176: 40889.82 48123.61 45141.70  --> 48123.61 MFLOP.
+      nb=184: 48965.80 47504.80 38493.49  --> 48965.80 MFLOP.
+      nb=192: 46856.11 37597.64 48565.47  --> 48565.47 MFLOP.
+      nb=200: 46630.21 50893.23 32005.30  --> 50893.23 MFLOP.
+      nb=208: 44744.29 42119.60 40376.82  --> 44744.29 MFLOP.
+   FOR M=2952, N=2952, LDA=2952, BEST NB=200
+
+   M=2952, N=2952, lda=2952, NB=200
+   FINDING NB FOR M=3312, N=3312, LDA=3312:
+      nb=144: 38529.00 38393.17 --> 38529.00 MFLOP.
+
+      NB refinement search:
+      *** i=80, nbB=144, NB=72, mul1=8, mul2=0 ***
+      nb=80: 28121.18 33488.04  --> 33488.04 MFLOP.
+      nb=88: 38279.75 32054.41 32040.04  --> 38279.75 MFLOP.
+      nb=96: 40703.48 41539.84 29499.40  --> 41539.84 MFLOP.
+      nb=104: 38094.30 41417.65  --> 41417.65 MFLOP.
+      nb=112: 36136.60 34936.95  --> 36136.60 MFLOP.
+      nb=120: 34077.51 46896.65 51701.80  --> 51701.80 MFLOP.
+      nb=128: 38199.49 60572.55 44934.42  --> 60572.55 MFLOP.
+      nb=136: 55332.43 50070.86 41378.60  --> 55332.43 MFLOP.
+      nb=144: 35624.61 43684.23  --> 43684.23 MFLOP.
+      nb=152: 48418.96 50247.63 46880.78  --> 50247.63 MFLOP.
+      nb=160: 35771.47 51751.66  --> 51751.66 MFLOP.
+      nb=168: 39809.70 53787.97 43924.40  --> 53787.97 MFLOP.
+      nb=176: 57777.88 48748.69 36064.37  --> 57777.88 MFLOP.
+      nb=184: 38736.87 42403.13  --> 42403.13 MFLOP.
+      nb=192: 44317.36 54880.34 46782.62  --> 54880.34 MFLOP.
+      nb=200: 52595.60 64363.70 52444.25  --> 64363.70 MFLOP.
+      nb=208: 66108.72 58808.24 58748.15  --> 66108.72 MFLOP.
+   FOR M=3312, N=3312, LDA=3312, BEST NB=208
+
+   M=3312, N=3312, lda=3312, NB=208
+   FINDING NB FOR M=3168, N=3168, LDA=3168:
+      nb=144: 35242.75 43620.16 32645.40 --> 43620.16 MFLOP.
+
+      NB refinement search:
+      *** i=80, nbB=144, NB=72, mul1=8, mul2=0 ***
+      nb=80: 28985.65 27727.69  --> 28985.65 MFLOP.
+      nb=88: 35951.59 38845.21 38520.17  --> 38845.21 MFLOP.
+      nb=96: 43095.34 26302.67 40191.71  --> 43095.34 MFLOP.
+      nb=104: 30808.92 38381.92 33006.56  --> 38381.92 MFLOP.
+      nb=112: 40000.89 24886.45  --> 40000.89 MFLOP.
+      nb=120: 35915.97 31690.09 34469.61  --> 35915.97 MFLOP.
+      nb=128: 41485.36 40528.87 51106.16  --> 51106.16 MFLOP.
+      nb=136: 46580.52 55991.04 58894.98  --> 58894.98 MFLOP.
+      nb=144: 48464.08 51386.46 36798.98  --> 51386.46 MFLOP.
+      nb=152: 47337.85 31542.32 29838.54  --> 47337.85 MFLOP.
+      nb=160: 36237.91 32499.76 38744.39  --> 38744.39 MFLOP.
+      nb=168: 46993.41 32025.48  --> 46993.41 MFLOP.
+      nb=176: 39006.33 33836.58  --> 39006.33 MFLOP.
+      nb=184: 50886.58 55385.20 57336.93  --> 57336.93 MFLOP.
+      nb=192: 59475.82 44368.18 41946.16  --> 59475.82 MFLOP.
+      nb=200: 44659.52 38925.81 47139.29  --> 47139.29 MFLOP.
+      nb=208: 59855.63 49970.43 52290.65  --> 59855.63 MFLOP.
+   FOR M=3168, N=3168, LDA=3168, BEST NB=136
+
+   M=3168, N=3168, lda=3168, NB=136
+   FINDING NB FOR M=7416, N=7416, LDA=7416:
+      nb=144: 88280.46 --> 88280.46 MFLOP.
+      nb=216: 88147.78 --> 88147.78 MFLOP.
+      nb=288: 114648.77 --> 114648.77 MFLOP.
+      nb=360: 137708.89 --> 137708.89 MFLOP.
+      nb=432: 126954.94 --> 126954.94 MFLOP.
+      nb=208: 109086.51  --> 109086.51 MFLOP.
+   FOR M=7416, N=7416, LDA=7416, BEST NB=360
+
+   M=7416, N=7416, lda=7416, NB=360
+   FINDING NB FOR M=6192, N=6192, LDA=6192:
+      nb=144: 82531.54 --> 82531.54 MFLOP.
+      nb=216: 70929.76 --> 70929.76 MFLOP.
+
+      NB refinement search:
+      *** i=80, nbB=144, NB=72, mul1=8, mul2=0 ***
+      nb=80: 19995.69  --> 19995.69 MFLOP.
+      nb=88: 12721.07  --> 12721.07 MFLOP.
+      nb=96: 13433.87  --> 13433.87 MFLOP.
+      nb=104: 45917.88  --> 45917.88 MFLOP.
+      nb=112: 23482.11  --> 23482.11 MFLOP.
+      nb=120: 69482.59  --> 69482.59 MFLOP.
+      nb=128: 64158.10  --> 64158.10 MFLOP.
+      nb=136: 76971.41  --> 76971.41 MFLOP.
+      nb=152: 86357.59  --> 86357.59 MFLOP.
+      nb=160: 92504.46  --> 92504.46 MFLOP.
+      nb=168: 74936.85  --> 74936.85 MFLOP.
+      nb=176: 76735.48  --> 76735.48 MFLOP.
+      nb=184: 102390.11  --> 102390.11 MFLOP.
+      nb=192: 101301.51  --> 101301.51 MFLOP.
+      nb=200: 83824.12  --> 83824.12 MFLOP.
+      nb=208: 72348.63  --> 72348.63 MFLOP.
+      nb=360: 105770.60  --> 105770.60 MFLOP.
+   FOR M=6192, N=6192, LDA=6192, BEST NB=360
+
+   M=6192, N=6192, lda=6192, NB=360
+   FINDING NB FOR M=5544, N=5544, LDA=5544:
+      nb=144: 80274.56 --> 80274.56 MFLOP.
+      nb=216: 63330.79 --> 63330.79 MFLOP.
+
+      NB refinement search:
+      *** i=80, nbB=144, NB=72, mul1=8, mul2=0 ***
+      nb=80: 16873.26  --> 16873.26 MFLOP.
+      nb=88: 26331.61  --> 26331.61 MFLOP.
+      nb=96: 16462.68  --> 16462.68 MFLOP.
+      nb=104: 44876.15  --> 44876.15 MFLOP.
+      nb=112: 36358.41  --> 36358.41 MFLOP.
+      nb=120: 48210.65  --> 48210.65 MFLOP.
+      nb=128: 71715.30  --> 71715.30 MFLOP.
+      nb=136: 87649.76  --> 87649.76 MFLOP.
+      nb=144: 57569.08  --> 57569.08 MFLOP.
+      nb=152: 59075.50  --> 59075.50 MFLOP.
+      nb=160: 72684.57  --> 72684.57 MFLOP.
+      nb=168: 76946.81  --> 76946.81 MFLOP.
+      nb=176: 85165.42  --> 85165.42 MFLOP.
+      nb=184: 58689.08  --> 58689.08 MFLOP.
+      nb=192: 79382.42  --> 79382.42 MFLOP.
+      nb=200: 100393.36  --> 100393.36 MFLOP.
+      nb=208: 93294.75  --> 93294.75 MFLOP.
+      nb=360: 104689.94  --> 104689.94 MFLOP.
+   FOR M=5544, N=5544, LDA=5544, BEST NB=360
+
+   M=5544, N=5544, lda=5544, NB=360
+   FINDING NB FOR M=5256, N=5256, LDA=5256:
+      nb=144: 53854.50 --> 53854.50 MFLOP.
+      nb=216: 71953.57 --> 71953.57 MFLOP.
+      nb=288: 81351.56 --> 81351.56 MFLOP.
+      nb=360: 92313.00 88343.74 --> 92313.00 MFLOP.
+      nb=208: 102067.19  --> 102067.19 MFLOP.
+   FOR M=5256, N=5256, LDA=5256, BEST NB=208
+
+   M=5256, N=5256, lda=5256, NB=208
+   FINDING NB FOR M=5400, N=5400, LDA=5400:
+      nb=144: 54178.97 --> 54178.97 MFLOP.
+      nb=216: 68558.65 --> 68558.65 MFLOP.
+      nb=288: 83196.27 --> 83196.27 MFLOP.
+      nb=360: 92612.14 --> 92612.14 MFLOP.
+      nb=208: 98196.57 70071.65  --> 98196.57 MFLOP.
+   FOR M=5400, N=5400, LDA=5400, BEST NB=208
+
+   M=5400, N=5400, lda=5400, NB=208
+   FINDING NB FOR M=5472, N=5472, LDA=5472:
+      nb=144: 55921.77 --> 55921.77 MFLOP.
+      nb=216: 83139.29 --> 83139.29 MFLOP.
+      nb=288: 86565.84 --> 86565.84 MFLOP.
+      nb=360: 100515.34 --> 100515.34 MFLOP.
+      nb=208: 78815.57  --> 78815.57 MFLOP.
+   FOR M=5472, N=5472, LDA=5472, BEST NB=360
+
+   M=5472, N=5472, lda=5472, NB=360
+   FINDING NB FOR M=8640, N=8640, LDA=8640:
+      nb=360: 148832.20 --> 148832.20 MFLOP.
+      nb=432: 153157.85 --> 153157.85 MFLOP.
+      nb=360: 153915.53  --> 153915.53 MFLOP.
+   FOR M=8640, N=8640, LDA=8640, BEST NB=360
+
+   M=8640, N=8640, lda=8640, NB=360
+         N     NB
+==========  =====
+        25     1
+       144    72
+       288    72
+       360    72
+       432    76
+       576    92
+       648   176
+       720   176
+       792   192
+       864   184
+      1224   176
+      1800   160
+      1872   144
+      1944   208
+      2088   192
+      2448   192
+      2736   192
+      2880   128
+      2952   200
+      3024   200
+      3168   136
+      3312   208
+      3672   208
+      4968   208
+      5256   208
+      5400   208
+      5472   360
+      5544   360
+      6192   360
+      7416   360
+      8640   360
+     10000   432
+GEQRF: Side='RIGHT', Uplo='UPPER', M=25, N=25, bestNB=1
+GEQRF: Side='RIGHT', Uplo='UPPER', M=144, N=144, bestNB=72
+GEQRF: Side='RIGHT', Uplo='UPPER', M=288, N=288, bestNB=72
+GEQRF: Side='RIGHT', Uplo='UPPER', M=360, N=360, bestNB=72
+GEQRF: Side='RIGHT', Uplo='UPPER', M=432, N=432, bestNB=76
+GEQRF: Side='RIGHT', Uplo='UPPER', M=576, N=576, bestNB=92
+GEQRF: Side='RIGHT', Uplo='UPPER', M=648, N=648, bestNB=176
+GEQRF: Side='RIGHT', Uplo='UPPER', M=720, N=720, bestNB=176
+GEQRF: Side='RIGHT', Uplo='UPPER', M=792, N=792, bestNB=192
+GEQRF: Side='RIGHT', Uplo='UPPER', M=864, N=864, bestNB=184
+GEQRF: Side='RIGHT', Uplo='UPPER', M=1224, N=1224, bestNB=176
+GEQRF: Side='RIGHT', Uplo='UPPER', M=1800, N=1800, bestNB=160
+GEQRF: Side='RIGHT', Uplo='UPPER', M=1872, N=1872, bestNB=144
+GEQRF: Side='RIGHT', Uplo='UPPER', M=1944, N=1944, bestNB=208
+GEQRF: Side='RIGHT', Uplo='UPPER', M=2088, N=2088, bestNB=192
+GEQRF: Side='RIGHT', Uplo='UPPER', M=2448, N=2448, bestNB=192
+GEQRF: Side='RIGHT', Uplo='UPPER', M=2736, N=2736, bestNB=192
+GEQRF: Side='RIGHT', Uplo='UPPER', M=2880, N=2880, bestNB=128
+GEQRF: Side='RIGHT', Uplo='UPPER', M=2952, N=2952, bestNB=200
+GEQRF: Side='RIGHT', Uplo='UPPER', M=3024, N=3024, bestNB=200
+GEQRF: Side='RIGHT', Uplo='UPPER', M=3168, N=3168, bestNB=136
+GEQRF: Side='RIGHT', Uplo='UPPER', M=3312, N=3312, bestNB=208
+GEQRF: Side='RIGHT', Uplo='UPPER', M=3672, N=3672, bestNB=208
+GEQRF: Side='RIGHT', Uplo='UPPER', M=4968, N=4968, bestNB=208
+GEQRF: Side='RIGHT', Uplo='UPPER', M=5256, N=5256, bestNB=208
+GEQRF: Side='RIGHT', Uplo='UPPER', M=5400, N=5400, bestNB=208
+GEQRF: Side='RIGHT', Uplo='UPPER', M=5472, N=5472, bestNB=360
+GEQRF: Side='RIGHT', Uplo='UPPER', M=5544, N=5544, bestNB=360
+GEQRF: Side='RIGHT', Uplo='UPPER', M=6192, N=6192, bestNB=360
+GEQRF: Side='RIGHT', Uplo='UPPER', M=7416, N=7416, bestNB=360
+GEQRF: Side='RIGHT', Uplo='UPPER', M=8640, N=8640, bestNB=360
+GEQRF: Side='RIGHT', Uplo='UPPER', M=10000, N=10000, bestNB=432
+make[3]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/lapack'
+make[2]: Leaving directory `/data/user/eesen/tools/ATLAS/build/bin'
+
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*      FINISHED ATLAS3.10.0 INSTALL OF SECTION 4-3-2 ON 08/07/2019 AT 17:35   *
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+
+
+

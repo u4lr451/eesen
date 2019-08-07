@@ -1,0 +1,34 @@
+#
+#  This file generated at line 658 of /data/user/eesen/tools/ATLAS/build/..//tune/blas/ger/r2hgen.c
+#
+include Make.inc
+
+R2CC = $(SKC)
+R2FLAGS = $(CDEFS) $(SKCFLAGS) -DSCPLX
+
+obj = ATL_cger2k__900002.o ATL_cger2k__900003.o ATL_cger2k__900005.o ATL_cger2k__900006.o
+lib : clib
+clib : cr2k.grd
+cr2k.grd : $(obj)
+	$(ARCHIVER) $(ARFLAGS) $(ATLASlib) $(obj)
+	$(RANLIB) $(ATLASlib)
+	touch cr2k.grd
+cclean : clean
+clean :
+	- rm -f $(obj) cr2k.grd
+
+ckilllib : killlib
+killlib : 
+	- $(ARCHIVER) d $(ATLASlib) $(obj)
+	$(RANLIB) $(ATLASlib)
+killall : killlib clean
+	 rm -f ATL_cger2k__900002.c ATL_cger2k__900003.c ATL_cger2k__900005.c ATL_cger2k__900006.c
+
+ATL_cger2k__900002.o : ATL_cger2k__900002.c
+	 $(GOODGCC) -o ATL_cger2k__900002.o -c -DATL_UGER2K=ATL_cger2k__900002 -x assembler-with-cpp -DPFIX=prefetcht1 -DPFIY=prefetcht1 -DSCPLX $(CDEFS) -fPIC ATL_cger2k__900002.c
+ATL_cger2k__900003.o : ATL_cger2k__900003.c
+	 $(GOODGCC) -o ATL_cger2k__900003.o -c -DATL_UGER2K=ATL_cger2k__900003 -x assembler-with-cpp -DPFIX=prefetchnta -DPFXDIST=256 -DPFYDIST=128 -DSCPLX $(CDEFS) -fPIC ATL_cger2k__900003.c
+ATL_cger2k__900005.o : ATL_cger2k__900005.c
+	 $(GOODGCC) -o ATL_cger2k__900005.o -c -DATL_UGER2K=ATL_cger2k__900005 -x assembler-with-cpp -DPFIA=prefetcht1 -DPFIX=prefetchnta -DPFIY=prefetchnta -DPFADIST=128 -DPFXDIST=256 -DSCPLX $(CDEFS) -fPIC ATL_cger2k__900005.c
+ATL_cger2k__900006.o : ATL_cger2k__900006.c
+	 $(GOODGCC) -o ATL_cger2k__900006.o -c -DATL_UGER2K=ATL_cger2k__900006 -x assembler-with-cpp -DPFIA=prefetcht0 -DPFIX=prefetcht0 -DPFIY=prefetchnta -DPFADIST=256 -DPFXDIST=128 -DPFYDIST=704 -DSCPLX $(CDEFS) -fPIC ATL_cger2k__900006.c

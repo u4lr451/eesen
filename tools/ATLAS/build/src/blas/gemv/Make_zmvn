@@ -1,0 +1,38 @@
+#
+#  This file generated at line 270 of /data/user/eesen/tools/ATLAS/build/..//tune/blas/gemv/mvnhgen.c
+#
+include Make.inc
+
+MVNCC = $(DKC)
+MVNFLAGS = $(CDEFS) $(DKCFLAGS) -DDCPLX
+
+obj = ATL_zmvnk__900002.o ATL_zmvnk__900002_b0.o ATL_zmvnk__900003.o ATL_zmvnk__900003_b0.o ATL_zmvnk__900005.o ATL_zmvnk__900005_b0.o
+lib : zlib
+zlib : zmvnk.grd
+zmvnk.grd : $(obj)
+	$(ARCHIVER) $(ARFLAGS) $(ATLASlib) $(obj)
+	$(RANLIB) $(ATLASlib)
+	touch zmvnk.grd
+zclean : clean
+clean :
+	- rm -f $(obj) zmvnk.grd
+
+zkilllib : killlib
+killlib : 
+	- $(ARCHIVER) d $(ATLASlib) $(obj)
+	$(RANLIB) $(ATLASlib)
+killall : killlib clean
+	 rm -f ATL_zmvnk__900002.c ATL_zmvnk__900003.c ATL_zmvnk__900005.c
+
+ATL_zmvnk__900002.o : ATL_zmvnk__900002.c
+	 $(GOODGCC) -o ATL_zmvnk__900002.o -c -DATL_UGEMV=ATL_zmvnk__900002 -x assembler-with-cpp -DDCPLX $(CDEFS) -fPIC ATL_zmvnk__900002.c
+ATL_zmvnk__900002_b0.o : ATL_zmvnk__900002.c
+	 $(GOODGCC) -o ATL_zmvnk__900002_b0.o -c -DATL_UGEMV=ATL_zmvnk__900002_b0 -DBETA0 -x assembler-with-cpp -DDCPLX $(CDEFS) -fPIC ATL_zmvnk__900002.c
+ATL_zmvnk__900003.o : ATL_zmvnk__900003.c
+	 $(GOODGCC) -o ATL_zmvnk__900003.o -c -DATL_UGEMV=ATL_zmvnk__900003 -x assembler-with-cpp -DPFIX=prefetchnta -DDCPLX $(CDEFS) -fPIC ATL_zmvnk__900003.c
+ATL_zmvnk__900003_b0.o : ATL_zmvnk__900003.c
+	 $(GOODGCC) -o ATL_zmvnk__900003_b0.o -c -DATL_UGEMV=ATL_zmvnk__900003_b0 -DBETA0 -x assembler-with-cpp -DPFIX=prefetchnta -DDCPLX $(CDEFS) -fPIC ATL_zmvnk__900003.c
+ATL_zmvnk__900005.o : ATL_zmvnk__900005.c
+	 $(GOODGCC) -o ATL_zmvnk__900005.o -c -DATL_UGEMV=ATL_zmvnk__900005 -x assembler-with-cpp -DPFIA=prefetcht1 -DPFIY=prefetcht2 -DPFYDIST=192 -DDCPLX $(CDEFS) -fPIC ATL_zmvnk__900005.c
+ATL_zmvnk__900005_b0.o : ATL_zmvnk__900005.c
+	 $(GOODGCC) -o ATL_zmvnk__900005_b0.o -c -DATL_UGEMV=ATL_zmvnk__900005_b0 -DBETA0 -x assembler-with-cpp -DPFIA=prefetcht1 -DPFIY=prefetcht2 -DPFYDIST=192 -DDCPLX $(CDEFS) -fPIC ATL_zmvnk__900005.c

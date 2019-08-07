@@ -1,0 +1,38 @@
+#
+#  This file generated at line 270 of /data/user/eesen/tools/ATLAS/build/..//tune/blas/gemv/mvnhgen.c
+#
+include Make.inc
+
+MVNCC = $(SKC)
+MVNFLAGS = $(CDEFS) $(SKCFLAGS) -DSREAL
+
+obj = ATL_smvnk__900002.o ATL_smvnk__900002_b0.o ATL_smvnk__900009.o ATL_smvnk__900009_b0.o ATL_smvnk__900008.o ATL_smvnk__900008_b0.o
+lib : slib
+slib : smvnk.grd
+smvnk.grd : $(obj)
+	$(ARCHIVER) $(ARFLAGS) $(ATLASlib) $(obj)
+	$(RANLIB) $(ATLASlib)
+	touch smvnk.grd
+sclean : clean
+clean :
+	- rm -f $(obj) smvnk.grd
+
+skilllib : killlib
+killlib : 
+	- $(ARCHIVER) d $(ATLASlib) $(obj)
+	$(RANLIB) $(ATLASlib)
+killall : killlib clean
+	 rm -f ATL_smvnk__900002.c ATL_smvnk__900009.c ATL_smvnk__900008.c
+
+ATL_smvnk__900002.o : ATL_smvnk__900002.c
+	 $(GOODGCC) -o ATL_smvnk__900002.o -c -DATL_UGEMV=ATL_smvnk__900002 -x assembler-with-cpp -DPFADIST=128 -DSREAL $(CDEFS) -fPIC ATL_smvnk__900002.c
+ATL_smvnk__900002_b0.o : ATL_smvnk__900002.c
+	 $(GOODGCC) -o ATL_smvnk__900002_b0.o -c -DATL_UGEMV=ATL_smvnk__900002_b0 -DBETA0 -x assembler-with-cpp -DPFADIST=128 -DSREAL $(CDEFS) -fPIC ATL_smvnk__900002.c
+ATL_smvnk__900009.o : ATL_smvnk__900009.c
+	 $(GOODGCC) -o ATL_smvnk__900009.o -c -DATL_UGEMV=ATL_smvnk__900009 -x assembler-with-cpp -DPFXDIST=128 -DSREAL $(CDEFS) -fPIC ATL_smvnk__900009.c
+ATL_smvnk__900009_b0.o : ATL_smvnk__900009.c
+	 $(GOODGCC) -o ATL_smvnk__900009_b0.o -c -DATL_UGEMV=ATL_smvnk__900009_b0 -DBETA0 -x assembler-with-cpp -DPFXDIST=128 -DSREAL $(CDEFS) -fPIC ATL_smvnk__900009.c
+ATL_smvnk__900008.o : ATL_smvnk__900008.c
+	 $(GOODGCC) -o ATL_smvnk__900008.o -c -DATL_UGEMV=ATL_smvnk__900008 -x assembler-with-cpp -DSREAL $(CDEFS) -fPIC ATL_smvnk__900008.c
+ATL_smvnk__900008_b0.o : ATL_smvnk__900008.c
+	 $(GOODGCC) -o ATL_smvnk__900008_b0.o -c -DATL_UGEMV=ATL_smvnk__900008_b0 -DBETA0 -x assembler-with-cpp -DSREAL $(CDEFS) -fPIC ATL_smvnk__900008.c

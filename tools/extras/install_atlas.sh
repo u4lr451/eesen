@@ -28,7 +28,7 @@
 # script (e.g. if you are compiling Kaldi in 32-bit on a 64-bit CPU).
 
 if [ ! -f atlas3.10.0.tar.bz2 ]; then
-  wget -T 10 -t 3 http://sourceforge.net/projects/math-atlas/files/Stable/3.10.0/atlas3.10.0.tar.bz2 || exit 1;
+  wget -T 10 -t 3 https://jaist.dl.sourceforge.net/project/math-atlas/Stable/3.10.0/atlas3.10.0.tar.bz2 || exit 1;
 fi
 
 tar -xvjf atlas3.10.0.tar.bz2  || exit 1;
@@ -46,9 +46,18 @@ if [ "$x" == "i686" -o "$x" == "x86" ]; then
   opt="-b 32"
 fi
 
-../configure $opt --prefix=`pwd`/install || exit 1;
-make -j 2 || exit 1;
-make check -j 2 || exit 1;
+if [ ! -f lapack-3.8.0.tar ]
+then 
+   wget http://www.netlib.org/lapack/lapack-3.8.0.tar.gz && gunzip -d lapack-3.8.0.tar.gz
+fi
+
+../configure $opt --shared --prefix=`pwd`/install  --with-netlib-lapack-tarfile=`pwd`/lapack-3.8.0.tar || exit 1;
+
+make -j 12 || exit 1;
+echo "-----------done make -----------------"
+make check -j 12 || exit 1;
+echo "-----------done make check -----------------"
 make install || exit 1;
+echo "-----------done make install -----------------"
 
 

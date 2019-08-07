@@ -1,0 +1,31 @@
+#ifndef ATL_INSTINFO_H
+   #define ATL_INSTINFO_H
+
+#define ATL_ARCH "UNKNOWNx8664AVXMAC"
+#define ATL_INSTFLAGS "-1 0 -a 1 -l 1"
+#define ATL_F2CDEFS "-DAdd_ -DF77_INTEGER=int -DStringSunStyle"
+#define ATL_ARCHDEFS "-DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664"
+#define ATL_DKCFLAGS "-O -fomit-frame-pointer -mavx -m64 -fPIC"
+#define ATL_DKC "/usr/bin/x86_64-redhat-linux-gcc"
+#define ATL_SKCFLAGS "-O -fomit-frame-pointer -mavx -m64 -fPIC"
+#define ATL_SKC "/usr/bin/x86_64-redhat-linux-gcc"
+#define ATL_DMCFLAGS "-O -fomit-frame-pointer -mavx -m64 -fPIC"
+#define ATL_DMC "/usr/bin/x86_64-redhat-linux-gcc"
+#define ATL_SMCFLAGS "-O -fomit-frame-pointer -mavx -m64 -fPIC"
+#define ATL_SMC "/usr/bin/x86_64-redhat-linux-gcc"
+#define ATL_ICCFLAGS "-DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC"
+#define ATL_ICC "/usr/bin/x86_64-redhat-linux-gcc"
+#define ATL_F77FLAGS "-O -mavx -m64 -fPIC"
+#define ATL_F77 "/usr/bin/gfortran"
+#define ATL_DKCVERS "x86_64-redhat-linux-gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-4)"
+#define ATL_SKCVERS "x86_64-redhat-linux-gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-4)"
+#define ATL_DMCVERS "x86_64-redhat-linux-gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-4)"
+#define ATL_SMCVERS "x86_64-redhat-linux-gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-4)"
+#define ATL_ICCVERS "x86_64-redhat-linux-gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-4)"
+#define ATL_F77VERS "GNU Fortran (GCC) 4.8.5 20150623 (Red Hat 4.8.5-4)"
+#define ATL_SYSINFO "Linux mmgpusprsnssz60 3.10.107-1-tlinux2-0048 #1 SMP Wed Feb 27 14:30:34 CST 2019 x86_64 x86_64 x86_64 GNU/Linux"
+#define ATL_DATE    "Wed Aug  7 11:52:18 CST 2019"
+#define ATL_UNAM    "root"
+#define ATL_VERS    "3.10.0"
+
+#endif

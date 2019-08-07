@@ -1,0 +1,9 @@
+0 '/usr/bin/x86_64-redhat-linux-gcc' '-O -fomit-frame-pointer -mavx -m64'
+1 '/usr/bin/x86_64-redhat-linux-gcc' '-O -fomit-frame-pointer -mavx -m64'
+2 '/usr/bin/x86_64-redhat-linux-gcc' '-O -fomit-frame-pointer -mavx -m64'
+3 '/usr/bin/x86_64-redhat-linux-gcc' '-O -fomit-frame-pointer -mavx -m64'
+4 '/usr/bin/x86_64-redhat-linux-gcc' '-O -fomit-frame-pointer -mavx -m64'
+5 '/usr/bin/x86_64-redhat-linux-gcc' '-O -fomit-frame-pointer -m64'
+6 '/usr/bin/x86_64-redhat-linux-gcc' '-O -fomit-frame-pointer -mavx -m64'
+7 '/usr/bin/gfortran' '-O -mavx -m64'
+F2CNAME,F2CINT,F2CSTRING=(1,1,1)

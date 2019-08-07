@@ -1,0 +1,36 @@
+#
+#  This file generated at line 634 of /data/user/eesen/tools/ATLAS/build/..//tune/blas/ger/r1hgen.c
+#
+include Make.inc
+
+R1CC = $(DKC)
+R1FLAGS = $(CDEFS) $(DKCFLAGS) -DDCPLX
+
+obj = ATL_zgerk__900002.o ATL_zgerk__900009.o ATL_zgerk__900008.o ATL_zgerk__900006.o ATL_zgerk__900005.o
+lib : zlib
+zlib : zr1k.grd
+zr1k.grd : $(obj)
+	$(ARCHIVER) $(ARFLAGS) $(ATLASlib) $(obj)
+	$(RANLIB) $(ATLASlib)
+	touch zr1k.grd
+zclean : clean
+clean :
+	- rm -f $(obj) zr1k.grd
+
+zkilllib : killlib
+killlib : 
+	- $(ARCHIVER) d $(ATLASlib) $(obj)
+	$(RANLIB) $(ATLASlib)
+killall : killlib clean
+	 rm -f ATL_zgerk__900002.c ATL_zgerk__900009.c ATL_zgerk__900008.c ATL_zgerk__900006.c ATL_zgerk__900005.c
+
+ATL_zgerk__900002.o : ATL_zgerk__900002.c
+	 $(GOODGCC) -o ATL_zgerk__900002.o -c -DATL_UGERK=ATL_zgerk__900002 -x assembler-with-cpp -DPFIY=prefetchnta -DDCPLX $(CDEFS) -fPIC ATL_zgerk__900002.c
+ATL_zgerk__900009.o : ATL_zgerk__900009.c
+	 $(GOODGCC) -o ATL_zgerk__900009.o -c -DATL_UGERK=ATL_zgerk__900009 -x assembler-with-cpp -DDCPLX $(CDEFS) -fPIC ATL_zgerk__900009.c
+ATL_zgerk__900008.o : ATL_zgerk__900008.c
+	 $(GOODGCC) -o ATL_zgerk__900008.o -c -DATL_UGERK=ATL_zgerk__900008 -x assembler-with-cpp -DPFIA=prefetcht0 -DDCPLX $(CDEFS) -fPIC ATL_zgerk__900008.c
+ATL_zgerk__900006.o : ATL_zgerk__900006.c
+	 $(GOODGCC) -o ATL_zgerk__900006.o -c -DATL_UGERK=ATL_zgerk__900006 -x assembler-with-cpp -DPFADIST=0 -DPFXDIST=128 -DDCPLX $(CDEFS) -fPIC ATL_zgerk__900006.c
+ATL_zgerk__900005.o : ATL_zgerk__900005.c
+	 $(GOODGCC) -o ATL_zgerk__900005.o -c -DATL_UGERK=ATL_zgerk__900005 -x assembler-with-cpp -DPFADIST=128 -DDCPLX $(CDEFS) -fPIC ATL_zgerk__900005.c

@@ -1,0 +1,38 @@
+#
+#  This file generated at line 270 of /data/user/eesen/tools/ATLAS/build/..//tune/blas/gemv/mvnhgen.c
+#
+include Make.inc
+
+MVNCC = $(DKC)
+MVNFLAGS = $(CDEFS) $(DKCFLAGS) -DDREAL
+
+obj = ATL_dmvnk__900002.o ATL_dmvnk__900002_b0.o ATL_dmvnk__900005.o ATL_dmvnk__900005_b0.o ATL_dmvnk__900006.o ATL_dmvnk__900006_b0.o
+lib : dlib
+dlib : dmvnk.grd
+dmvnk.grd : $(obj)
+	$(ARCHIVER) $(ARFLAGS) $(ATLASlib) $(obj)
+	$(RANLIB) $(ATLASlib)
+	touch dmvnk.grd
+dclean : clean
+clean :
+	- rm -f $(obj) dmvnk.grd
+
+dkilllib : killlib
+killlib : 
+	- $(ARCHIVER) d $(ATLASlib) $(obj)
+	$(RANLIB) $(ATLASlib)
+killall : killlib clean
+	 rm -f ATL_dmvnk__900002.c ATL_dmvnk__900005.c ATL_dmvnk__900006.c
+
+ATL_dmvnk__900002.o : ATL_dmvnk__900002.c
+	 $(GOODGCC) -o ATL_dmvnk__900002.o -c -DATL_UGEMV=ATL_dmvnk__900002 -x assembler-with-cpp -DDREAL $(CDEFS) -fPIC ATL_dmvnk__900002.c
+ATL_dmvnk__900002_b0.o : ATL_dmvnk__900002.c
+	 $(GOODGCC) -o ATL_dmvnk__900002_b0.o -c -DATL_UGEMV=ATL_dmvnk__900002_b0 -DBETA0 -x assembler-with-cpp -DDREAL $(CDEFS) -fPIC ATL_dmvnk__900002.c
+ATL_dmvnk__900005.o : ATL_dmvnk__900005.c
+	 $(GOODGCC) -o ATL_dmvnk__900005.o -c -DATL_UGEMV=ATL_dmvnk__900005 -x assembler-with-cpp -DDREAL $(CDEFS) -fPIC ATL_dmvnk__900005.c
+ATL_dmvnk__900005_b0.o : ATL_dmvnk__900005.c
+	 $(GOODGCC) -o ATL_dmvnk__900005_b0.o -c -DATL_UGEMV=ATL_dmvnk__900005_b0 -DBETA0 -x assembler-with-cpp -DDREAL $(CDEFS) -fPIC ATL_dmvnk__900005.c
+ATL_dmvnk__900006.o : ATL_dmvnk__900006.c
+	 $(GOODGCC) -o ATL_dmvnk__900006.o -c -DATL_UGEMV=ATL_dmvnk__900006 -x assembler-with-cpp -DPFIX=prefetchnta -DPFIY=prefetchnta -DDREAL $(CDEFS) -fPIC ATL_dmvnk__900006.c
+ATL_dmvnk__900006_b0.o : ATL_dmvnk__900006.c
+	 $(GOODGCC) -o ATL_dmvnk__900006_b0.o -c -DATL_UGEMV=ATL_dmvnk__900006_b0 -DBETA0 -x assembler-with-cpp -DPFIX=prefetchnta -DPFIY=prefetchnta -DDREAL $(CDEFS) -fPIC ATL_dmvnk__900006.c

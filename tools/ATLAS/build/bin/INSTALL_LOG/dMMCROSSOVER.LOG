@@ -1,0 +1,916 @@
+
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*       BEGAN ATLAS3.10.0 INSTALL OF SECTION 2-1-3 ON 08/07/2019 AT 12:20     *
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+
+
+
+make[2]: Entering directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/tune/blas/gemm ; make res/dXover.h pre=d nb=88
+make[3]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+make dRun_tfc pre=d
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+make xdtfc pre=d typ=DREAL
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+/usr/bin/x86_64-redhat-linux-gcc -o dtfc.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL /data/user/eesen/tools/ATLAS/build/..//tune/blas/gemm/tfc.c \
+                 -DSM_FOUT=/data/user/eesen/tools/ATLAS/build/include/dXover.h
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make dlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make auxillib dcleanuplib dusergemm
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd /data/user/eesen/tools/ATLAS/build/src/auxil ; make lib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_buildinfo.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC /data/user/eesen/tools/ATLAS/build/..//src/auxil/ATL_buildinfo.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_flushcache.o ATL_flushCacheByAddr.o ATL_cputime.o ATL_walltime.o ATL_xerbla.o ATL_lcm.o ATL_buildinfo.o ATL_ssyreflect.o ATL_sgemoveT.o ATL_sgemove.o ATL_sgecopy.o ATL_sgezero.o ATL_sgeadd.o ATL_sgescal.o ATL_strscal.o ATL_stradd.o ATL_sgecollapse.o ATL_strcollapse.o ATL_saxpby.o ATL_sgeswapT.o ATL_ssqtrans.o ATL_sgeApBt_NB.o ATL_ssyApAt_NB.o ATL_ssyApAt.o ATL_sgemaxnrm.o ATL_sgeset.o ATL_strsetL.o ATL_strsetU.o ATL_dsyreflect.o ATL_dgemoveT.o ATL_dgemove.o ATL_dgecopy.o ATL_dgezero.o ATL_dgeadd.o ATL_dgescal.o ATL_dtrscal.o ATL_dtradd.o ATL_dgecollapse.o ATL_dtrcollapse.o ATL_daxpby.o ATL_dgeswapT.o ATL_dsqtrans.o ATL_dgeApBt_NB.o ATL_dsyApAt_NB.o ATL_dsyApAt.o ATL_dgemaxnrm.o ATL_dgeset.o ATL_dtrsetL.o ATL_dtrsetU.o ATL_csyreflect.o ATL_cgemoveT.o ATL_cgemove.o ATL_cgecopy.o ATL_cgezero.o ATL_cgeadd.o ATL_cgescal.o ATL_ctrscal.o ATL_ctradd.o ATL_cgecollapse.o ATL_ctrcollapse.o ATL_caxpby.o ATL_cgeswapT.o ATL_csqtrans.o ATL_cgeApBt_NB.o ATL_csyApAt_NB.o ATL_csyApAt.o ATL_cgemaxnrm.o ATL_cgeset.o ATL_ctrsetL.o ATL_ctrsetU.o ATL_zsyreflect.o ATL_zgemoveT.o ATL_zgemove.o ATL_zgecopy.o ATL_zgezero.o ATL_zgeadd.o ATL_zgescal.o ATL_ztrscal.o ATL_ztradd.o ATL_zgecollapse.o ATL_ztrcollapse.o ATL_zaxpby.o ATL_zgeswapT.o ATL_zsqtrans.o ATL_zgeApBt_NB.o ATL_zsyApAt_NB.o ATL_zsyApAt.o ATL_zgemaxnrm.o ATL_zgeset.o ATL_ztrsetL.o ATL_ztrsetU.o ATL_cgemoveC.o ATL_caxpbyConj.o ATL_caxpyConj.o ATL_cmoveConj.o ATL_ccopyConj.o ATL_cscalConj.o ATL_chereflect.o ATL_ccplxdivide.o ATL_ccplxinvert.o ATL_caxpyConj_x1_y1.o ATL_chescal.o ATL_cgeApBc_NB.o ATL_cheApAc_NB.o ATL_cheApAc.o ATL_cgemove_aXi0.o ATL_cgemove_aX.o ATL_cgemove_a1.o ATL_cgemove_a0.o ATL_caxpbyConj_aXi0_bXi0.o ATL_caxpby_aXi0_bXi0.o ATL_cgeadd_aXi0_bXi0.o ATL_caxpbyConj_aX_bXi0.o ATL_caxpby_aX_bXi0.o ATL_cgeadd_aX_bXi0.o ATL_caxpbyConj_a1_bXi0.o ATL_caxpby_a1_bXi0.o ATL_cgeadd_a1_bXi0.o ATL_caxpbyConj_a0_bXi0.o ATL_caxpby_a0_bXi0.o ATL_cgeadd_a0_bXi0.o ATL_cgescal_bXi0.o ATL_caxpbyConj_aXi0_bX.o ATL_caxpby_aXi0_bX.o ATL_cgeadd_aXi0_bX.o ATL_caxpbyConj_aX_bX.o ATL_caxpby_aX_bX.o ATL_cgeadd_aX_bX.o ATL_caxpbyConj_a1_bX.o ATL_caxpby_a1_bX.o ATL_cgeadd_a1_bX.o ATL_caxpbyConj_a0_bX.o ATL_caxpby_a0_bX.o ATL_cgeadd_a0_bX.o ATL_cgescal_bX.o ATL_caxpbyConj_aXi0_b1.o ATL_caxpby_aXi0_b1.o ATL_cgeadd_aXi0_b1.o ATL_caxpbyConj_aX_b1.o ATL_caxpby_aX_b1.o ATL_cgeadd_aX_b1.o ATL_caxpbyConj_a1_b1.o ATL_caxpby_a1_b1.o ATL_cgeadd_a1_b1.o ATL_caxpbyConj_a0_b1.o ATL_caxpby_a0_b1.o ATL_cgeadd_a0_b1.o ATL_cgescal_b1.o ATL_caxpbyConj_aXi0_b0.o ATL_caxpby_aXi0_b0.o ATL_cgeadd_aXi0_b0.o ATL_caxpbyConj_aX_b0.o ATL_caxpby_aX_b0.o ATL_cgeadd_aX_b0.o ATL_caxpbyConj_a1_b0.o ATL_caxpby_a1_b0.o ATL_cgeadd_a1_b0.o ATL_caxpbyConj_a0_b0.o ATL_caxpby_a0_b0.o ATL_cgeadd_a0_b0.o ATL_cgescal_b0.o ATL_zgemoveC.o ATL_zaxpbyConj.o ATL_zaxpyConj.o ATL_zmoveConj.o ATL_zcopyConj.o ATL_zscalConj.o ATL_zhereflect.o ATL_zcplxdivide.o ATL_zcplxinvert.o ATL_zaxpyConj_x1_y1.o ATL_zhescal.o ATL_zgeApBc_NB.o ATL_zheApAc_NB.o ATL_zheApAc.o ATL_zgemove_aXi0.o ATL_zgemove_aX.o ATL_zgemove_a1.o ATL_zgemove_a0.o ATL_zaxpbyConj_aXi0_bXi0.o ATL_zaxpby_aXi0_bXi0.o ATL_zgeadd_aXi0_bXi0.o ATL_zaxpbyConj_aX_bXi0.o ATL_zaxpby_aX_bXi0.o ATL_zgeadd_aX_bXi0.o ATL_zaxpbyConj_a1_bXi0.o ATL_zaxpby_a1_bXi0.o ATL_zgeadd_a1_bXi0.o ATL_zaxpbyConj_a0_bXi0.o ATL_zaxpby_a0_bXi0.o ATL_zgeadd_a0_bXi0.o ATL_zgescal_bXi0.o ATL_zaxpbyConj_aXi0_bX.o ATL_zaxpby_aXi0_bX.o ATL_zgeadd_aXi0_bX.o ATL_zaxpbyConj_aX_bX.o ATL_zaxpby_aX_bX.o ATL_zgeadd_aX_bX.o ATL_zaxpbyConj_a1_bX.o ATL_zaxpby_a1_bX.o ATL_zgeadd_a1_bX.o ATL_zaxpbyConj_a0_bX.o ATL_zaxpby_a0_bX.o ATL_zgeadd_a0_bX.o ATL_zgescal_bX.o ATL_zaxpbyConj_aXi0_b1.o ATL_zaxpby_aXi0_b1.o ATL_zgeadd_aXi0_b1.o ATL_zaxpbyConj_aX_b1.o ATL_zaxpby_aX_b1.o ATL_zgeadd_aX_b1.o ATL_zaxpbyConj_a1_b1.o ATL_zaxpby_a1_b1.o ATL_zgeadd_a1_b1.o ATL_zaxpbyConj_a0_b1.o ATL_zaxpby_a0_b1.o ATL_zgeadd_a0_b1.o ATL_zgescal_b1.o ATL_zaxpbyConj_aXi0_b0.o ATL_zaxpby_aXi0_b0.o ATL_zgeadd_aXi0_b0.o ATL_zaxpbyConj_aX_b0.o ATL_zaxpby_aX_b0.o ATL_zgeadd_aX_b0.o ATL_zaxpbyConj_a1_b0.o ATL_zaxpby_a1_b0.o ATL_zgeadd_a1_b0.o ATL_zaxpbyConj_a0_b0.o ATL_zaxpby_a0_b0.o ATL_zgeadd_a0_b0.o ATL_zgescal_b0.o ATL_sgemove_aX.o ATL_sgemove_a1.o ATL_sgemove_a0.o ATL_saxpby_aX_bX.o ATL_sgeadd_aX_bX.o ATL_saxpby_a1_bX.o ATL_sgeadd_a1_bX.o ATL_saxpby_a0_bX.o ATL_sgeadd_a0_bX.o ATL_sgescal_bX.o ATL_saxpby_aX_b1.o ATL_sgeadd_aX_b1.o ATL_saxpby_a1_b1.o ATL_sgeadd_a1_b1.o ATL_saxpby_a0_b1.o ATL_sgeadd_a0_b1.o ATL_sgescal_b1.o ATL_saxpby_aX_b0.o ATL_sgeadd_aX_b0.o ATL_saxpby_a1_b0.o ATL_sgeadd_a1_b0.o ATL_saxpby_a0_b0.o ATL_sgeadd_a0_b0.o ATL_sgescal_b0.o ATL_dgemove_aX.o ATL_dgemove_a1.o ATL_dgemove_a0.o ATL_daxpby_aX_bX.o ATL_dgeadd_aX_bX.o ATL_daxpby_a1_bX.o ATL_dgeadd_a1_bX.o ATL_daxpby_a0_bX.o ATL_dgeadd_a0_bX.o ATL_dgescal_bX.o ATL_daxpby_aX_b1.o ATL_dgeadd_aX_b1.o ATL_daxpby_a1_b1.o ATL_dgeadd_a1_b1.o ATL_daxpby_a0_b1.o ATL_dgeadd_a0_b1.o ATL_dgescal_b1.o ATL_daxpby_aX_b0.o ATL_dgeadd_aX_b0.o ATL_daxpby_a1_b0.o ATL_dgeadd_a1_b0.o ATL_daxpby_a0_b0.o ATL_dgeadd_a0_b0.o ATL_dgescal_b0.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch lib.grd0
+cd /data/user/eesen/tools/ATLAS/build/src/blas/level1 ; make lib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make dgen
+make[10]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_drot
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_drot' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_drot lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_daxpby
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_daxpby' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_daxpby lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_dcpsc
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_dcpsc' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_dcpsc lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_dset
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_dset' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_dset lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_dnrm2
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_dnrm2' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_dnrm2 lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_dasum
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_dasum' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_dasum lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_ddot
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_ddot' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_ddot lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_dswap
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_dswap' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_dswap lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_dscal
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_dscal' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_dscal lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_dcopy
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_dcopy' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_dcopy lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_daxpy
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_daxpy' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_daxpy lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_diamax
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_diamax' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_diamax lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[10]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -j 56 dlib.grd
+make[10]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[10]: `dlib.grd' is up to date.
+make[10]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make sgen
+make[10]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_srot
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_srot' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_srot lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_saxpby
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_saxpby' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_saxpby lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_scpsc
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_scpsc' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_scpsc lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sset
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_sset' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sset lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_snrm2
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_snrm2' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_snrm2 lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sasum
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_sasum' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sasum lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sdot
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_sdot' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sdot lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sswap
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_sswap' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sswap lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_sscal
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_sscal' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_sscal lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_scopy
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_scopy' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_scopy lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_saxpy
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_saxpy' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_saxpy lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_siamax
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_siamax' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_siamax lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[10]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -j 56 slib.grd
+make[10]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[10]: `slib.grd' is up to date.
+make[10]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make zgen
+make[10]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_zrot
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_zrot' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_zrot lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_zaxpby
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_zaxpby' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_zaxpby lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_zcpsc
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_zcpsc' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_zcpsc lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_zset
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_zset' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_zset lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_znrm2
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_znrm2' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_znrm2 lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_zasum
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_zasum' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_zasum lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_zdot
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_zdot' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_zdot lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_zswap
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_zswap' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_zswap lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_zscal
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_zscal' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_zscal lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_zcopy
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_zcopy' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_zcopy lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_zaxpy
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_zaxpy' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_zaxpy lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_ziamax
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_ziamax' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_ziamax lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_zdotc
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_zdotc' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_zdotc lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[10]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -j 56 zlib.grd
+make[10]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[10]: `zlib.grd' is up to date.
+make[10]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make cgen
+make[10]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_crot
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_crot' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_crot lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_caxpby
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_caxpby' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_caxpby lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_ccpsc
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_ccpsc' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_ccpsc lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_cset
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_cset' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_cset lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_cnrm2
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_cnrm2' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_cnrm2 lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_casum
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_casum' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_casum lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_cdot
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_cdot' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_cdot lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_cswap
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_cswap' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_cswap lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_cscal
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_cscal' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_cscal lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_ccopy
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_ccopy' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_ccopy lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_caxpy
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_caxpy' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_caxpy lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_ciamax
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_ciamax' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_ciamax lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make Make_cdotc
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: `Make_cdotc' is up to date.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -f Make_cdotc lib
+make[11]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[11]: Nothing to be done for `lib'.
+make[11]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[10]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make -j 56 clib.grd
+make[10]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[10]: `clib.grd' is up to date.
+make[10]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/level1'
+touch lib.grd
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+cd KERNEL ; make -f dMakefile dlib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm/KERNEL'
+make[8]: Nothing to be done for `dlib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm/KERNEL'
+make[7]: Nothing to be done for `dusergemm'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make -j 56 dlib.grd
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dgemm.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -DATLGEMM -I./ \
+              /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemm.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dgemmNN.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL \
+              -DNoTransA_ -DNoTransB_ /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dgemmNT.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL \
+              -DNoTransA_ -DTransB_ /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dgemmTN.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL \
+              -DTransA_ -DNoTransB_ /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dgemmTT.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL \
+              -DTransA_ -DTransB_ /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dNCmmIJK.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL   /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_NCmmIJK.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dNCmmJIK.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL   /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_NCmmJIK.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dNCmmIJK_c.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL   /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_NCmmIJK_c.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dNCmmJIK_c.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL   /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_NCmmJIK_c.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_daliased_gemm.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -DALIASED_GEMM -I./ \
+              /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemm.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dAgemmNN.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL \
+              -DNoTransA_ -DNoTransB_ /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_AgemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dAgemmNT.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL \
+              -DNoTransA_ -DTransB_ /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_AgemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dAgemmTN.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL \
+              -DTransA_ -DNoTransB_ /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_AgemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dAgemmTT.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL \
+              -DTransA_ -DTransB_ /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_AgemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dsmallK_mm.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -DSMALLK_MM -I./ \
+              /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemm.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dsmall_mm.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -DSMALL_MM -I./ \
+              /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemm.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dbig_mm.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -DBIG_MM -I./ \
+              /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemm.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dbignork_mm.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -DBIGNORK_MM -I./ \
+              /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemm.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_dMBJBmm.o ATL_dIBNBmm.o ATL_dIBJBmm.o ATL_dgemm.o ATL_dGetNB.o ATL_dGetNCNB.o ATL_dgemmNN.o ATL_dgemmNT.o ATL_dgemmTN.o ATL_dgemmTT.o ATL_dNCmmIJK.o ATL_dNCmmJIK.o ATL_dNCmmIJK_c.o ATL_dNCmmJIK_c.o ATL_daliased_gemm.o ATL_dAgemmNN.o ATL_dAgemmNT.o ATL_dAgemmTN.o ATL_dAgemmTT.o ATL_dmmJIK.o ATL_dmmIJK.o ATL_dmmJKI.o ATL_dmmK.o ATL_dmmBPP.o ATL_dmmJITcp.o ATL_dcol2blk_aX.o ATL_drow2blkT_aX.o ATL_dcol2blk_a1.o ATL_drow2blkT_a1.o ATL_dputblk_bX.o ATL_dputblk_b1.o ATL_dputblk_bn1.o ATL_dputblk_b0.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch dlib.grd
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make ATL_dbig_mm.o ATL_dsmall_mm.o \
+           pre=d typ=DREAL
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[6]: `ATL_dbig_mm.o' is up to date.
+make[6]: `ATL_dsmall_mm.o' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o xdtfc dtfc.o \
+              /data/user/eesen/tools/ATLAS/build/src/blas/gemm/ATL_dbig_mm.o /data/user/eesen/tools/ATLAS/build/src/blas/gemm/ATL_dsmall_mm.o \
+              /data/user/eesen/tools/ATLAS/build/lib/libatlas.a -lpthread -lm
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+/data/user/eesen/tools/ATLAS/build/bin/ATLrun.sh /data/user/eesen/tools/ATLAS/build/tune/blas/gemm xdtfc
+
+
+Finding crossover point for small case algorithms:
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+   1   N   N   56   10   10    1.0    1.0    0.76 4248.4  1.00
+   1   N   N   56   10   10    1.0    1.0    0.80 4057.2  0.95
+   2   N   N   56  750  750    1.0    1.0    0.62 5318.2  1.00
+   2   N   N   56  750  750    1.0    1.0    0.20 16714.3  3.14
+   3   N   N   56  380  380    1.0    1.0    0.60 5417.9  1.00
+   3   N   N   56  380  380    1.0    1.0    0.19 16930.9  3.13
+   4   N   N   56  195  195    1.0    1.0    0.60 5415.8  1.00
+   4   N   N   56  195  195    1.0    1.0    0.24 13539.4  2.50
+   5   N   N   56  102  102    1.0    1.0    0.61 5339.4  1.00
+   5   N   N   56  102  102    1.0    1.0    0.34 9437.2  1.77
+   6   N   N   56   56   56    1.0    1.0    0.62 5202.1  1.00
+   6   N   N   56   56   56    1.0    1.0    0.21 15606.2  3.00
+   7   N   N   56   33   33    1.0    1.0    0.63 5135.8  1.00
+   7   N   N   56   33   33    1.0    1.0    0.66 4888.3  0.95
+   8   N   N   56   44   44    1.0    1.0    0.62 5269.1  1.00
+   8   N   N   56   44   44    1.0    1.0    0.66 4888.2  0.93
+   9   N   N   56   50   50    1.0    1.0    0.63 5168.4  1.00
+   9   N   N   56   50   50    1.0    1.0    0.66 4917.8  0.95
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  10   N   N   10   56   10    1.0    1.0    0.86 3774.2  1.00
+  10   N   N   10   56   10    1.0    1.0    0.96 3367.0  0.89
+  11   N   N  750   56  750    1.0    1.0    0.65 5024.5  1.00
+  11   N   N  750   56  750    1.0    1.0    0.20 16714.3  3.33
+  12   N   N  380   56  380    1.0    1.0    0.62 5243.1  1.00
+  12   N   N  380   56  380    1.0    1.0    0.20 16585.4  3.16
+  13   N   N  195   56  195    1.0    1.0    0.61 5309.6  1.00
+  13   N   N  195   56  195    1.0    1.0    0.25 13102.7  2.47
+  14   N   N  102   56  102    1.0    1.0    0.60 5374.8  1.00
+  14   N   N  102   56  102    1.0    1.0    0.36 8918.6  1.66
+  15   N   N   56   56   56    1.0    1.0    0.62 5235.6  1.00
+  15   N   N   56   56   56    1.0    1.0    0.20 15912.2  3.04
+  16   N   N   33   56   33    1.0    1.0    0.65 5009.0  1.00
+  16   N   N   33   56   33    1.0    1.0    0.68 4801.5  0.96
+  17   N   N   44   56   44    1.0    1.0    0.63 5135.7  1.00
+  17   N   N   44   56   44    1.0    1.0    0.66 4917.8  0.96
+  18   N   N   50   56   50    1.0    1.0    0.64 5103.4  1.00
+  18   N   N   50   56   50    1.0    1.0    0.66 4888.2  0.96
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  19   N   N   56   56   10    1.0    1.0    0.72 4533.3  1.00
+  19   N   N   56   56   10    1.0    1.0    0.40 8034.2  1.77
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  20   N   N   10   10   56    1.0    1.0    0.76 4293.4  1.00
+  20   N   N   10   10   56    1.0    1.0    0.92 3528.0  0.82
+  21   N   N  750  750   56    1.0    1.0    0.64 5118.7  1.00
+  21   N   N  750  750   56    1.0    1.0    0.17 19500.0  3.81
+  22   N   N  380  380   56    1.0    1.0    0.63 5143.6  1.00
+  22   N   N  380  380   56    1.0    1.0    0.18 18470.1  3.59
+  23   N   N  195  195   56    1.0    1.0    0.60 5379.9  1.00
+  23   N   N  195  195   56    1.0    1.0    0.23 14252.0  2.65
+  24   N   N  102  102   56    1.0    1.0    0.62 5202.5  1.00
+  24   N   N  102  102   56    1.0    1.0    0.31 10405.1  2.00
+  25   N   N   56   56   56    1.0    1.0    0.63 5136.2  1.00
+  25   N   N   56   56   56    1.0    1.0    0.22 15028.2  2.93
+  26   N   N   33   33   56    1.0    1.0    0.64 5103.5  1.00
+  26   N   N   33   33   56    1.0    1.0    0.68 4745.3  0.93
+  27   N   N   44   44   56    1.0    1.0    0.63 5135.7  1.00
+  27   N   N   44   44   56    1.0    1.0    0.64 5103.4  0.99
+  28   N   N   50   50   56    1.0    1.0    0.61 5303.5  1.00
+  28   N   N   50   50   56    1.0    1.0    0.66 4888.2  0.92
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  29   N   N   10   10   10    1.0    1.0    1.00 3258.8  1.00
+  29   N   N   10   10   10    1.0    1.0    1.28 2535.8  0.78
+  30   N   N  750  750  750    1.0    1.0    0.66 5144.8  1.00
+  30   N   N  750  750  750    1.0    1.0    0.18 18342.4  3.57
+  31   N   N  380  380  380    1.0    1.0    0.61 5379.6  1.00
+  31   N   N  380  380  380    1.0    1.0    0.19 17512.3  3.26
+  32   N   N  195  195  195    1.0    1.0    0.60 5449.2  1.00
+  32   N   N  195  195  195    1.0    1.0    0.25 12887.8  2.37
+  33   N   N  102  102  102    1.0    1.0    0.60 5412.2  1.00
+  33   N   N  102  102  102    1.0    1.0    0.42 7658.7  1.42
+  34   N   N   56   56   56    1.0    1.0    0.63 5168.9  1.00
+  34   N   N   56   56   56    1.0    1.0    0.22 15028.2  2.91
+  35   N   N   33   33   33    1.0    1.0    0.64 5071.6  1.00
+  35   N   N   33   33   33    1.0    1.0    0.69 4717.8  0.93
+  36   N   N   44   44   44    1.0    1.0    0.62 5235.2  1.00
+  36   N   N   44   44   44    1.0    1.0    0.67 4830.1  0.92
+  37   N   N   50   50   50    1.0    1.0    0.61 5338.8  1.00
+  37   N   N   50   50   50    1.0    1.0    0.67 4859.3  0.91
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  38   N   T   56   10   10    1.0    1.0    0.72 4508.0  1.00
+  38   N   T   56   10   10    1.0    1.0    0.79 4098.2  0.91
+  39   N   T   56  750  750    1.0    1.0    0.63 5183.5  1.00
+  39   N   T   56  750  750    1.0    1.0    0.20 16714.3  3.22
+  40   N   T   56  380  380    1.0    1.0    0.60 5382.0  1.00
+  40   N   T   56  380  380    1.0    1.0    0.20 16585.4  3.08
+  41   N   T   56  195  195    1.0    1.0    0.60 5379.9  1.00
+  41   N   T   56  195  195    1.0    1.0    0.24 13539.4  2.52
+  42   N   T   56  102  102    1.0    1.0    0.60 5410.6  1.00
+  42   N   T   56  102  102    1.0    1.0    0.34 9437.2  1.74
+  43   N   T   56   56   56    1.0    1.0    0.61 5339.0  1.00
+  43   N   T   56   56   56    1.0    1.0    0.20 16230.4  3.04
+  44   N   T   56   33   33    1.0    1.0    0.62 5201.6  1.00
+  44   N   T   56   33   33    1.0    1.0    0.67 4859.0  0.93
+  45   N   T   56   44   44    1.0    1.0    0.61 5303.5  1.00
+  45   N   T   56   44   44    1.0    1.0    0.66 4888.2  0.92
+  46   N   T   56   50   50    1.0    1.0    0.61 5303.5  1.00
+  46   N   T   56   50   50    1.0    1.0    0.66 4917.8  0.93
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  47   N   T   10   56   10    1.0    1.0    0.79 4098.2  1.00
+  47   N   T   10   56   10    1.0    1.0    0.89 3638.8  0.89
+  48   N   T  750   56  750    1.0    1.0    0.66 4933.7  1.00
+  48   N   T  750   56  750    1.0    1.0    0.20 16714.3  3.39
+  49   N   T  380   56  380    1.0    1.0    0.61 5311.7  1.00
+  49   N   T  380   56  380    1.0    1.0    0.20 16585.4  3.12
+  50   N   T  195   56  195    1.0    1.0    0.60 5379.9  1.00
+  50   N   T  195   56  195    1.0    1.0    0.24 13317.5  2.48
+  51   N   T  102   56  102    1.0    1.0    0.60 5410.6  1.00
+  51   N   T  102   56  102    1.0    1.0    0.38 8634.0  1.60
+  52   N   T   56   56   56    1.0    1.0    0.61 5304.1  1.00
+  52   N   T   56   56   56    1.0    1.0    0.20 15912.2  3.00
+  53   N   T   33   56   33    1.0    1.0    0.64 5071.6  1.00
+  53   N   T   33   56   33    1.0    1.0    0.68 4773.3  0.94
+  54   N   T   44   56   44    1.0    1.0    0.64 5103.4  1.00
+  54   N   T   44   56   44    1.0    1.0    0.67 4858.9  0.95
+  55   N   T   50   56   50    1.0    1.0    0.62 5269.1  1.00
+  55   N   T   50   56   50    1.0    1.0    0.66 4888.2  0.93
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  56   N   T   56   56   10    1.0    1.0    0.68 4773.3  1.00
+  56   N   T   56   56   10    1.0    1.0    0.40 8196.5  1.72
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  57   N   T   10   10   56    1.0    1.0    0.78 4140.0  1.00
+  57   N   T   10   10   56    1.0    1.0    0.97 3339.3  0.81
+  58   N   T  750  750   56    1.0    1.0    0.65 5024.5  1.00
+  58   N   T  750  750   56    1.0    1.0    0.17 19500.0  3.88
+  59   N   T  380  380   56    1.0    1.0    0.64 5079.3  1.00
+  59   N   T  380  380   56    1.0    1.0    0.17 18899.6  3.72
+  60   N   T  195  195   56    1.0    1.0    0.60 5379.9  1.00
+  60   N   T  195  195   56    1.0    1.0    0.22 15043.8  2.80
+  61   N   T  102  102   56    1.0    1.0    0.60 5410.6  1.00
+  61   N   T  102  102   56    1.0    1.0    0.32 10273.4  1.90
+  62   N   T   56   56   56    1.0    1.0    0.61 5304.1  1.00
+  62   N   T   56   56   56    1.0    1.0    0.21 15606.2  2.94
+  63   N   T   33   33   56    1.0    1.0    0.64 5103.5  1.00
+  63   N   T   33   33   56    1.0    1.0    0.67 4859.0  0.95
+  64   N   T   44   44   56    1.0    1.0    0.61 5303.5  1.00
+  64   N   T   44   44   56    1.0    1.0    0.64 5071.5  0.96
+  65   N   T   50   50   56    1.0    1.0    0.61 5338.4  1.00
+  65   N   T   50   50   56    1.0    1.0    0.65 5008.9  0.94
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  66   N   T   10   10   10    1.0    1.0    0.96 3395.2  1.00
+  66   N   T   10   10   10    1.0    1.0    1.26 2567.9  0.76
+  67   N   T  750  750  750    1.0    1.0    0.68 4963.2  1.00
+  67   N   T  750  750  750    1.0    1.0    0.18 19176.1  3.86
+  68   N   T  380  380  380    1.0    1.0    0.64 5176.6  1.00
+  68   N   T  380  380  380    1.0    1.0    0.18 18290.7  3.53
+  69   N   T  195  195  195    1.0    1.0    0.60 5377.0  1.00
+  69   N   T  195  195  195    1.0    1.0    0.25 12887.8  2.40
+  70   N   T  102  102  102    1.0    1.0    0.60 5448.5  1.00
+  70   N   T  102  102  102    1.0    1.0    0.43 7587.1  1.39
+  71   N   T   56   56   56    1.0    1.0    0.61 5339.0  1.00
+  71   N   T   56   56   56    1.0    1.0    0.20 16230.4  3.04
+  72   N   T   33   33   33    1.0    1.0    0.64 5103.5  1.00
+  72   N   T   33   33   33    1.0    1.0    0.69 4717.8  0.92
+  73   N   T   44   44   44    1.0    1.0    0.61 5303.7  1.00
+  73   N   T   44   44   44    1.0    1.0    0.66 4918.0  0.93
+  74   N   T   50   50   50    1.0    1.0    0.61 5338.8  1.00
+  74   N   T   50   50   50    1.0    1.0    0.66 4888.6  0.92
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  75   T   N   56   10   10    1.0    1.0    0.82 3939.1  1.00
+  75   T   N   56   10   10    1.0    1.0    0.84 3845.7  0.98
+  76   T   N   56  750  750    1.0    1.0    0.64 5150.9  1.00
+  76   T   N   56  750  750    1.0    1.0    0.19 17062.5  3.31
+  77   T   N   56  380  380    1.0    1.0    0.62 5243.1  1.00
+  77   T   N   56  380  380    1.0    1.0    0.20 16585.4  3.16
+  78   T   N   56  195  195    1.0    1.0    0.62 5275.1  1.00
+  78   T   N   56  195  195    1.0    1.0    0.24 13317.5  2.52
+  79   T   N   56  102  102    1.0    1.0    0.62 5202.5  1.00
+  79   T   N   56  102  102    1.0    1.0    0.34 9548.2  1.84
+  80   T   N   56   56   56    1.0    1.0    0.63 5136.2  1.00
+  80   T   N   56   56   56    1.0    1.0    0.21 15311.7  2.98
+  81   T   N   56   33   33    1.0    1.0    0.64 5071.6  1.00
+  81   T   N   56   33   33    1.0    1.0    0.68 4801.5  0.95
+  82   T   N   56   44   44    1.0    1.0    0.62 5235.1  1.00
+  82   T   N   56   44   44    1.0    1.0    0.67 4858.9  0.93
+  83   T   N   56   50   50    1.0    1.0    0.64 5103.4  1.00
+  83   T   N   56   50   50    1.0    1.0    0.66 4917.8  0.96
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  84   T   N   10   56   10    1.0    1.0    0.87 3722.2  1.00
+  84   T   N   10   56   10    1.0    1.0    0.96 3381.0  0.91
+  85   T   N  750   56  750    1.0    1.0    0.64 5118.7  1.00
+  85   T   N  750   56  750    1.0    1.0    0.20 16714.3  3.27
+  86   T   N  380   56  380    1.0    1.0    0.62 5209.5  1.00
+  86   T   N  380   56  380    1.0    1.0    0.19 16930.9  3.25
+  87   T   N  195   56  195    1.0    1.0    0.62 5275.1  1.00
+  87   T   N  195   56  195    1.0    1.0    0.25 13102.7  2.48
+  88   T   N  102   56  102    1.0    1.0    0.62 5270.1  1.00
+  88   T   N  102   56  102    1.0    1.0    0.36 8918.6  1.69
+  89   T   N   56   56   56    1.0    1.0    0.64 5040.5  1.00
+  89   T   N   56   56   56    1.0    1.0    0.21 15311.7  3.04
+  90   T   N   33   56   33    1.0    1.0    0.64 5040.1  1.00
+  90   T   N   33   56   33    1.0    1.0    0.67 4830.1  0.96
+  91   T   N   44   56   44    1.0    1.0    0.62 5235.1  1.00
+  91   T   N   44   56   44    1.0    1.0    0.65 4978.2  0.95
+  92   T   N   50   56   50    1.0    1.0    0.63 5168.4  1.00
+  92   T   N   50   56   50    1.0    1.0    0.66 4947.8  0.96
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  93   T   N   56   56   10    1.0    1.0    0.74 4410.1  1.00
+  93   T   N   56   56   10    1.0    1.0    0.41 7878.2  1.79
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+  94   T   N   10   10   56    1.0    1.0    0.70 4610.5  1.00
+  94   T   N   10   10   56    1.0    1.0    0.87 3739.4  0.81
+  95   T   N  750  750   56    1.0    1.0    0.62 5283.9  1.00
+  95   T   N  750  750   56    1.0    1.0    0.17 19046.5  3.60
+  96   T   N  380  380   56    1.0    1.0    0.61 5311.7  1.00
+  96   T   N  380  380   56    1.0    1.0    0.17 18899.6  3.56
+  97   T   N  195  195   56    1.0    1.0    0.62 5275.1  1.00
+  97   T   N  195  195   56    1.0    1.0    0.22 14770.3  2.80
+  98   T   N  102  102   56    1.0    1.0    0.62 5270.1  1.00
+  98   T   N  102  102   56    1.0    1.0    0.31 10405.1  1.97
+  99   T   N   56   56   56    1.0    1.0    0.62 5202.1  1.00
+  99   T   N   56   56   56    1.0    1.0    0.21 15311.7  2.94
+ 100   T   N   33   33   56    1.0    1.0    0.63 5168.5  1.00
+ 100   T   N   33   33   56    1.0    1.0    0.67 4859.0  0.94
+ 101   T   N   44   44   56    1.0    1.0    0.62 5201.5  1.00
+ 101   T   N   44   44   56    1.0    1.0    0.64 5071.5  0.98
+ 102   T   N   50   50   56    1.0    1.0    0.62 5235.1  1.00
+ 102   T   N   50   50   56    1.0    1.0    0.65 5008.9  0.96
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+ 103   T   N   10   10   10    1.0    1.0    1.03 3145.1  1.00
+ 103   T   N   10   10   10    1.0    1.0    1.29 2520.0  0.80
+ 104   T   N  750  750  750    1.0    1.0    0.64 5240.7  1.00
+ 104   T   N  750  750  750    1.0    1.0    0.18 19176.1  3.66
+ 105   T   N  380  380  380    1.0    1.0    0.62 5276.2  1.00
+ 105   T   N  380  380  380    1.0    1.0    0.19 17512.3  3.32
+ 106   T   N  195  195  195    1.0    1.0    0.61 5306.7  1.00
+ 106   T   N  195  195  195    1.0    1.0    0.26 12686.4  2.39
+ 107   T   N  102  102  102    1.0    1.0    0.63 5170.9  1.00
+ 107   T   N  102  102  102    1.0    1.0    0.43 7516.9  1.45
+ 108   T   N   56   56   56    1.0    1.0    0.64 5072.0  1.00
+ 108   T   N   56   56   56    1.0    1.0    0.22 14754.9  2.91
+ 109   T   N   33   33   33    1.0    1.0    0.64 5071.6  1.00
+ 109   T   N   33   33   33    1.0    1.0    0.69 4690.5  0.92
+ 110   T   N   44   44   44    1.0    1.0    0.61 5303.7  1.00
+ 110   T   N   44   44   44    1.0    1.0    0.66 4888.3  0.92
+ 111   T   N   50   50   50    1.0    1.0    0.64 5071.9  1.00
+ 111   T   N   50   50   50    1.0    1.0    0.67 4830.4  0.95
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+ 112   T   T   56   10   10    1.0    1.0    0.82 3977.7  1.00
+ 112   T   T   56   10   10    1.0    1.0    0.84 3845.7  0.97
+ 113   T   T   56  750  750    1.0    1.0    0.64 5087.0  1.00
+ 113   T   T   56  750  750    1.0    1.0    0.20 16380.0  3.22
+ 114   T   T   56  380  380    1.0    1.0    0.63 5143.6  1.00
+ 114   T   T   56  380  380    1.0    1.0    0.20 16585.4  3.22
+ 115   T   T   56  195  195    1.0    1.0    0.62 5275.1  1.00
+ 115   T   T   56  195  195    1.0    1.0    0.24 13317.5  2.52
+ 116   T   T   56  102  102    1.0    1.0    0.62 5270.1  1.00
+ 116   T   T   56  102  102    1.0    1.0    0.34 9437.2  1.79
+ 117   T   T   56   56   56    1.0    1.0    0.63 5136.2  1.00
+ 117   T   T   56   56   56    1.0    1.0    0.21 15606.2  3.04
+ 118   T   T   56   33   33    1.0    1.0    0.63 5135.8  1.00
+ 118   T   T   56   33   33    1.0    1.0    0.66 4888.3  0.95
+ 119   T   T   56   44   44    1.0    1.0    0.61 5338.4  1.00
+ 119   T   T   56   44   44    1.0    1.0    0.67 4858.9  0.91
+ 120   T   T   56   50   50    1.0    1.0    0.63 5135.7  1.00
+ 120   T   T   56   50   50    1.0    1.0    0.66 4947.8  0.96
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+ 121   T   T   10   56   10    1.0    1.0    0.81 3997.3  1.00
+ 121   T   T   10   56   10    1.0    1.0    0.90 3622.5  0.91
+ 122   T   T  750   56  750    1.0    1.0    0.64 5118.7  1.00
+ 122   T   T  750   56  750    1.0    1.0    0.20 16714.3  3.27
+ 123   T   T  380   56  380    1.0    1.0    0.61 5311.7  1.00
+ 123   T   T  380   56  380    1.0    1.0    0.20 16253.7  3.06
+ 124   T   T  195   56  195    1.0    1.0    0.61 5309.6  1.00
+ 124   T   T  195   56  195    1.0    1.0    0.24 13317.5  2.51
+ 125   T   T  102   56  102    1.0    1.0    0.61 5304.5  1.00
+ 125   T   T  102   56  102    1.0    1.0    0.36 8918.6  1.68
+ 126   T   T   56   56   56    1.0    1.0    0.62 5235.6  1.00
+ 126   T   T   56   56   56    1.0    1.0    0.21 15606.2  2.98
+ 127   T   T   33   56   33    1.0    1.0    0.65 5009.0  1.00
+ 127   T   T   33   56   33    1.0    1.0    0.66 4888.3  0.98
+ 128   T   T   44   56   44    1.0    1.0    0.62 5201.5  1.00
+ 128   T   T   44   56   44    1.0    1.0    0.65 4978.2  0.96
+ 129   T   T   50   56   50    1.0    1.0    0.63 5168.4  1.00
+ 129   T   T   50   56   50    1.0    1.0    0.66 4917.8  0.95
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+ 130   T   T   56   56   10    1.0    1.0    0.71 4584.5  1.00
+ 130   T   T   56   56   10    1.0    1.0    0.40 8114.6  1.77
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+ 131   T   T   10   10   56    1.0    1.0    0.75 4339.3  1.00
+ 131   T   T   10   10   56    1.0    1.0    0.90 3590.5  0.83
+ 132   T   T  750  750   56    1.0    1.0    0.62 5250.0  1.00
+ 132   T   T  750  750   56    1.0    1.0    0.17 19046.5  3.63
+ 133   T   T  380  380   56    1.0    1.0    0.62 5243.1  1.00
+ 133   T   T  380  380   56    1.0    1.0    0.17 18899.6  3.60
+ 134   T   T  195  195   56    1.0    1.0    0.62 5207.5  1.00
+ 134   T   T  195  195   56    1.0    1.0    0.22 14506.5  2.79
+ 135   T   T  102  102   56    1.0    1.0    0.62 5270.1  1.00
+ 135   T   T  102  102   56    1.0    1.0    0.31 10405.1  1.97
+ 136   T   T   56   56   56    1.0    1.0    0.62 5235.6  1.00
+ 136   T   T   56   56   56    1.0    1.0    0.20 15912.2  3.04
+ 137   T   T   33   33   56    1.0    1.0    0.64 5103.5  1.00
+ 137   T   T   33   33   56    1.0    1.0    0.67 4859.0  0.95
+ 138   T   T   44   44   56    1.0    1.0    0.62 5269.1  1.00
+ 138   T   T   44   44   56    1.0    1.0    0.63 5135.7  0.97
+ 139   T   T   50   50   56    1.0    1.0    0.62 5269.1  1.00
+ 139   T   T   50   50   56    1.0    1.0    0.64 5103.4  0.97
+
+TEST  TA  TB    M    N    K  alpha   beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  =====  =====  ======  =====  ==== 
+
+ 140   T   T   10   10   10    1.0    1.0    0.99 3272.0  1.00
+ 140   T   T   10   10   10    1.0    1.0    1.27 2551.7  0.78
+ 141   T   T  750  750  750    1.0    1.0    0.66 5113.6  1.00
+ 141   T   T  750  750  750    1.0    1.0    0.18 18750.0  3.67
+ 142   T   T  380  380  380    1.0    1.0    0.63 5209.4  1.00
+ 142   T   T  380  380  380    1.0    1.0    0.18 18290.7  3.51
+ 143   T   T  195  195  195    1.0    1.0    0.61 5306.7  1.00
+ 143   T   T  195  195  195    1.0    1.0    0.25 12887.8  2.43
+ 144   T   T  102  102  102    1.0    1.0    0.61 5340.9  1.00
+ 144   T   T  102  102  102    1.0    1.0    0.42 7731.7  1.45
+ 145   T   T   56   56   56    1.0    1.0    0.62 5235.6  1.00
+ 145   T   T   56   56   56    1.0    1.0    0.20 15912.2  3.04
+ 146   T   T   33   33   33    1.0    1.0    0.64 5103.5  1.00
+ 146   T   T   33   33   33    1.0    1.0    0.68 4745.4  0.93
+ 147   T   T   44   44   44    1.0    1.0    0.61 5338.6  1.00
+ 147   T   T   44   44   44    1.0    1.0    0.66 4947.9  0.93
+ 148   T   T   50   50   50    1.0    1.0    0.62 5235.5  1.00
+ 148   T   T   50   50   50    1.0    1.0    0.66 4888.6  0.93
+cp -f /data/user/eesen/tools/ATLAS/build/include/dXover.h res/.
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+make[3]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+cp /data/user/eesen/tools/ATLAS/build/tune/blas/gemm/res/dXover.h INSTALL_LOG/.
+make[2]: Leaving directory `/data/user/eesen/tools/ATLAS/build/bin'
+
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*      FINISHED ATLAS3.10.0 INSTALL OF SECTION 2-1-3 ON 08/07/2019 AT 12:23   *
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+
+
+

@@ -1,0 +1,38 @@
+#
+#  This file generated at line 274 of /data/user/eesen/tools/ATLAS/build/..//tune/blas/gemv/mvthgen.c
+#
+include Make.inc
+
+MVTCC = $(SKC)
+MVTFLAGS = $(CDEFS) $(SKCFLAGS) -DSCPLX
+
+obj = ATL_cmvtk__900002.o ATL_cmvtk__900002_b0.o ATL_cmvtk__3.o ATL_cmvtk__3_b0.o ATL_cmvtk__900004.o ATL_cmvtk__900004_b0.o
+lib : clib
+clib : cmvtk.grd
+cmvtk.grd : $(obj)
+	$(ARCHIVER) $(ARFLAGS) $(ATLASlib) $(obj)
+	$(RANLIB) $(ATLASlib)
+	touch cmvtk.grd
+cclean : clean
+clean :
+	- rm -f $(obj) cmvtk.grd
+
+ckilllib : killlib
+killlib : 
+	- $(ARCHIVER) d $(ATLASlib) $(obj)
+	$(RANLIB) $(ATLASlib)
+killall : killlib clean
+	 rm -f ATL_cmvtk__900002.c ATL_cmvtk__3.c ATL_cmvtk__900004.c
+
+ATL_cmvtk__900002.o : ATL_cmvtk__900002.c
+	 $(GOODGCC) -o ATL_cmvtk__900002.o -c -DATL_UGEMV=ATL_cmvtk__900002 -x assembler-with-cpp -DSCPLX $(CDEFS) -fPIC ATL_cmvtk__900002.c
+ATL_cmvtk__900002_b0.o : ATL_cmvtk__900002.c
+	 $(GOODGCC) -o ATL_cmvtk__900002_b0.o -c -DATL_UGEMV=ATL_cmvtk__900002_b0 -DBETA0 -x assembler-with-cpp -DSCPLX $(CDEFS) -fPIC ATL_cmvtk__900002.c
+ATL_cmvtk__3.o : ATL_cmvtk__3.c
+	 $(GOODGCC) -o ATL_cmvtk__3.o -c -DATL_UGEMV=ATL_cmvtk__3 -x assembler-with-cpp -DSCPLX $(CDEFS) -fPIC ATL_cmvtk__3.c
+ATL_cmvtk__3_b0.o : ATL_cmvtk__3.c
+	 $(GOODGCC) -o ATL_cmvtk__3_b0.o -c -DATL_UGEMV=ATL_cmvtk__3_b0 -DBETA0 -x assembler-with-cpp -DSCPLX $(CDEFS) -fPIC ATL_cmvtk__3.c
+ATL_cmvtk__900004.o : ATL_cmvtk__900004.c
+	 $(GOODGCC) -o ATL_cmvtk__900004.o -c -DATL_UGEMV=ATL_cmvtk__900004 -x assembler-with-cpp -DSCPLX $(CDEFS) -fPIC ATL_cmvtk__900004.c
+ATL_cmvtk__900004_b0.o : ATL_cmvtk__900004.c
+	 $(GOODGCC) -o ATL_cmvtk__900004_b0.o -c -DATL_UGEMV=ATL_cmvtk__900004_b0 -DBETA0 -x assembler-with-cpp -DSCPLX $(CDEFS) -fPIC ATL_cmvtk__900004.c

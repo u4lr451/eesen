@@ -1,0 +1,38 @@
+#
+#  This file generated at line 270 of /data/user/eesen/tools/ATLAS/build/..//tune/blas/gemv/mvnhgen.c
+#
+include Make.inc
+
+MVNCC = $(SKC)
+MVNFLAGS = $(CDEFS) $(SKCFLAGS) -DSCPLX
+
+obj = ATL_cmvnk__900002.o ATL_cmvnk__900002_b0.o ATL_cmvnk__900006.o ATL_cmvnk__900006_b0.o ATL_cmvnk__900005.o ATL_cmvnk__900005_b0.o
+lib : clib
+clib : cmvnk.grd
+cmvnk.grd : $(obj)
+	$(ARCHIVER) $(ARFLAGS) $(ATLASlib) $(obj)
+	$(RANLIB) $(ATLASlib)
+	touch cmvnk.grd
+cclean : clean
+clean :
+	- rm -f $(obj) cmvnk.grd
+
+ckilllib : killlib
+killlib : 
+	- $(ARCHIVER) d $(ATLASlib) $(obj)
+	$(RANLIB) $(ATLASlib)
+killall : killlib clean
+	 rm -f ATL_cmvnk__900002.c ATL_cmvnk__900006.c ATL_cmvnk__900005.c
+
+ATL_cmvnk__900002.o : ATL_cmvnk__900002.c
+	 $(GOODGCC) -o ATL_cmvnk__900002.o -c -DATL_UGEMV=ATL_cmvnk__900002 -x assembler-with-cpp -DPFIA=prefetcht0 -DPFIY=prefetcht0 -DPFXDIST=128 -DSCPLX $(CDEFS) -fPIC ATL_cmvnk__900002.c
+ATL_cmvnk__900002_b0.o : ATL_cmvnk__900002.c
+	 $(GOODGCC) -o ATL_cmvnk__900002_b0.o -c -DATL_UGEMV=ATL_cmvnk__900002_b0 -DBETA0 -x assembler-with-cpp -DPFIA=prefetcht0 -DPFIY=prefetcht0 -DPFXDIST=128 -DSCPLX $(CDEFS) -fPIC ATL_cmvnk__900002.c
+ATL_cmvnk__900006.o : ATL_cmvnk__900006.c
+	 $(GOODGCC) -o ATL_cmvnk__900006.o -c -DATL_UGEMV=ATL_cmvnk__900006 -x assembler-with-cpp -DPFIY=prefetcht0 -DPFADIST=192 -DPFYDIST=256 -DSCPLX $(CDEFS) -fPIC ATL_cmvnk__900006.c
+ATL_cmvnk__900006_b0.o : ATL_cmvnk__900006.c
+	 $(GOODGCC) -o ATL_cmvnk__900006_b0.o -c -DATL_UGEMV=ATL_cmvnk__900006_b0 -DBETA0 -x assembler-with-cpp -DPFIY=prefetcht0 -DPFADIST=192 -DPFYDIST=256 -DSCPLX $(CDEFS) -fPIC ATL_cmvnk__900006.c
+ATL_cmvnk__900005.o : ATL_cmvnk__900005.c
+	 $(GOODGCC) -o ATL_cmvnk__900005.o -c -DATL_UGEMV=ATL_cmvnk__900005 -x assembler-with-cpp -DSCPLX $(CDEFS) -fPIC ATL_cmvnk__900005.c
+ATL_cmvnk__900005_b0.o : ATL_cmvnk__900005.c
+	 $(GOODGCC) -o ATL_cmvnk__900005_b0.o -c -DATL_UGEMV=ATL_cmvnk__900005_b0 -DBETA0 -x assembler-with-cpp -DSCPLX $(CDEFS) -fPIC ATL_cmvnk__900005.c

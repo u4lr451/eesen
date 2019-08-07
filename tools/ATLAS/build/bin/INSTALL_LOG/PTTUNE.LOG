@@ -1,0 +1,971 @@
+
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*       BEGAN ATLAS3.10.0 INSTALL OF SECTION 4-2-0 ON 08/07/2019 AT 15:48     *
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+
+
+
+make[2]: Entering directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/tune/threads ; make IThreadTune
+make[3]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+make ITune_aff
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -m64 -I/data/user/eesen/tools/ATLAS/build/..//CONFIG/include -c -o probe_aff.o \
+               /data/user/eesen/tools/ATLAS/build/..//CONFIG/src/probe_aff.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -m64 -I/data/user/eesen/tools/ATLAS/build/..//CONFIG/include -c -o atlconf_misc.o \
+               /data/user/eesen/tools/ATLAS/build/..//CONFIG/src/atlconf_misc.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -m64 -o xprobe_aff probe_aff.o atlconf_misc.o -lpthread -lm
+rm res/probe.out
+rm: cannot remove 'res/probe.out': No such file or directory
+make[4]: [IRun_aff] Error 1 (ignored)
+./xprobe_aff -v 1 -o /data/user/eesen/tools/ATLAS/build/include/atlas_taffinity.h 
+   SETAFFNP: DETECTED!
+FINDING LARGEST POWER OF 2 ID THAT CAN BE USED IN AFFINITY:
+   ID=1 works.
+   ID=2 works.
+   ID=4 works.
+   ID=8 works.
+   ID=16 works.
+   ID=32 works.
+   ID=64 FAILS.
+   ID=128 FAILS.
+LARGEST SUCCESSFUL POWER OF 2 = 32
+
+FINDING ALL VALID IDs BETWEEN 0 AND 63:
+   ID=1 works.
+   ID=2 works.
+   ID=3 works.
+   ID=4 works.
+   ID=5 works.
+   ID=6 works.
+   ID=7 works.
+   ID=8 works.
+   ID=9 works.
+   ID=10 works.
+   ID=11 works.
+   ID=12 works.
+   ID=13 works.
+   ID=14 works.
+   ID=15 works.
+   ID=16 works.
+   ID=17 works.
+   ID=18 works.
+   ID=19 works.
+   ID=20 works.
+   ID=21 works.
+   ID=22 works.
+   ID=23 works.
+   ID=24 works.
+   ID=25 works.
+   ID=26 works.
+   ID=27 works.
+   ID=28 works.
+   ID=29 works.
+   ID=30 works.
+   ID=31 works.
+   ID=32 works.
+   ID=33 works.
+   ID=34 works.
+   ID=35 works.
+   ID=36 works.
+   ID=37 works.
+   ID=38 works.
+   ID=39 works.
+   ID=40 works.
+   ID=41 works.
+   ID=42 works.
+   ID=43 works.
+   ID=44 works.
+   ID=45 works.
+   ID=46 works.
+   ID=47 works.
+   ID=48 works.
+   ID=49 works.
+   ID=50 works.
+   ID=51 works.
+   ID=52 works.
+   ID=53 works.
+   ID=54 works.
+   ID=55 works.
+   ID=56 FAILS.
+   ID=57 FAILS.
+   ID=58 FAILS.
+   ID=59 FAILS.
+   ID=60 FAILS.
+   ID=61 FAILS.
+   ID=62 FAILS.
+   ID=63 FAILS.
+AFFINITY TYPE= 'SETAFFNP'
+IDs[56]=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55]
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o probe_nthr.o -c /data/user/eesen/tools/ATLAS/build/..//tune/threads/probe_nthr.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o xprobe_nthr probe_nthr.o /data/user/eesen/tools/ATLAS/build/lib/libatlas.a -lpthread -lm
+rm -f /data/user/eesen/tools/ATLAS/build/include/atlas_pthreads.h
+./xprobe_nthr -o /data/user/eesen/tools/ATLAS/build/include/atlas_pthreads.h
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o tune_aff.o -c /data/user/eesen/tools/ATLAS/build/..//tune/threads/tune_aff.c
+cd /data/user/eesen/tools/ATLAS/build/src/threads ; make
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_lin0tlaunch.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_lin0tlaunch.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_log2tlaunch.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_log2tlaunch.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_dyntlaunch.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_dyntlaunch.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_GetAtomicCount.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_GetAtomicCount.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_FreeGlobalAtomicCount.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_FreeGlobalAtomicCount.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_GetGlobalAtomicCount.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_GetGlobalAtomicCount.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_DecGlobalAtomicCount.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_DecGlobalAtomicCount.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_ResetGlobalAtomicCount.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_ResetGlobalAtomicCount.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_SetGlobalAtomicCount.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_SetGlobalAtomicCount.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_thread_yield.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_thread_yield.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_mutex_free.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_mutex_free.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_mutex_trylock.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_mutex_trylock.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_mutex_unlock.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_mutex_unlock.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_mutex_lock.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_mutex_lock.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_mutex_init.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_mutex_init.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_goparallel.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_goparallel.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_thread_start.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_thread_start.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_thread_exit.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_thread_exit.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_thread_join.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_thread_join.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_lin0tlaunch.o ATL_log2tlaunch.o ATL_dyntlaunch.o  ATL_GetAtomicCount.o ATL_FreeGlobalAtomicCount.o ATL_GetGlobalAtomicCount.o ATL_DecGlobalAtomicCount.o ATL_ResetGlobalAtomicCount.o ATL_SetGlobalAtomicCount.o ATL_thread_yield.o ATL_mutex_free.o ATL_mutex_trylock.o ATL_mutex_unlock.o ATL_mutex_lock.o ATL_mutex_init.o ATL_goparallel.o ATL_thread_start.o ATL_thread_exit.o ATL_thread_join.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch lib.grd
+cd blas/level3 ; make dlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dthreadMM.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_threadMM.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtgemm_rec.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_rec.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtgemm_K.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_K.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtgemm_N.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_N.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtgemm_M.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_M.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtNumGemmThreads.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tNumGemmThreads.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtsymm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tsymm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dttrmm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_ttrmm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dttrsm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_ttrsm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtsyrk.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tsyrk.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtsyr2k.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tsyr2k.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtgemm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtgemm_rkK.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_rkK.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtgemm_bigMN_Kp.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_bigMN_Kp.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_dthreadMM.o ATL_dtgemm_rec.o ATL_dtgemm_K.o ATL_dtgemm_N.o ATL_dtgemm_M.o ATL_dtNumGemmThreads.o ATL_dtsymm.o ATL_dttrmm.o ATL_dttrsm.o ATL_dtsyrk.o ATL_dtsyr2k.o ATL_dtgemm.o ATL_dtgemm_rkK.o ATL_dtgemm_bigMN_Kp.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch dlib.grd
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_Xtsyrk.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_Xtsyrk.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_Xtsyr2k.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_Xtsyr2k.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_Xtgemm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_Xtgemm.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_Xtsyrk.o ATL_Xtsyr2k.o ATL_Xtgemm.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch ilib.grd
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make dtlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dtgemmNN.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL \
+              -DNoTransA_ -DNoTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dtgemmNT.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL \
+              -DNoTransA_ -DTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dtgemmTN.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL \
+              -DTransA_ -DNoTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dtgemmTT.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL \
+              -DTransA_ -DTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_dtgemmNN.o ATL_dtgemmNT.o ATL_dtgemmTN.o ATL_dtgemmTT.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch dtlib.grd
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make zlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX -o ATL_zthreadMM.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_threadMM.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX -o ATL_ztgemm_rec.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_rec.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX -o ATL_ztgemm_K.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_K.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX -o ATL_ztgemm_N.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_N.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX -o ATL_ztgemm_M.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_M.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX -o ATL_ztNumGemmThreads.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tNumGemmThreads.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX -o ATL_ztsymm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tsymm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX -o ATL_zttrmm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_ttrmm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX -o ATL_zttrsm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_ttrsm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX -o ATL_ztsyrk.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tsyrk.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX -o ATL_ztsyr2k.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tsyr2k.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX -o ATL_ztgemm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX -o ATL_ztherk.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_therk.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX -o ATL_zthemm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_themm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX -o ATL_zther2k.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_ther2k.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX -o ATL_ztgemm_rkK.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_rkK.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX -o ATL_ztgemm_bigMN_Kp.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_bigMN_Kp.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_zthreadMM.o ATL_ztgemm_rec.o ATL_ztgemm_K.o ATL_ztgemm_N.o ATL_ztgemm_M.o ATL_ztNumGemmThreads.o ATL_ztsymm.o ATL_zttrmm.o ATL_zttrsm.o ATL_ztsyrk.o ATL_ztsyr2k.o ATL_ztgemm.o ATL_ztherk.o ATL_zthemm.o ATL_zther2k.o ATL_ztgemm_rkK.o ATL_ztgemm_bigMN_Kp.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch zlib.grd
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make ztlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_ztgemmNN.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX \
+              -DNoTransA_ -DNoTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_ztgemmNT.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX \
+              -DNoTransA_ -DTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_ztgemmTN.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX \
+              -DTransA_ -DNoTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_ztgemmTT.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX \
+              -DTransA_ -DTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_ztgemmNC.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX \
+              -DNoTransA_ -DConjTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_ztgemmCN.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX \
+              -DConjTransA_ -DNoTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_ztgemmTC.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX \
+              -DTransA_ -DConjTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_ztgemmCT.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX \
+              -DConjTransA_ -DTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_ztgemmCC.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDCPLX \
+              -DConjTransA_ -DConjTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_ztgemmNN.o ATL_ztgemmNT.o ATL_ztgemmTN.o ATL_ztgemmTT.o ATL_ztgemmNC.o ATL_ztgemmCN.o ATL_ztgemmTC.o ATL_ztgemmCT.o ATL_ztgemmCC.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch ztlib.grd
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make clib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -o ATL_cthreadMM.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_threadMM.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -o ATL_ctgemm_rec.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_rec.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -o ATL_ctgemm_K.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_K.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -o ATL_ctgemm_N.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_N.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -o ATL_ctgemm_M.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_M.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -o ATL_ctNumGemmThreads.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tNumGemmThreads.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -o ATL_ctsymm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tsymm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -o ATL_cttrmm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_ttrmm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -o ATL_cttrsm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_ttrsm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -o ATL_ctsyrk.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tsyrk.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -o ATL_ctsyr2k.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tsyr2k.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -o ATL_ctgemm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -o ATL_ctherk.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_therk.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -o ATL_cthemm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_themm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -o ATL_cther2k.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_ther2k.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -o ATL_ctgemm_rkK.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_rkK.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -o ATL_ctgemm_bigMN_Kp.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_bigMN_Kp.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_cthreadMM.o ATL_ctgemm_rec.o ATL_ctgemm_K.o ATL_ctgemm_N.o ATL_ctgemm_M.o ATL_ctNumGemmThreads.o ATL_ctsymm.o ATL_cttrmm.o ATL_cttrsm.o ATL_ctsyrk.o ATL_ctsyr2k.o ATL_ctgemm.o ATL_ctherk.o ATL_cthemm.o ATL_cther2k.o ATL_ctgemm_rkK.o ATL_ctgemm_bigMN_Kp.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch clib.grd
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make ctlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_ctgemmNN.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX \
+              -DNoTransA_ -DNoTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_ctgemmNT.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX \
+              -DNoTransA_ -DTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_ctgemmTN.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX \
+              -DTransA_ -DNoTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_ctgemmTT.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX \
+              -DTransA_ -DTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_ctgemmNC.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX \
+              -DNoTransA_ -DConjTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_ctgemmCN.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX \
+              -DConjTransA_ -DNoTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_ctgemmTC.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX \
+              -DTransA_ -DConjTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_ctgemmCT.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX \
+              -DConjTransA_ -DTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_ctgemmCC.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX \
+              -DConjTransA_ -DConjTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_ctgemmNN.o ATL_ctgemmNT.o ATL_ctgemmTN.o ATL_ctgemmTT.o ATL_ctgemmNC.o ATL_ctgemmCN.o ATL_ctgemmTC.o ATL_ctgemmCT.o ATL_ctgemmCC.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch ctlib.grd
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make slib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_sthreadMM.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_threadMM.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stgemm_rec.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_rec.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stgemm_K.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_K.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stgemm_N.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_N.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stgemm_M.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_M.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stNumGemmThreads.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tNumGemmThreads.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stsymm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tsymm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_sttrmm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_ttrmm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_sttrsm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_ttrsm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stsyrk.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tsyrk.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stsyr2k.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tsyr2k.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stgemm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stgemm_rkK.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_rkK.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stgemm_bigMN_Kp.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_bigMN_Kp.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_sthreadMM.o ATL_stgemm_rec.o ATL_stgemm_K.o ATL_stgemm_N.o ATL_stgemm_M.o ATL_stNumGemmThreads.o ATL_stsymm.o ATL_sttrmm.o ATL_sttrsm.o ATL_stsyrk.o ATL_stsyr2k.o ATL_stgemm.o ATL_stgemm_rkK.o ATL_stgemm_bigMN_Kp.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch slib.grd
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make stlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_stgemmNN.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL \
+              -DNoTransA_ -DNoTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_stgemmNT.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL \
+              -DNoTransA_ -DTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_stgemmTN.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL \
+              -DTransA_ -DNoTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_stgemmTT.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL \
+              -DTransA_ -DTransB_ -DATL_TGEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_stgemmNN.o ATL_stgemmNT.o ATL_stgemmTN.o ATL_stgemmTT.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch stlib.grd
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level2 ; make dlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -I./ -DDREAL -o ATL_dtgemv.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level2/ATL_tgemv.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -I./ -DDREAL -o ATL_dtger.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level2/ATL_tger.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_dtgemv.o ATL_dtger.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch dlib.grd
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make zlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -I./ -DDCPLX -o ATL_ztgemv.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level2/ATL_tgemv.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -I./ -DDCPLX -DConj_ -o ATL_ztgerc.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level2/ATL_tger.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -I./ -DDCPLX   -o ATL_ztgeru.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level2/ATL_tger.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_ztgemv.o ATL_ztgerc.o ATL_ztgeru.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch zlib.grd
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make clib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -I./ -DSCPLX -o ATL_ctgemv.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level2/ATL_tgemv.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -I./ -DSCPLX -DConj_ -o ATL_ctgerc.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level2/ATL_tger.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -I./ -DSCPLX   -o ATL_ctgeru.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level2/ATL_tger.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_ctgemv.o ATL_ctgerc.o ATL_ctgeru.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch clib.grd
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make slib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -I./ -DSREAL -o ATL_stgemv.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level2/ATL_tgemv.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -I./ -DSREAL -o ATL_stger.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level2/ATL_tger.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_stgemv.o ATL_stger.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch slib.grd
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_goparallel_noaff.o -c -DATL_TUNING -DATL_NOAFFINITY=1 \
+               /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_goparallel.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_log2tlaunch_noaff.o -c -DATL_TUNING -DATL_NOAFFINITY=1 \
+               /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_log2tlaunch.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_goparallel_aff.o -DATL_TUNING -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_goparallel.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_log2tlaunch.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_log2tlaunch.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_thread_start_noaff.o -c -DATL_TUNING -DATL_NOAFFINITY=1 \
+               /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_thread_start.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_thread_start.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_thread_start.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o xtune_aff tune_aff.o ATL_goparallel_noaff.o \
+              ATL_goparallel_aff.o ATL_log2tlaunch_noaff.o ATL_log2tlaunch.o \
+              ATL_thread_start_noaff.o ATL_thread_start.o /data/user/eesen/tools/ATLAS/build/lib/libatlas.a -lpthread -lm
+./xtune_aff -o /data/user/eesen/tools/ATLAS/build/include/atlas_taffinity.h
+FINDING WHETHER AFFINITY IS HELPFUL USING FLOPS=5.400000e+07 NREPS=50
+   Affinity    time = 2.027229e+00
+   NO affinity time = 1.994171e+00
+Affinity speedup = 0.98
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+make iTune_atomic
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+if make mutcnt ; then \
+           if make iFind_atomic_arch ; then \
+              make xtune_count ; ./xtune_count -r 1000000 -o yes; \
+           fi ; \
+        else \
+           make iFind_atomic_arch ; \
+        fi
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+cd /data/user/eesen/tools/ATLAS/build/src/threads ; make ATL_SetAtomicCount_mut_mut.o ATL_ResetAtomicCount_mut_mut.o ATL_DecAtomicCount_mut_mut.o ATL_FreeAtomicCount_mut_mut.o
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_SetAtomicCount_mut_mut.o -DATL_SetAtomicCount=ATL_SetAtomicCount_mut \
+               -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_SetAtomicCount_mut.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_ResetAtomicCount_mut_mut.o -DATL_ResetAtomicCount=ATL_ResetAtomicCount_mut \
+               -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_ResetAtomicCount_mut.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_DecAtomicCount_mut_mut.o -DATL_DecAtomicCount=ATL_DecAtomicCount_mut \
+               -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_DecAtomicCount_mut.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_FreeAtomicCount_mut_mut.o -DATL_FreeAtomicCount=ATL_FreeAtomicCount_mut \
+               -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_FreeAtomicCount_mut.c
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+if make xprobe_atomic_amd64 ; then \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_*AtomicCount_arch.c . ; \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_ResetAtomicCount_amd64.S \
+              ATL_ResetAtomicCount_arch.S ; \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_DecAtomicCount_amd64.S \
+              ATL_DecAtomicCount_arch.S ; \
+           rm /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc ; \
+           echo "aobj = ATL_SetAtomicCount_arch.o ATL_ResetAtomicCount_amd64.o ATL_DecAtomicCount_amd64.o ATL_FreeAtomicCount_arch.o" > /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc ; \
+elif make xprobe_atomic_win64 ; then \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_*AtomicCount_arch.c . ; \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_ResetAtomicCount_win64.S \
+              ATL_ResetAtomicCount_arch.S ; \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_DecAtomicCount_win64.S \
+              ATL_DecAtomicCount_arch.S ; \
+           rm /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc ; \
+           echo "aobj = ATL_SetAtomicCount_arch.o ATL_ResetAtomicCount_win64.o ATL_DecAtomicCount_win64.o ATL_FreeAtomicCount_arch.o" > /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc ; \
+elif make xprobe_atomic_ia32 ; then \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_*AtomicCount_arch.c . ; \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_ResetAtomicCount_ia32.S \
+              ATL_ResetAtomicCount_arch.S ; \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_DecAtomicCount_ia32.S \
+              ATL_DecAtomicCount_arch.S ; \
+           rm /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc ; \
+           echo "aobj = ATL_SetAtomicCount_arch.o ATL_ResetAtomicCount_ia32.o ATL_DecAtomicCount_ia32.o ATL_FreeAtomicCount_arch.o" > /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc ; \
+elif make xprobe_atomic_sparc ; then \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_*AtomicCount_arch.c . ; \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_ResetAtomicCount_sparc.S \
+              ATL_ResetAtomicCount_arch.S ; \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_DecAtomicCount_sparc.S \
+              ATL_DecAtomicCount_arch.S ; \
+           rm /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc ; \
+           echo "aobj = ATL_SetAtomicCount_arch.o ATL_ResetAtomicCount_sparc.o ATL_DecAtomicCount_sparc.o ATL_FreeAtomicCount_arch.o" > /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc ; \
+elif make xprobe_atomic_mips ; then \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_*AtomicCount_arch.c . ; \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_ResetAtomicCount_mips.S \
+              ATL_ResetAtomicCount_arch.S ; \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_DecAtomicCount_mips.S \
+              ATL_DecAtomicCount_arch.S ; \
+           rm /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc ; \
+           echo "aobj = ATL_SetAtomicCount_arch.o ATL_ResetAtomicCount_mips.o ATL_DecAtomicCount_mips.o ATL_FreeAtomicCount_arch.o" > /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc ; \
+        else \
+           make iForceUseMutex ; \
+        fi
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o test_count.o -c /data/user/eesen/tools/ATLAS/build/..//tune/threads/test_count.c
+rm -f /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc
+echo "aobj =" > /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc
+make tlib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+cd /data/user/eesen/tools/ATLAS/build/src/threads ; make
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+cd blas/level3 ; make dlib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[9]: Nothing to be done for `dlib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make dtlib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[9]: Nothing to be done for `dtlib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make zlib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[9]: Nothing to be done for `zlib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make ztlib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[9]: Nothing to be done for `ztlib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make clib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[9]: Nothing to be done for `clib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make ctlib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[9]: Nothing to be done for `ctlib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make slib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[9]: Nothing to be done for `slib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make stlib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[9]: Nothing to be done for `stlib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level2 ; make dlib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[9]: Nothing to be done for `dlib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make zlib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[9]: Nothing to be done for `zlib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make clib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[9]: Nothing to be done for `clib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make slib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[9]: Nothing to be done for `slib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+cd /data/user/eesen/tools/ATLAS/build/src/threads ; make ATL_SetAtomicCount_arch.o \
+           ATL_ResetAtomicCount_amd64.o ATL_DecAtomicCount_amd64.o \
+           ATL_FreeAtomicCount_arch.o
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_SetAtomicCount_arch.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_SetAtomicCount_arch.c
+/usr/bin/x86_64-redhat-linux-gcc -O -fomit-frame-pointer -mavx -m64 -fPIC -m64 -fPIC -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -o ATL_ResetAtomicCount_amd64.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_ResetAtomicCount_amd64.S
+/usr/bin/x86_64-redhat-linux-gcc -O -fomit-frame-pointer -mavx -m64 -fPIC -m64 -fPIC -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -o ATL_DecAtomicCount_amd64.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_DecAtomicCount_amd64.S
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_FreeAtomicCount_arch.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_FreeAtomicCount_arch.c
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o xtst_arch test_count.o \
+              /data/user/eesen/tools/ATLAS/build/src/threads/ATL_SetAtomicCount_arch.o \
+              /data/user/eesen/tools/ATLAS/build/src/threads/ATL_ResetAtomicCount_amd64.o \
+              /data/user/eesen/tools/ATLAS/build/src/threads/ATL_DecAtomicCount_amd64.o \
+              /data/user/eesen/tools/ATLAS/build/src/threads/ATL_FreeAtomicCount_arch.o \
+              /data/user/eesen/tools/ATLAS/build/lib/libatlas.a -lpthread -lm
+./xtst_arch
+TEST PASSED
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+rm -f /data/user/eesen/tools/ATLAS/build/src/threads/lib.grd
+make tlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+cd /data/user/eesen/tools/ATLAS/build/src/threads ; make
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_lin0tlaunch.o ATL_log2tlaunch.o ATL_dyntlaunch.o ATL_SetAtomicCount_arch.o ATL_ResetAtomicCount_amd64.o ATL_DecAtomicCount_amd64.o ATL_FreeAtomicCount_arch.o ATL_GetAtomicCount.o ATL_FreeGlobalAtomicCount.o ATL_GetGlobalAtomicCount.o ATL_DecGlobalAtomicCount.o ATL_ResetGlobalAtomicCount.o ATL_SetGlobalAtomicCount.o ATL_thread_yield.o ATL_mutex_free.o ATL_mutex_trylock.o ATL_mutex_unlock.o ATL_mutex_lock.o ATL_mutex_init.o ATL_goparallel.o ATL_thread_start.o ATL_thread_exit.o ATL_thread_join.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch lib.grd
+cd blas/level3 ; make dlib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[8]: Nothing to be done for `dlib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make dtlib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[8]: Nothing to be done for `dtlib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make zlib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[8]: Nothing to be done for `zlib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make ztlib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[8]: Nothing to be done for `ztlib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make clib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[8]: Nothing to be done for `clib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make ctlib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[8]: Nothing to be done for `ctlib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make slib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[8]: Nothing to be done for `slib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make stlib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[8]: Nothing to be done for `stlib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level2 ; make dlib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[8]: Nothing to be done for `dlib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make zlib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[8]: Nothing to be done for `zlib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make clib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[8]: Nothing to be done for `clib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make slib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[8]: Nothing to be done for `slib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o tune_count.o -c /data/user/eesen/tools/ATLAS/build/..//tune/threads/tune_count.c
+cd /data/user/eesen/tools/ATLAS/build/src/threads ; make
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+cd blas/level3 ; make dlib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[7]: Nothing to be done for `dlib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make dtlib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[7]: Nothing to be done for `dtlib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make zlib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[7]: Nothing to be done for `zlib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make ztlib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[7]: Nothing to be done for `ztlib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make clib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[7]: Nothing to be done for `clib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make ctlib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[7]: Nothing to be done for `ctlib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make slib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[7]: Nothing to be done for `slib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make stlib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[7]: Nothing to be done for `stlib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level2 ; make dlib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[7]: Nothing to be done for `dlib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make zlib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[7]: Nothing to be done for `zlib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make clib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[7]: Nothing to be done for `clib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make slib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[7]: Nothing to be done for `slib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+cd /data/user/eesen/tools/ATLAS/build/src/threads ; make ATL_SetAtomicCount_mut_mut.o ATL_ResetAtomicCount_mut_mut.o ATL_DecAtomicCount_mut_mut.o ATL_FreeAtomicCount_mut_mut.o
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+make[6]: `ATL_SetAtomicCount_mut_mut.o' is up to date.
+make[6]: `ATL_ResetAtomicCount_mut_mut.o' is up to date.
+make[6]: `ATL_DecAtomicCount_mut_mut.o' is up to date.
+make[6]: `ATL_FreeAtomicCount_mut_mut.o' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+if make xprobe_atomic_amd64 ; then \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_*AtomicCount_arch.c . ; \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_ResetAtomicCount_amd64.S \
+              ATL_ResetAtomicCount_arch.S ; \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_DecAtomicCount_amd64.S \
+              ATL_DecAtomicCount_arch.S ; \
+           rm /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc ; \
+           echo "aobj = ATL_SetAtomicCount_arch.o ATL_ResetAtomicCount_amd64.o ATL_DecAtomicCount_amd64.o ATL_FreeAtomicCount_arch.o" > /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc ; \
+elif make xprobe_atomic_win64 ; then \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_*AtomicCount_arch.c . ; \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_ResetAtomicCount_win64.S \
+              ATL_ResetAtomicCount_arch.S ; \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_DecAtomicCount_win64.S \
+              ATL_DecAtomicCount_arch.S ; \
+           rm /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc ; \
+           echo "aobj = ATL_SetAtomicCount_arch.o ATL_ResetAtomicCount_win64.o ATL_DecAtomicCount_win64.o ATL_FreeAtomicCount_arch.o" > /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc ; \
+elif make xprobe_atomic_ia32 ; then \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_*AtomicCount_arch.c . ; \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_ResetAtomicCount_ia32.S \
+              ATL_ResetAtomicCount_arch.S ; \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_DecAtomicCount_ia32.S \
+              ATL_DecAtomicCount_arch.S ; \
+           rm /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc ; \
+           echo "aobj = ATL_SetAtomicCount_arch.o ATL_ResetAtomicCount_ia32.o ATL_DecAtomicCount_ia32.o ATL_FreeAtomicCount_arch.o" > /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc ; \
+elif make xprobe_atomic_sparc ; then \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_*AtomicCount_arch.c . ; \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_ResetAtomicCount_sparc.S \
+              ATL_ResetAtomicCount_arch.S ; \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_DecAtomicCount_sparc.S \
+              ATL_DecAtomicCount_arch.S ; \
+           rm /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc ; \
+           echo "aobj = ATL_SetAtomicCount_arch.o ATL_ResetAtomicCount_sparc.o ATL_DecAtomicCount_sparc.o ATL_FreeAtomicCount_arch.o" > /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc ; \
+elif make xprobe_atomic_mips ; then \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_*AtomicCount_arch.c . ; \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_ResetAtomicCount_mips.S \
+              ATL_ResetAtomicCount_arch.S ; \
+           cp /data/user/eesen/tools/ATLAS/build/..//src/threads/ATL_DecAtomicCount_mips.S \
+              ATL_DecAtomicCount_arch.S ; \
+           rm /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc ; \
+           echo "aobj = ATL_SetAtomicCount_arch.o ATL_ResetAtomicCount_mips.o ATL_DecAtomicCount_mips.o ATL_FreeAtomicCount_arch.o" > /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc ; \
+        else \
+           make iForceUseMutex ; \
+        fi
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+rm -f /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc
+echo "aobj =" > /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc
+make tlib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+cd /data/user/eesen/tools/ATLAS/build/src/threads ; make
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+cd blas/level3 ; make dlib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[9]: Nothing to be done for `dlib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make dtlib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[9]: Nothing to be done for `dtlib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make zlib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[9]: Nothing to be done for `zlib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make ztlib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[9]: Nothing to be done for `ztlib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make clib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[9]: Nothing to be done for `clib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make ctlib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[9]: Nothing to be done for `ctlib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make slib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[9]: Nothing to be done for `slib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make stlib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[9]: Nothing to be done for `stlib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level2 ; make dlib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[9]: Nothing to be done for `dlib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make zlib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[9]: Nothing to be done for `zlib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make clib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[9]: Nothing to be done for `clib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make slib
+make[9]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[9]: Nothing to be done for `slib'.
+make[9]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+cd /data/user/eesen/tools/ATLAS/build/src/threads ; make ATL_SetAtomicCount_arch.o \
+           ATL_ResetAtomicCount_amd64.o ATL_DecAtomicCount_amd64.o \
+           ATL_FreeAtomicCount_arch.o
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+make[7]: `ATL_SetAtomicCount_arch.o' is up to date.
+make[7]: `ATL_ResetAtomicCount_amd64.o' is up to date.
+make[7]: `ATL_DecAtomicCount_amd64.o' is up to date.
+make[7]: `ATL_FreeAtomicCount_arch.o' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o xtst_arch test_count.o \
+              /data/user/eesen/tools/ATLAS/build/src/threads/ATL_SetAtomicCount_arch.o \
+              /data/user/eesen/tools/ATLAS/build/src/threads/ATL_ResetAtomicCount_amd64.o \
+              /data/user/eesen/tools/ATLAS/build/src/threads/ATL_DecAtomicCount_amd64.o \
+              /data/user/eesen/tools/ATLAS/build/src/threads/ATL_FreeAtomicCount_arch.o \
+              /data/user/eesen/tools/ATLAS/build/lib/libatlas.a -lpthread -lm
+./xtst_arch
+TEST PASSED
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+rm -f /data/user/eesen/tools/ATLAS/build/src/threads/lib.grd
+make tlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+cd /data/user/eesen/tools/ATLAS/build/src/threads ; make
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_lin0tlaunch.o ATL_log2tlaunch.o ATL_dyntlaunch.o ATL_SetAtomicCount_arch.o ATL_ResetAtomicCount_amd64.o ATL_DecAtomicCount_amd64.o ATL_FreeAtomicCount_arch.o ATL_GetAtomicCount.o ATL_FreeGlobalAtomicCount.o ATL_GetGlobalAtomicCount.o ATL_DecGlobalAtomicCount.o ATL_ResetGlobalAtomicCount.o ATL_SetGlobalAtomicCount.o ATL_thread_yield.o ATL_mutex_free.o ATL_mutex_trylock.o ATL_mutex_unlock.o ATL_mutex_lock.o ATL_mutex_init.o ATL_goparallel.o ATL_thread_start.o ATL_thread_exit.o ATL_thread_join.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch lib.grd
+cd blas/level3 ; make dlib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[8]: Nothing to be done for `dlib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make dtlib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[8]: Nothing to be done for `dtlib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make zlib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[8]: Nothing to be done for `zlib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make ztlib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[8]: Nothing to be done for `ztlib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make clib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[8]: Nothing to be done for `clib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make ctlib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[8]: Nothing to be done for `ctlib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level3 ; make slib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+make[8]: Nothing to be done for `slib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make stlib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[8]: Nothing to be done for `stlib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd blas/level2 ; make dlib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[8]: Nothing to be done for `dlib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make zlib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[8]: Nothing to be done for `zlib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make clib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[8]: Nothing to be done for `clib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+cd blas/level2 ; make slib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[8]: Nothing to be done for `slib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level2'
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+make ATL_SetAtomicCount_arch.o ATL_ResetAtomicCount_arch.o ATL_DecAtomicCount_arch.o ATL_FreeAtomicCount_arch.o
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_SetAtomicCount_arch.o -c ATL_SetAtomicCount_arch.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_ResetAtomicCount_arch.o -c ATL_ResetAtomicCount_arch.S
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_DecAtomicCount_arch.o -c ATL_DecAtomicCount_arch.S
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_FreeAtomicCount_arch.o -c ATL_FreeAtomicCount_arch.c
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o xtune_count tune_count.o ATL_SetAtomicCount_arch.o ATL_ResetAtomicCount_arch.o ATL_DecAtomicCount_arch.o ATL_FreeAtomicCount_arch.o /data/user/eesen/tools/ATLAS/build/src/threads/ATL_SetAtomicCount_mut_mut.o /data/user/eesen/tools/ATLAS/build/src/threads/ATL_ResetAtomicCount_mut_mut.o /data/user/eesen/tools/ATLAS/build/src/threads/ATL_DecAtomicCount_mut_mut.o /data/user/eesen/tools/ATLAS/build/src/threads/ATL_FreeAtomicCount_mut_mut.o \
+              /data/user/eesen/tools/ATLAS/build/lib/libatlas.a -lpthread -lm
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+FINDING SPEED OF SERIAL COUNTER CHANGING USING 1000000 REPS:
+   serial AtoDec time = 1.159900e-02
+   serial mutex  time = 2.138100e-02
+   serial/read unsafe time = 3.200000e-05
+   MICROSECONDS PER CALL: SER=0.00 DEC=0.01, MUT=0.02
+DEC TIME SPEEDUP OVER MUTEX   = 1.84
+UNSAFE/READ SPEEDUP OVER DEC = 362.47
+
+FINDING SPEED OF PARALLEL COUNTER CHANGING USING 1000000 REPS 56 PROC
+   parallel GblDec time = 1.250800e-02 (par/ser = 1.08)
+   parallel AtoDec time = 9.484300e-02 (par/ser = 8.18)
+   parallel mutex  time = 6.519800e-02 (par/ser = 3.05)
+   parallel unsafe time = 5.200000e-05 (par/ser = 1.63)
+   MICROSECONDS PER CALL: SER=0.00 DEC=0.09, GBLDEC=0.01, MUT=0.07
+DEC TIME SPEEDUP OVER MUTEX   = 0.69
+GBLDEC TIME SPEEDUP OVER MUTEX   = 5.21
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+make MakeThreadSum
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+rm -f /data/user/eesen/tools/ATLAS/build/include/atlas_tsumm.h
+echo "#ifndef ATLAS_SUMM_H" > /data/user/eesen/tools/ATLAS/build/include/atlas_tsumm.h
+echo "   #define ATLAS_SUMM_H" >> /data/user/eesen/tools/ATLAS/build/include/atlas_tsumm.h
+if [ -e res/aff.h ]; then \
+           cat res/aff.h >> /data/user/eesen/tools/ATLAS/build/include/atlas_tsumm.h ; \
+        else \
+           echo "#define ATL_TAFFINITY 0" >> /data/user/eesen/tools/ATLAS/build/include/atlas_tsumm.h ; \
+        fi
+if grep -q ATL_DecAtomicCount_mut /data/user/eesen/tools/ATLAS/build/src/threads/atomic.inc ; then \
+           echo "#define ATL_ATOMIC_COUNT_MUT 1" >> /data/user/eesen/tools/ATLAS/build/include/atlas_tsumm.h ; \
+        else \
+           echo "#define ATL_ATOMIC_COUNT_MUT 0" >> /data/user/eesen/tools/ATLAS/build/include/atlas_tsumm.h ; \
+        fi
+echo "#endif" >> /data/user/eesen/tools/ATLAS/build/include/atlas_tsumm.h
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+make[3]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/threads'
+cd /data/user/eesen/tools/ATLAS/build/src/auxil/ ; make ptlib
+make[3]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_ptflushcache.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC /data/user/eesen/tools/ATLAS/build/..//src/auxil/ATL_ptflushcache.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_ptflushcache.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch ptlib.grd
+make[3]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+make INSTALL_LOG/atlas_tcacheedge.h
+make[3]: Entering directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/tune/blas/gemm ; make res/atlas_tcacheedge.h
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+make xdtfindCE
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make dlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make auxillib dcleanuplib dusergemm
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd /data/user/eesen/tools/ATLAS/build/src/auxil ; make lib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+make[8]: Nothing to be done for `lib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+cd KERNEL ; make -f dMakefile dlib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm/KERNEL'
+make[8]: Nothing to be done for `dlib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm/KERNEL'
+make[7]: Nothing to be done for `dusergemm'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make -j 56 dlib.grd
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[7]: `dlib.grd' is up to date.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -c -DATL_THREADED_CE -DDREAL -o dtfindCE.o \
+               /data/user/eesen/tools/ATLAS/build/..//tune/blas/gemm/findCE.c
+cd /data/user/eesen/tools/ATLAS/build/src/threads ; make lib.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+make[6]: `lib.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads'
+cd /data/user/eesen/tools/ATLAS/build/src/threads/blas/level3 ; make dlib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtgemm_rec.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_rec.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtgemm_K.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_K.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtgemm_N.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_N.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtgemm_M.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_M.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtNumGemmThreads.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tNumGemmThreads.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtsymm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tsymm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dttrmm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_ttrmm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dttrsm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_ttrsm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtsyrk.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tsyrk.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtsyr2k.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tsyr2k.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtgemm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtgemm_rkK.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_rkK.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -o ATL_dtgemm_bigMN_Kp.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_bigMN_Kp.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_dthreadMM.o ATL_dtgemm_rec.o ATL_dtgemm_K.o ATL_dtgemm_N.o ATL_dtgemm_M.o ATL_dtNumGemmThreads.o ATL_dtsymm.o ATL_dttrmm.o ATL_dttrsm.o ATL_dtsyrk.o ATL_dtsyr2k.o ATL_dtgemm.o ATL_dtgemm_rkK.o ATL_dtgemm_bigMN_Kp.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch dlib.grd
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_Xtsyrk.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_Xtsyrk.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_Xtsyr2k.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_Xtsyr2k.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o ATL_Xtgemm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_Xtgemm.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_Xtsyrk.o ATL_Xtsyr2k.o ATL_Xtgemm.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch ilib.grd
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/threads/blas/level3 ; make ATL_dtgemm_CE.o \
+           ATL_dtgemm_bigMN_Kp_CE.o
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stgemm_rec.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_rec.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stgemm_K.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_K.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stgemm_N.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_N.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stgemm_M.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_M.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stNumGemmThreads.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tNumGemmThreads.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stsymm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tsymm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_sttrmm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_ttrmm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_sttrsm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_ttrsm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stsyrk.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tsyrk.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stsyr2k.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tsyr2k.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stgemm.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stgemm_rkK.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_rkK.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSREAL -o ATL_stgemm_bigMN_Kp.o -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_bigMN_Kp.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_sthreadMM.o ATL_stgemm_rec.o ATL_stgemm_K.o ATL_stgemm_N.o ATL_stgemm_M.o ATL_stNumGemmThreads.o ATL_stsymm.o ATL_sttrmm.o ATL_sttrsm.o ATL_stsyrk.o ATL_stsyr2k.o ATL_stgemm.o ATL_stgemm_rkK.o ATL_stgemm_bigMN_Kp.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch slib.grd
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -DFindingCE -o ATL_dtgemm_CE.o \
+               -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm.c
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -DFindingCE -o ATL_dtgemm_bigMN_Kp_CE.o \
+               -c /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm_bigMN_Kp.c
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/threads/blas/level3'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make ATL_dFindCE_mm.o pre=d typ=DREAL
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dFindCE_mm.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -DFindingCE -I./ /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemm.c
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o xdtfindCE dtfindCE.o \
+           /data/user/eesen/tools/ATLAS/build/src/threads/blas/level3/ATL_dtgemm_CE.o \
+           /data/user/eesen/tools/ATLAS/build/src/threads/blas/level3/ATL_dtgemm_bigMN_Kp_CE.o \
+           /data/user/eesen/tools/ATLAS/build/src/blas/gemm/ATL_dFindCE_mm.o /data/user/eesen/tools/ATLAS/build/lib/libatlas.a -lpthread -lm
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+/data/user/eesen/tools/ATLAS/build/bin/ATLrun.sh /data/user/eesen/tools/ATLAS/build/tune/blas/gemm xdtfindCE -f res/atlas_tcacheedge.h
+assertion !ATL_dtgemm_bigMN_Kp(TA, TB, M, N, K, alpha, A, lda, B, ldb, beta, C, ldc) failed, line 580 of file /data/user/eesen/tools/ATLAS/build/..//src/threads/blas/level3/ATL_tgemm.c
+TA  TB       M       N       K   alpha    beta  CacheEdge       TIME    MFLOPS
+==  ==  ======  ======  ======  ======  ======  =========  =========  ========
+
+ T   N     896    1960    4681    1.00    1.00          0      0.102 160478.37
+ T   N     896    1960    4681    1.00    1.00         32     -2.000      0.00
+ T   N     896    1960    4681    1.00    1.00         64     -2.000      0.00
+ T   N     896    1960    4681    1.00    1.00        128      3.103   5299.30
+ T   N     896    1960    4681    1.00    1.00        256      0.563  29223.97
+ T   N     896    1960    4681    1.00    1.00        512      0.316  52002.52
+ T   N     896    1960    4681    1.00    1.00       1024      0.272  60429.48
+ T   N     896    1960    4681    1.00    1.00       2048      0.139 118575.25
+ T   N     896    1960    4681    1.00    1.00       4096      0.277  59334.70
+make[4]: *** [res/atlas_tcacheedge.h] Error 255
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+make[3]: *** [/data/user/eesen/tools/ATLAS/build/tune/blas/gemm/res/atlas_tcachedge.h] Error 2
+make[3]: Leaving directory `/data/user/eesen/tools/ATLAS/build/bin'
+make[2]: *** [IPTtune] Error 2
+make[2]: Leaving directory `/data/user/eesen/tools/ATLAS/build/bin'

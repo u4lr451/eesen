@@ -1,0 +1,539 @@
+
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*       BEGAN ATLAS3.10.0 INSTALL OF SECTION 2-4-3 ON 08/07/2019 AT 15:03     *
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+
+
+
+make[2]: Entering directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/tune/blas/gemm ; make res/cXover.h pre=c nb=88
+make[3]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+make cRun_tfc pre=c
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+make xctfc pre=c typ=SCPLX
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+/usr/bin/x86_64-redhat-linux-gcc -o ctfc.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX /data/user/eesen/tools/ATLAS/build/..//tune/blas/gemm/tfc.c \
+                 -DSM_FOUT=/data/user/eesen/tools/ATLAS/build/include/cXover.h
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make clib
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make auxillib ccleanuplib cusergemm
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd /data/user/eesen/tools/ATLAS/build/src/auxil ; make lib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+make[8]: Nothing to be done for `lib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+cd KERNEL ; make -f cMakefile clib
+make[8]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm/KERNEL'
+make[8]: Nothing to be done for `clib'.
+make[8]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm/KERNEL'
+make[7]: Nothing to be done for `cusergemm'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make -j 56 clib.grd
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_cgemmNN.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX \
+              -DNoTransA_ -DNoTransB_ /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_cgemmNT.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX \
+              -DNoTransA_ -DTransB_ /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_cgemmTN.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX \
+              -DTransA_ -DNoTransB_ /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_cgemmTT.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX \
+              -DTransA_ -DTransB_ /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_cAgemmNN.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -DNoTransA_ -DNoTransB_ \
+              -DALIASED_GEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_AgemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_cAgemmNT.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -DNoTransA_ -DTransB_ \
+              -DALIASED_GEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_AgemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_cAgemmTN.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -DTransA_ -DNoTransB_ \
+              -DALIASED_GEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_AgemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_cAgemmTT.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -DTransA_ -DTransB_ \
+              -DALIASED_GEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_AgemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_cAgemmNC.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -DNoTransA_ -DConjTransB_ \
+              -DALIASED_GEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_AgemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_cAgemmTC.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -DTransA_ -DConjTransB_ \
+              -DALIASED_GEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_AgemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_cAgemmCN.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -DConjTransA_ -DNoTransB_ \
+              -DALIASED_GEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_AgemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_cAgemmCT.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -DConjTransA_ -DTransB_ \
+              -DALIASED_GEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_AgemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_cAgemmCC.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -DConjTransA_ -DConjTransB_ \
+              -DALIASED_GEMM /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_AgemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_cgemmNC.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX \
+              -DNoTransA_ -DConjTransB_ /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_cgemmCN.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX \
+              -DConjTransA_ -DNoTransB_ /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_cgemmTC.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX \
+              -DTransA_ -DConjTransB_ /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_cgemmCT.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX \
+              -DConjTransA_ -DTransB_ /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_cgemmCC.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX \
+              -DConjTransA_ -DConjTransB_ /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemmXX.c
+ar r /data/user/eesen/tools/ATLAS/build/lib/libatlas.a ATL_cMBJBmm.o ATL_cIBNBmm.o ATL_cIBJBmm.o ATL_cgemm.o ATL_cGetNB.o ATL_cGetNCNB.o ATL_cgemmNN.o ATL_cgemmNT.o ATL_cgemmTN.o ATL_cgemmTT.o ATL_cNCmmIJK.o ATL_cNCmmJIK.o ATL_cNCmmIJK_c.o ATL_cNCmmJIK_c.o ATL_caliased_gemm.o ATL_cAgemmNN.o ATL_cAgemmNT.o ATL_cAgemmTN.o ATL_cAgemmTT.o ATL_cmmJIK.o ATL_cmmIJK.o ATL_cmmJKI.o ATL_cgereal2cplx.o ATL_cmmJITcp.o ATL_cAgemmNC.o ATL_cAgemmTC.o ATL_cAgemmCN.o ATL_cAgemmCT.o ATL_cAgemmCC.o ATL_cCNBmm_b0.o ATL_cCNBmm_b1.o ATL_cCNBmm_bX.o ATL_cgemmNC.o ATL_cgemmCN.o ATL_cgemmTC.o ATL_cgemmCT.o ATL_cgemmCC.o ATL_ccol2blk_aXi0.o ATL_crow2blkT_aXi0.o ATL_ccol2blkConj_aXi0.o ATL_crow2blkC_aXi0.o ATL_ccol2blk_aX.o ATL_crow2blkT_aX.o ATL_ccol2blkConj_aX.o ATL_crow2blkC_aX.o ATL_ccol2blk_a1.o ATL_crow2blkT_a1.o ATL_ccol2blkConj_a1.o ATL_crow2blkC_a1.o ATL_cputblk_bXi0.o ATL_cputblk_bX.o ATL_cputblk_b1.o ATL_cputblk_bn1.o ATL_cputblk_b0.o
+echo /data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+/data/user/eesen/tools/ATLAS/build/lib/libatlas.a
+touch clib.grd
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make ATL_cbig_mm.o ATL_csmall_mm.o \
+           ATL_csbig_mm.o pre=c typ=SCPLX
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[6]: `ATL_cbig_mm.o' is up to date.
+make[6]: `ATL_csmall_mm.o' is up to date.
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_csbig_mm.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DSCPLX -DCRBIG_MM -I./ \
+              /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemm.c
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o xctfc ctfc.o \
+              /data/user/eesen/tools/ATLAS/build/src/blas/gemm/ATL_cbig_mm.o /data/user/eesen/tools/ATLAS/build/src/blas/gemm/ATL_csmall_mm.o \
+              /data/user/eesen/tools/ATLAS/build/src/blas/gemm/ATL_csbig_mm.o \
+              /data/user/eesen/tools/ATLAS/build/lib/libatlas.a -lpthread -lm
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+/data/user/eesen/tools/ATLAS/build/bin/ATLrun.sh /data/user/eesen/tools/ATLAS/build/tune/blas/gemm xctfc
+
+
+Finding crossover point for small case algorithms:
+
+TEST  TA  TB    M    N    K        alpha         beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  ===== =====  ===== =====  ======  =====  ====
+
+   1   N   N   80   10   10   -1.0   0.0    1.0   0.0    3.64 3562.9 1.00
+   1   N   N   80   10   10   -1.0   0.0    1.0   0.0    4.11 3157.4 0.89
+   2   N   N   80  750  750   -1.0   0.0    1.0   0.0    2.76 4702.5 1.00
+   2   N   N   80  750  750   -1.0   0.0    1.0   0.0    0.54 23823.5 5.07
+   3   N   N   80  380  380   -1.0   0.0    1.0   0.0    2.75 4741.9 1.00
+   3   N   N   80  380  380   -1.0   0.0    1.0   0.0    0.55 23778.6 5.01
+   4   N   N   80  195  195   -1.0   0.0    1.0   0.0    2.82 4614.9 1.00
+   4   N   N   80  195  195   -1.0   0.0    1.0   0.0    0.92 14125.5 3.06
+   5   N   N   80  102  102   -1.0   0.0    1.0   0.0    2.84 4571.9 1.00
+   5   N   N   80  102  102   -1.0   0.0    1.0   0.0    1.03 12581.6 2.75
+   6   N   N   80   56   56   -1.0   0.0    1.0   0.0    2.79 4656.9 1.00
+   6   N   N   80   56   56   -1.0   0.0    1.0   0.0    2.87 4527.0 0.97
+   7   N   N   80   79   79   -1.0   0.0    1.0   0.0    2.72 4781.0 1.00
+   7   N   N   80   79   79   -1.0   0.0    1.0   0.0    2.54 5112.3 1.07
+   8   N   N   80   67   67   -1.0   0.0    1.0   0.0    2.84 4565.0 1.00
+   8   N   N   80   67   67   -1.0   0.0    1.0   0.0    2.56 5071.4 1.11
+
+TEST  TA  TB    M    N    K        alpha         beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  ===== =====  ===== =====  ======  =====  ====
+
+   9   N   N   10   80   10   -1.0   0.0    1.0   0.0    4.09 3172.8 1.00
+   9   N   N   10   80   10   -1.0   0.0    1.0   0.0    4.86 2671.4 0.84
+  10   N   N  750   80  750   -1.0   0.0    1.0   0.0    2.84 4557.0 1.00
+  10   N   N  750   80  750   -1.0   0.0    1.0   0.0    0.56 22978.7 5.04
+  11   N   N  380   80  380   -1.0   0.0    1.0   0.0    2.73 4776.6 1.00
+  11   N   N  380   80  380   -1.0   0.0    1.0   0.0    0.56 23269.0 4.87
+  12   N   N  195   80  195   -1.0   0.0    1.0   0.0    2.66 4885.5 1.00
+  12   N   N  195   80  195   -1.0   0.0    1.0   0.0    1.26 10313.8 2.11
+  13   N   N  102   80  102   -1.0   0.0    1.0   0.0    2.78 4677.3 1.00
+  13   N   N  102   80  102   -1.0   0.0    1.0   0.0    1.08 11978.0 2.56
+  14   N   N   56   80   56   -1.0   0.0    1.0   0.0    2.87 4527.0 1.00
+  14   N   N   56   80   56   -1.0   0.0    1.0   0.0    2.81 4623.8 1.02
+  15   N   N   33   80   33   -1.0   0.0    1.0   0.0    3.10 4193.7 1.00
+  15   N   N   33   80   33   -1.0   0.0    1.0   0.0    3.44 3778.7 0.90
+  16   N   N   44   80   44   -1.0   0.0    1.0   0.0    2.84 4571.8 1.00
+  16   N   N   44   80   44   -1.0   0.0    1.0   0.0    3.12 4161.5 0.91
+  17   N   N   50   80   50   -1.0   0.0    1.0   0.0    2.73 4752.6 1.00
+  17   N   N   50   80   50   -1.0   0.0    1.0   0.0    2.94 4410.3 0.93
+
+TEST  TA  TB    M    N    K        alpha         beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  ===== =====  ===== =====  ======  =====  ====
+
+  18   N   N   80   80   10   -1.0   0.0    1.0   0.0    3.38 3841.2 1.00
+  18   N   N   80   80   10   -1.0   0.0    1.0   0.0    3.65 3555.1 0.93
+  19   N   N   80   80  750   -1.0   0.0    1.0   0.0    2.74 4757.9 1.00
+  19   N   N   80   80  750   -1.0   0.0    1.0   0.0    0.55 23754.7 4.99
+  20   N   N   80   80  380   -1.0   0.0    1.0   0.0    2.74 4743.3 1.00
+  20   N   N   80   80  380   -1.0   0.0    1.0   0.0    0.52 24993.5 5.27
+  21   N   N   80   80  195   -1.0   0.0    1.0   0.0    2.76 4699.4 1.00
+  21   N   N   80   80  195   -1.0   0.0    1.0   0.0    0.97 13363.4 2.84
+  22   N   N   80   80  102   -1.0   0.0    1.0   0.0    2.72 4773.1 1.00
+  22   N   N   80   80  102   -1.0   0.0    1.0   0.0    1.04 12483.5 2.62
+  23   N   N   80   80   56   -1.0   0.0    1.0   0.0    2.76 4711.7 1.00
+  23   N   N   80   80   56   -1.0   0.0    1.0   0.0    0.58 22235.5 4.72
+  24   N   N   80   80   33   -1.0   0.0    1.0   0.0    2.91 4459.0 1.00
+  24   N   N   80   80   33   -1.0   0.0    1.0   0.0    2.98 4351.4 0.98
+  25   N   N   80   80   44   -1.0   0.0    1.0   0.0    2.80 4630.1 1.00
+  25   N   N   80   80   44   -1.0   0.0    1.0   0.0    0.89 14554.8 3.14
+
+TEST  TA  TB    M    N    K        alpha         beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  ===== =====  ===== =====  ======  =====  ====
+
+  26   N   N   10   10   80   -1.0   0.0    1.0   0.0    3.76 3456.6 1.00
+  26   N   N   10   10   80   -1.0   0.0    1.0   0.0    4.36 2975.0 0.86
+  27   N   N  750  750   80   -1.0   0.0    1.0   0.0    2.72 4757.7 1.00
+  27   N   N  750  750   80   -1.0   0.0    1.0   0.0    0.41 31456.3 6.61
+  28   N   N  380  380   80   -1.0   0.0    1.0   0.0    2.72 4797.7 1.00
+  28   N   N  380  380   80   -1.0   0.0    1.0   0.0    0.44 29348.3 6.12
+  29   N   N  195  195   80   -1.0   0.0    1.0   0.0    2.68 4841.8 1.00
+  29   N   N  195  195   80   -1.0   0.0    1.0   0.0    0.94 13884.0 2.87
+  30   N   N  102  102   80   -1.0   0.0    1.0   0.0    2.71 4787.7 1.00
+  30   N   N  102  102   80   -1.0   0.0    1.0   0.0    0.59 21932.8 4.58
+  31   N   N   56   56   80   -1.0   0.0    1.0   0.0    2.80 4630.4 1.00
+  31   N   N   56   56   80   -1.0   0.0    1.0   0.0    2.63 4940.5 1.07
+  32   N   N   33   33   80   -1.0   0.0    1.0   0.0    2.82 4604.1 1.00
+  32   N   N   33   33   80   -1.0   0.0    1.0   0.0    2.94 4422.2 0.96
+  33   N   N   44   44   80   -1.0   0.0    1.0   0.0    2.66 4873.8 1.00
+  33   N   N   44   44   80   -1.0   0.0    1.0   0.0    2.66 4881.2 1.00
+
+TEST  TA  TB    M    N    K        alpha         beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  ===== =====  ===== =====  ======  =====  ====
+
+  34   N   N   10   10   10   -1.0   0.0    1.0   0.0    4.17 3112.0 1.00
+  34   N   N   10   10   10   -1.0   0.0    1.0   0.0    5.50 2362.3 0.76
+  35   N   N  750  750  750   -1.0   0.0    1.0   0.0    2.90 4655.2 1.00
+  35   N   N  750  750  750   -1.0   0.0    1.0   0.0    0.52 25961.5 5.58
+  36   N   N  380  380  380   -1.0   0.0    1.0   0.0    2.68 4906.6 1.00
+  36   N   N  380  380  380   -1.0   0.0    1.0   0.0    0.62 21240.8 4.33
+  37   N   N  195  195  195   -1.0   0.0    1.0   0.0    2.66 4876.4 1.00
+  37   N   N  195  195  195   -1.0   0.0    1.0   0.0    1.29 10086.1 2.07
+  38   N   N  102  102  102   -1.0   0.0    1.0   0.0    2.72 4775.4 1.00
+  38   N   N  102  102  102   -1.0   0.0    1.0   0.0    1.14 11354.2 2.38
+  39   N   N   56   56   56   -1.0   0.0    1.0   0.0    2.91 4465.0 1.00
+  39   N   N   56   56   56   -1.0   0.0    1.0   0.0    2.94 4416.4 0.99
+  40   N   N   79   79   79   -1.0   0.0    1.0   0.0    2.70 4802.0 1.00
+  40   N   N   79   79   79   -1.0   0.0    1.0   0.0    2.57 5048.5 1.05
+  41   N   N   67   67   67   -1.0   0.0    1.0   0.0    2.77 4683.7 1.00
+  41   N   N   67   67   67   -1.0   0.0    1.0   0.0    2.59 5009.0 1.07
+
+TEST  TA  TB    M    N    K        alpha         beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  ===== =====  ===== =====  ======  =====  ====
+
+  42   N   T   80   10   10   -1.0   0.0    1.0   0.0    3.41 3809.6 1.00
+  42   N   T   80   10   10   -1.0   0.0    1.0   0.0    4.07 3191.5 0.84
+  43   N   T   80  750  750   -1.0   0.0    1.0   0.0    2.98 4349.0 1.00
+  43   N   T   80  750  750   -1.0   0.0    1.0   0.0    0.59 22040.8 5.07
+  44   N   T   80  380  380   -1.0   0.0    1.0   0.0    2.78 4694.0 1.00
+  44   N   T   80  380  380   -1.0   0.0    1.0   0.0    0.53 24493.7 5.22
+  45   N   T   80  195  195   -1.0   0.0    1.0   0.0    2.78 4674.6 1.00
+  45   N   T   80  195  195   -1.0   0.0    1.0   0.0    0.96 13536.9 2.90
+  46   N   T   80  102  102   -1.0   0.0    1.0   0.0    2.89 4495.9 1.00
+  46   N   T   80  102  102   -1.0   0.0    1.0   0.0    1.02 12679.9 2.82
+  47   N   T   80   56   56   -1.0   0.0    1.0   0.0    2.85 4558.8 1.00
+  47   N   T   80   56   56   -1.0   0.0    1.0   0.0    2.84 4578.1 1.00
+  48   N   T   80   33   33   -1.0   0.0    1.0   0.0    2.70 4815.9 1.00
+  48   N   T   80   33   33   -1.0   0.0    1.0   0.0    2.74 4731.7 0.98
+  49   N   T   80   44   44   -1.0   0.0    1.0   0.0    2.62 4948.1 1.00
+  49   N   T   80   44   44   -1.0   0.0    1.0   0.0    2.66 4881.2 0.99
+  50   N   T   80   50   50   -1.0   0.0    1.0   0.0    2.61 4978.5 1.00
+  50   N   T   80   50   50   -1.0   0.0    1.0   0.0    2.59 5009.3 1.01
+
+TEST  TA  TB    M    N    K        alpha         beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  ===== =====  ===== =====  ======  =====  ====
+
+  51   N   T   10   80   10   -1.0   0.0    1.0   0.0    3.75 3464.0 1.00
+  51   N   T   10   80   10   -1.0   0.0    1.0   0.0    4.25 3056.3 0.88
+  52   N   T  750   80  750   -1.0   0.0    1.0   0.0    2.61 4961.7 1.00
+  52   N   T  750   80  750   -1.0   0.0    1.0   0.0    0.50 25920.0 5.22
+  53   N   T  380   80  380   -1.0   0.0    1.0   0.0    2.48 5262.8 1.00
+  53   N   T  380   80  380   -1.0   0.0    1.0   0.0    0.50 25854.5 4.91
+  54   N   T  195   80  195   -1.0   0.0    1.0   0.0    2.47 5257.0 1.00
+  54   N   T  195   80  195   -1.0   0.0    1.0   0.0    1.18 10975.9 2.09
+  55   N   T  102   80  102   -1.0   0.0    1.0   0.0    2.48 5235.6 1.00
+  55   N   T  102   80  102   -1.0   0.0    1.0   0.0    1.00 13036.3 2.49
+  56   N   T   56   80   56   -1.0   0.0    1.0   0.0    2.64 4918.0 1.00
+  56   N   T   56   80   56   -1.0   0.0    1.0   0.0    2.60 4993.7 1.02
+  57   N   T   33   80   33   -1.0   0.0    1.0   0.0    2.62 4963.2 1.00
+  57   N   T   33   80   33   -1.0   0.0    1.0   0.0    2.90 4483.3 0.90
+  58   N   T   44   80   44   -1.0   0.0    1.0   0.0    2.46 5286.6 1.00
+  58   N   T   44   80   44   -1.0   0.0    1.0   0.0    2.70 4808.9 0.91
+  59   N   T   50   80   50   -1.0   0.0    1.0   0.0    2.46 5278.0 1.00
+  59   N   T   50   80   50   -1.0   0.0    1.0   0.0    2.66 4881.2 0.92
+
+TEST  TA  TB    M    N    K        alpha         beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  ===== =====  ===== =====  ======  =====  ====
+
+  60   N   T   80   80   10   -1.0   0.0    1.0   0.0    2.82 4610.5 1.00
+  60   N   T   80   80   10   -1.0   0.0    1.0   0.0    3.38 3836.7 0.83
+  61   N   T   80   80  750   -1.0   0.0    1.0   0.0    2.52 5173.9 1.00
+  61   N   T   80   80  750   -1.0   0.0    1.0   0.0    0.51 25425.0 4.91
+  62   N   T   80   80  380   -1.0   0.0    1.0   0.0    2.52 5149.2 1.00
+  62   N   T   80   80  380   -1.0   0.0    1.0   0.0    0.47 27770.5 5.39
+  63   N   T   80   80  195   -1.0   0.0    1.0   0.0    2.54 5121.9 1.00
+  63   N   T   80   80  195   -1.0   0.0    1.0   0.0    0.83 15612.0 3.05
+  64   N   T   80   80  102   -1.0   0.0    1.0   0.0    2.55 5087.3 1.00
+  64   N   T   80   80  102   -1.0   0.0    1.0   0.0    0.94 13753.1 2.70
+  65   N   T   80   80   56   -1.0   0.0    1.0   0.0    2.56 5080.4 1.00
+  65   N   T   80   80   56   -1.0   0.0    1.0   0.0    0.46 28477.1 5.61
+  66   N   T   80   80   33   -1.0   0.0    1.0   0.0    2.63 4940.9 1.00
+  66   N   T   80   80   33   -1.0   0.0    1.0   0.0    2.65 4896.1 0.99
+  67   N   T   80   80   44   -1.0   0.0    1.0   0.0    2.61 4970.5 1.00
+  67   N   T   80   80   44   -1.0   0.0    1.0   0.0    0.72 17932.2 3.61
+
+TEST  TA  TB    M    N    K        alpha         beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  ===== =====  ===== =====  ======  =====  ====
+
+  68   N   T   10   10   80   -1.0   0.0    1.0   0.0    3.52 3688.4 1.00
+  68   N   T   10   10   80   -1.0   0.0    1.0   0.0    3.90 3325.6 0.90
+  69   N   T  750  750   80   -1.0   0.0    1.0   0.0    2.79 4648.5 1.00
+  69   N   T  750  750   80   -1.0   0.0    1.0   0.0    0.38 33750.0 7.26
+  70   N   T  380  380   80   -1.0   0.0    1.0   0.0    2.62 4966.0 1.00
+  70   N   T  380  380   80   -1.0   0.0    1.0   0.0    0.43 30445.5 6.13
+  71   N   T  195  195   80   -1.0   0.0    1.0   0.0    2.47 5257.0 1.00
+  71   N   T  195  195   80   -1.0   0.0    1.0   0.0    0.85 15252.8 2.90
+  72   N   T  102  102   80   -1.0   0.0    1.0   0.0    2.50 5193.7 1.00
+  72   N   T  102  102   80   -1.0   0.0    1.0   0.0    0.56 23021.6 4.43
+  73   N   T   56   56   80   -1.0   0.0    1.0   0.0    2.59 5009.1 1.00
+  73   N   T   56   56   80   -1.0   0.0    1.0   0.0    2.44 5329.9 1.06
+  74   N   T   33   33   80   -1.0   0.0    1.0   0.0    2.60 5001.4 1.00
+  74   N   T   33   33   80   -1.0   0.0    1.0   0.0    2.64 4918.1 0.98
+  75   N   T   44   44   80   -1.0   0.0    1.0   0.0    2.46 5286.6 1.00
+  75   N   T   44   44   80   -1.0   0.0    1.0   0.0    2.49 5210.2 0.99
+  76   N   T   50   50   80   -1.0   0.0    1.0   0.0    2.44 5330.0 1.00
+  76   N   T   50   50   80   -1.0   0.0    1.0   0.0    2.46 5278.0 0.99
+
+TEST  TA  TB    M    N    K        alpha         beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  ===== =====  ===== =====  ======  =====  ====
+
+  77   N   T   10   10   10   -1.0   0.0    1.0   0.0    3.98 3262.1 1.00
+  77   N   T   10   10   10   -1.0   0.0    1.0   0.0    4.83 2689.1 0.82
+  78   N   T  750  750  750   -1.0   0.0    1.0   0.0    2.93 4604.4 1.00
+  78   N   T  750  750  750   -1.0   0.0    1.0   0.0    0.49 27439.0 5.96
+  79   N   T  380  380  380   -1.0   0.0    1.0   0.0    2.66 4950.9 1.00
+  79   N   T  380  380  380   -1.0   0.0    1.0   0.0    0.55 24031.5 4.85
+  80   N   T  195  195  195   -1.0   0.0    1.0   0.0    2.46 5280.8 1.00
+  80   N   T  195  195  195   -1.0   0.0    1.0   0.0    1.18 10972.0 2.08
+  81   N   T  102  102  102   -1.0   0.0    1.0   0.0    2.52 5162.6 1.00
+  81   N   T  102  102  102   -1.0   0.0    1.0   0.0    1.08 11982.6 2.32
+  82   N   T   56   56   56   -1.0   0.0    1.0   0.0    2.61 4971.0 1.00
+  82   N   T   56   56   56   -1.0   0.0    1.0   0.0    2.63 4933.3 0.99
+  83   N   T   79   79   79   -1.0   0.0    1.0   0.0    2.53 5136.3 1.00
+  83   N   T   79   79   79   -1.0   0.0    1.0   0.0    2.37 5483.4 1.07
+  84   N   T   67   67   67   -1.0   0.0    1.0   0.0    2.55 5087.5 1.00
+  84   N   T   67   67   67   -1.0   0.0    1.0   0.0    2.40 5418.8 1.07
+
+TEST  TA  TB    M    N    K        alpha         beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  ===== =====  ===== =====  ======  =====  ====
+
+  85   T   N   80   10   10   -1.0   0.0    1.0   0.0    3.32 3905.9 1.00
+  85   T   N   80   10   10   -1.0   0.0    1.0   0.0    3.68 3531.9 0.90
+  86   T   N   80  750  750   -1.0   0.0    1.0   0.0    2.60 4992.3 1.00
+  86   T   N   80  750  750   -1.0   0.0    1.0   0.0    0.48 26776.9 5.36
+  87   T   N   80  380  380   -1.0   0.0    1.0   0.0    2.57 5066.4 1.00
+  87   T   N   80  380  380   -1.0   0.0    1.0   0.0    0.50 26271.5 5.19
+  88   T   N   80  195  195   -1.0   0.0    1.0   0.0    2.62 4967.7 1.00
+  88   T   N   80  195  195   -1.0   0.0    1.0   0.0    0.87 14971.7 3.01
+  89   T   N   80  102  102   -1.0   0.0    1.0   0.0    2.61 4971.0 1.00
+  89   T   N   80  102  102   -1.0   0.0    1.0   0.0    0.93 13931.5 2.80
+  90   T   N   80   56   56   -1.0   0.0    1.0   0.0    2.64 4910.6 1.00
+  90   T   N   80   56   56   -1.0   0.0    1.0   0.0    2.56 5079.6 1.03
+  91   T   N   80   33   33   -1.0   0.0    1.0   0.0    2.72 4766.4 1.00
+  91   T   N   80   33   33   -1.0   0.0    1.0   0.0    2.70 4815.9 1.01
+  92   T   N   80   21   21   -1.0   0.0    1.0   0.0    2.83 4584.5 1.00
+  92   T   N   80   21   21   -1.0   0.0    1.0   0.0    2.91 4464.7 0.97
+  93   T   N   80   27   27   -1.0   0.0    1.0   0.0    2.75 4724.7 1.00
+  93   T   N   80   27   27   -1.0   0.0    1.0   0.0    2.78 4670.3 0.99
+
+TEST  TA  TB    M    N    K        alpha         beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  ===== =====  ===== =====  ======  =====  ====
+
+  94   T   N   10   80   10   -1.0   0.0    1.0   0.0    3.51 3701.0 1.00
+  94   T   N   10   80   10   -1.0   0.0    1.0   0.0    4.34 2991.5 0.81
+  95   T   N  750   80  750   -1.0   0.0    1.0   0.0    2.56 5054.6 1.00
+  95   T   N  750   80  750   -1.0   0.0    1.0   0.0    0.49 26341.5 5.21
+  96   T   N  380   80  380   -1.0   0.0    1.0   0.0    2.55 5114.1 1.00
+  96   T   N  380   80  380   -1.0   0.0    1.0   0.0    0.49 26485.1 5.18
+  97   T   N  195   80  195   -1.0   0.0    1.0   0.0    2.54 5108.3 1.00
+  97   T   N  195   80  195   -1.0   0.0    1.0   0.0    1.18 11050.5 2.16
+  98   T   N  102   80  102   -1.0   0.0    1.0   0.0    2.54 5119.9 1.00
+  98   T   N  102   80  102   -1.0   0.0    1.0   0.0    1.00 12984.2 2.54
+  99   T   N   56   80   56   -1.0   0.0    1.0   0.0    2.75 4724.7 1.00
+  99   T   N   56   80   56   -1.0   0.0    1.0   0.0    2.62 4955.6 1.05
+ 100   T   N   33   80   33   -1.0   0.0    1.0   0.0    2.74 4738.6 1.00
+ 100   T   N   33   80   33   -1.0   0.0    1.0   0.0    2.92 4440.4 0.94
+ 101   T   N   44   80   44   -1.0   0.0    1.0   0.0    2.59 5017.0 1.00
+ 101   T   N   44   80   44   -1.0   0.0    1.0   0.0    2.72 4766.5 0.95
+ 102   T   N   50   80   50   -1.0   0.0    1.0   0.0    2.54 5119.9 1.00
+ 102   T   N   50   80   50   -1.0   0.0    1.0   0.0    2.64 4918.2 0.96
+
+TEST  TA  TB    M    N    K        alpha         beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  ===== =====  ===== =====  ======  =====  ====
+
+ 103   T   N   80   80   10   -1.0   0.0    1.0   0.0    3.28 3958.3 1.00
+ 103   T   N   80   80   10   -1.0   0.0    1.0   0.0    3.48 3730.8 0.94
+ 104   T   N   80   80  750   -1.0   0.0    1.0   0.0    2.64 4930.9 1.00
+ 104   T   N   80   80  750   -1.0   0.0    1.0   0.0    0.52 25227.9 5.12
+ 105   T   N   80   80  380   -1.0   0.0    1.0   0.0    2.60 5006.4 1.00
+ 105   T   N   80   80  380   -1.0   0.0    1.0   0.0    0.48 27076.3 5.41
+ 106   T   N   80   80  195   -1.0   0.0    1.0   0.0    2.61 4980.5 1.00
+ 106   T   N   80   80  195   -1.0   0.0    1.0   0.0    0.84 15537.3 3.12
+ 107   T   N   80   80  102   -1.0   0.0    1.0   0.0    2.60 4985.7 1.00
+ 107   T   N   80   80  102   -1.0   0.0    1.0   0.0    0.94 13870.6 2.78
+ 108   T   N   80   80   56   -1.0   0.0    1.0   0.0    2.68 4852.6 1.00
+ 108   T   N   80   80   56   -1.0   0.0    1.0   0.0    0.45 28985.6 5.97
+ 109   T   N   80   80   33   -1.0   0.0    1.0   0.0    2.74 4745.8 1.00
+ 109   T   N   80   80   33   -1.0   0.0    1.0   0.0    2.69 4830.6 1.02
+ 110   T   N   80   80   21   -1.0   0.0    1.0   0.0    2.82 4610.5 1.00
+ 110   T   N   80   80   21   -1.0   0.0    1.0   0.0    2.86 4545.9 0.99
+ 111   T   N   80   80   27   -1.0   0.0    1.0   0.0    2.73 4752.4 1.00
+ 111   T   N   80   80   27   -1.0   0.0    1.0   0.0    2.75 4724.7 0.99
+
+TEST  TA  TB    M    N    K        alpha         beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  ===== =====  ===== =====  ======  =====  ====
+
+ 112   T   N   10   10   80   -1.0   0.0    1.0   0.0    3.18 4077.6 1.00
+ 112   T   N   10   10   80   -1.0   0.0    1.0   0.0    3.58 3622.5 0.89
+ 113   T   N  750  750   80   -1.0   0.0    1.0   0.0    2.51 5167.5 1.00
+ 113   T   N  750  750   80   -1.0   0.0    1.0   0.0    0.38 34468.1 6.67
+ 114   T   N  380  380   80   -1.0   0.0    1.0   0.0    2.52 5162.7 1.00
+ 114   T   N  380  380   80   -1.0   0.0    1.0   0.0    0.43 30445.5 5.90
+ 115   T   N  195  195   80   -1.0   0.0    1.0   0.0    2.53 5140.6 1.00
+ 115   T   N  195  195   80   -1.0   0.0    1.0   0.0    0.85 15252.8 2.97
+ 116   T   N  102  102   80   -1.0   0.0    1.0   0.0    2.53 5128.0 1.00
+ 116   T   N  102  102   80   -1.0   0.0    1.0   0.0    0.57 22859.5 4.46
+ 117   T   N   56   56   80   -1.0   0.0    1.0   0.0    2.64 4925.5 1.00
+ 117   T   N   56   56   80   -1.0   0.0    1.0   0.0    2.44 5321.1 1.08
+ 118   T   N   33   33   80   -1.0   0.0    1.0   0.0    2.66 4888.4 1.00
+ 118   T   N   33   33   80   -1.0   0.0    1.0   0.0    2.68 4837.4 0.99
+ 119   T   N   44   44   80   -1.0   0.0    1.0   0.0    2.54 5119.8 1.00
+ 119   T   N   44   44   80   -1.0   0.0    1.0   0.0    2.49 5218.6 1.02
+
+TEST  TA  TB    M    N    K        alpha         beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  ===== =====  ===== =====  ======  =====  ====
+
+ 120   T   N   10   10   10   -1.0   0.0    1.0   0.0    3.68 3524.2 1.00
+ 120   T   N   10   10   10   -1.0   0.0    1.0   0.0    4.80 2704.8 0.77
+ 121   T   N  750  750  750   -1.0   0.0    1.0   0.0    2.65 5090.5 1.00
+ 121   T   N  750  750  750   -1.0   0.0    1.0   0.0    0.50 27000.0 5.30
+ 122   T   N  380  380  380   -1.0   0.0    1.0   0.0    2.54 5176.6 1.00
+ 122   T   N  380  380  380   -1.0   0.0    1.0   0.0    0.55 23857.4 4.61
+ 123   T   N  195  195  195   -1.0   0.0    1.0   0.0    2.53 5130.7 1.00
+ 123   T   N  195  195  195   -1.0   0.0    1.0   0.0    1.18 10972.0 2.14
+ 124   T   N  102  102  102   -1.0   0.0    1.0   0.0    2.54 5121.9 1.00
+ 124   T   N  102  102  102   -1.0   0.0    1.0   0.0    1.07 12116.8 2.37
+ 125   T   N   56   56   56   -1.0   0.0    1.0   0.0    2.72 4780.7 1.00
+ 125   T   N   56   56   56   -1.0   0.0    1.0   0.0    2.62 4948.3 1.04
+ 126   T   N   33   33   33   -1.0   0.0    1.0   0.0    2.79 4650.2 1.00
+ 126   T   N   33   33   33   -1.0   0.0    1.0   0.0    3.01 4316.3 0.93
+ 127   T   N   44   44   44   -1.0   0.0    1.0   0.0    2.61 4978.3 1.00
+ 127   T   N   44   44   44   -1.0   0.0    1.0   0.0    2.77 4683.8 0.94
+ 128   T   N   50   50   50   -1.0   0.0    1.0   0.0    2.59 5009.3 1.00
+ 128   T   N   50   50   50   -1.0   0.0    1.0   0.0    2.75 4724.9 0.94
+
+TEST  TA  TB    M    N    K        alpha         beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  ===== =====  ===== =====  ======  =====  ====
+
+ 129   T   T   80   10   10   -1.0   0.0    1.0   0.0    3.20 4052.2 1.00
+ 129   T   T   80   10   10   -1.0   0.0    1.0   0.0    3.82 3395.2 0.84
+ 130   T   T   80  750  750   -1.0   0.0    1.0   0.0    2.78 4661.9 1.00
+ 130   T   T   80  750  750   -1.0   0.0    1.0   0.0    0.51 25511.8 5.47
+ 131   T   T   80  380  380   -1.0   0.0    1.0   0.0    2.66 4898.7 1.00
+ 131   T   T   80  380  380   -1.0   0.0    1.0   0.0    0.52 25059.0 5.12
+ 132   T   T   80  195  195   -1.0   0.0    1.0   0.0    2.63 4937.5 1.00
+ 132   T   T   80  195  195   -1.0   0.0    1.0   0.0    0.89 14634.5 2.96
+ 133   T   T   80  102  102   -1.0   0.0    1.0   0.0    2.67 4866.6 1.00
+ 133   T   T   80  102  102   -1.0   0.0    1.0   0.0    0.96 13525.2 2.78
+ 134   T   T   80   56   56   -1.0   0.0    1.0   0.0    2.70 4801.6 1.00
+ 134   T   T   80   56   56   -1.0   0.0    1.0   0.0    2.60 4993.7 1.04
+ 135   T   T   80   33   33   -1.0   0.0    1.0   0.0    2.76 4697.4 1.00
+ 135   T   T   80   33   33   -1.0   0.0    1.0   0.0    2.86 4533.4 0.97
+ 136   T   T   80   44   44   -1.0   0.0    1.0   0.0    2.76 4711.1 1.00
+ 136   T   T   80   44   44   -1.0   0.0    1.0   0.0    2.71 4787.6 1.02
+
+TEST  TA  TB    M    N    K        alpha         beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  ===== =====  ===== =====  ======  =====  ====
+
+ 137   T   T   10   80   10   -1.0   0.0    1.0   0.0    3.86 3363.5 1.00
+ 137   T   T   10   80   10   -1.0   0.0    1.0   0.0    4.46 2908.4 0.86
+ 138   T   T  750   80  750   -1.0   0.0    1.0   0.0    2.62 4939.0 1.00
+ 138   T   T  750   80  750   -1.0   0.0    1.0   0.0    0.52 24923.1 5.05
+ 139   T   T  380   80  380   -1.0   0.0    1.0   0.0    2.68 4862.2 1.00
+ 139   T   T  380   80  380   -1.0   0.0    1.0   0.0    0.50 25854.5 5.32
+ 140   T   T  195   80  195   -1.0   0.0    1.0   0.0    2.54 5108.3 1.00
+ 140   T   T  195   80  195   -1.0   0.0    1.0   0.0    1.19 10938.9 2.14
+ 141   T   T  102   80  102   -1.0   0.0    1.0   0.0    2.55 5087.8 1.00
+ 141   T   T  102   80  102   -1.0   0.0    1.0   0.0    1.02 12779.7 2.51
+ 142   T   T   56   80   56   -1.0   0.0    1.0   0.0    2.76 4704.2 1.00
+ 142   T   T   56   80   56   -1.0   0.0    1.0   0.0    2.62 4948.0 1.05
+ 143   T   T   33   80   33   -1.0   0.0    1.0   0.0    2.68 4837.4 1.00
+ 143   T   T   33   80   33   -1.0   0.0    1.0   0.0    2.94 4422.2 0.91
+ 144   T   T   44   80   44   -1.0   0.0    1.0   0.0    2.81 4623.9 1.00
+ 144   T   T   44   80   44   -1.0   0.0    1.0   0.0    3.10 4193.8 0.91
+ 145   T   T   50   80   50   -1.0   0.0    1.0   0.0    2.95 4398.4 1.00
+ 145   T   T   50   80   50   -1.0   0.0    1.0   0.0    2.99 4345.4 0.99
+
+TEST  TA  TB    M    N    K        alpha         beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  ===== =====  ===== =====  ======  =====  ====
+
+ 146   T   T   80   80   10   -1.0   0.0    1.0   0.0    3.56 3642.9 1.00
+ 146   T   T   80   80   10   -1.0   0.0    1.0   0.0    3.94 3298.6 0.91
+ 147   T   T   80   80  750   -1.0   0.0    1.0   0.0    2.88 4520.0 1.00
+ 147   T   T   80   80  750   -1.0   0.0    1.0   0.0    0.58 22600.0 5.00
+ 148   T   T   80   80  380   -1.0   0.0    1.0   0.0    2.92 4450.9 1.00
+ 148   T   T   80   80  380   -1.0   0.0    1.0   0.0    0.54 23890.8 5.37
+ 149   T   T   80   80  195   -1.0   0.0    1.0   0.0    2.97 4376.4 1.00
+ 149   T   T   80   80  195   -1.0   0.0    1.0   0.0    0.97 13418.6 3.07
+ 150   T   T   80   80  102   -1.0   0.0    1.0   0.0    2.86 4539.5 1.00
+ 150   T   T   80   80  102   -1.0   0.0    1.0   0.0    1.02 12778.4 2.81
+ 151   T   T   80   80   56   -1.0   0.0    1.0   0.0    2.95 4404.9 1.00
+ 151   T   T   80   80   56   -1.0   0.0    1.0   0.0    0.55 23524.5 5.34
+ 152   T   T   80   80   33   -1.0   0.0    1.0   0.0    2.93 4434.6 1.00
+ 152   T   T   80   80   33   -1.0   0.0    1.0   0.0    3.04 4271.2 0.96
+ 153   T   T   80   80   44   -1.0   0.0    1.0   0.0    2.95 4398.0 1.00
+ 153   T   T   80   80   44   -1.0   0.0    1.0   0.0    0.92 14173.5 3.22
+
+TEST  TA  TB    M    N    K        alpha         beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  ===== =====  ===== =====  ======  =====  ====
+
+ 154   T   T   10   10   80   -1.0   0.0    1.0   0.0    4.04 3210.5 1.00
+ 154   T   T   10   10   80   -1.0   0.0    1.0   0.0    4.48 2898.0 0.90
+ 155   T   T  750  750   80   -1.0   0.0    1.0   0.0    2.65 4894.3 1.00
+ 155   T   T  750  750   80   -1.0   0.0    1.0   0.0    0.41 31764.7 6.49
+ 156   T   T  380  380   80   -1.0   0.0    1.0   0.0    2.84 4588.3 1.00
+ 156   T   T  380  380   80   -1.0   0.0    1.0   0.0    0.48 27147.2 5.92
+ 157   T   T  195  195   80   -1.0   0.0    1.0   0.0    2.85 4563.0 1.00
+ 157   T   T  195  195   80   -1.0   0.0    1.0   0.0    0.99 13153.3 2.88
+ 158   T   T  102  102   80   -1.0   0.0    1.0   0.0    2.73 4752.6 1.00
+ 158   T   T  102  102   80   -1.0   0.0    1.0   0.0    0.71 18339.3 3.86
+ 159   T   T   56   56   80   -1.0   0.0    1.0   0.0    2.97 4368.6 1.00
+ 159   T   T   56   56   80   -1.0   0.0    1.0   0.0    2.72 4773.4 1.09
+ 160   T   T   33   33   80   -1.0   0.0    1.0   0.0    3.26 3987.6 1.00
+ 160   T   T   33   33   80   -1.0   0.0    1.0   0.0    3.12 4161.4 1.04
+ 161   T   T   21   21   80   -1.0   0.0    1.0   0.0    3.44 3769.8 1.00
+ 161   T   T   21   21   80   -1.0   0.0    1.0   0.0    3.65 3559.0 0.94
+ 162   T   T   27   27   80   -1.0   0.0    1.0   0.0    3.12 4161.4 1.00
+ 162   T   T   27   27   80   -1.0   0.0    1.0   0.0    3.36 3864.1 0.93
+
+TEST  TA  TB    M    N    K        alpha         beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  ===== =====  ===== =====  ======  =====  ====
+
+ 163   T   T   10   10   10   -1.0   0.0    1.0   0.0    4.76 2725.3 1.00
+ 163   T   T   10   10   10   -1.0   0.0    1.0   0.0    6.21 2090.0 0.77
+ 164   T   T  750  750  750   -1.0   0.0    1.0   0.0    3.06 4406.0 1.00
+ 164   T   T  750  750  750   -1.0   0.0    1.0   0.0    0.54 24816.2 5.63
+ 165   T   T  380  380  380   -1.0   0.0    1.0   0.0    2.96 4443.1 1.00
+ 165   T   T  380  380  380   -1.0   0.0    1.0   0.0    0.63 20837.5 4.69
+ 166   T   T  195  195  195   -1.0   0.0    1.0   0.0    2.90 4485.8 1.00
+ 166   T   T  195  195  195   -1.0   0.0    1.0   0.0    1.31 9931.9 2.21
+ 167   T   T  102  102  102   -1.0   0.0    1.0   0.0    2.78 4679.1 1.00
+ 167   T   T  102  102  102   -1.0   0.0    1.0   0.0    1.23 10577.5 2.26
+ 168   T   T   56   56   56   -1.0   0.0    1.0   0.0    3.10 4188.5 1.00
+ 168   T   T   56   56   56   -1.0   0.0    1.0   0.0    2.86 4533.6 1.08
+ 169   T   T   33   33   33   -1.0   0.0    1.0   0.0    3.06 4242.9 1.00
+ 169   T   T   33   33   33   -1.0   0.0    1.0   0.0    3.64 3570.8 0.84
+ 170   T   T   44   44   44   -1.0   0.0    1.0   0.0    2.92 4446.4 1.00
+ 170   T   T   44   44   44   -1.0   0.0    1.0   0.0    3.24 4012.2 0.90
+ 171   T   T   50   50   50   -1.0   0.0    1.0   0.0    2.95 4404.3 1.00
+ 171   T   T   50   50   50   -1.0   0.0    1.0   0.0    3.09 4204.7 0.95
+
+TEST  TA  TB    M    N    K        alpha         beta    Time  Mflop  SpUp
+====  ==  ==  ===  ===  ===  ===== =====  ===== =====  ======  =====  ====
+
+ 172   N   T   10   10   10   -1.0   0.0    1.0   0.0    6.69 1941.3 1.00
+ 172   N   T   10   10   10   -1.0   0.0    1.0   0.0    5.18 2506.4 1.29
+cp -f /data/user/eesen/tools/ATLAS/build/include/cXover.h res/.
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+make[3]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+cp /data/user/eesen/tools/ATLAS/build/tune/blas/gemm/res/cXover.h INSTALL_LOG/.
+make[2]: Leaving directory `/data/user/eesen/tools/ATLAS/build/bin'
+
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*      FINISHED ATLAS3.10.0 INSTALL OF SECTION 2-4-3 ON 08/07/2019 AT 15:17   *
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+
+
+

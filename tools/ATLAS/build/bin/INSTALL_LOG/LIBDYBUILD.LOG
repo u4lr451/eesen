@@ -1,0 +1,166 @@
+
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*       BEGAN ATLAS3.10.0 INSTALL OF SECTION 5-2-1 ON 08/07/2019 AT 19:38     *
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+
+
+
+make[2]: Entering directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build ; make dylibs
+make[3]: Entering directory `/data/user/eesen/tools/ATLAS/build'
+cd lib ; make shared_all
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/lib'
+make shared
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/lib'
+make TRYALL outso=libsatlas.so \
+                libas="liblapack.a libf77blas.a libcblas.a libatlas.a" \
+                LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/lib'
+if make GCCTRY outso="libsatlas.so" libas="liblapack.a libf77blas.a libcblas.a libatlas.a"  \
+        LIBS="-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -lgfortran  -lc -lpthread -lm -lgcc" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libsatlas.so built wt gcc and all libs" ; \
+        elif make LDTRY outso="libsatlas.so" libas="liblapack.a libf77blas.a libcblas.a libatlas.a"  \
+        LIBS="-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -lgfortran  -lc -lpthread -lm -lgcc" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libsatlas.so built wt ld and all sys libs" ; \
+elif make GCCTRY_norp outso="libsatlas.so" libas="liblapack.a libf77blas.a libcblas.a libatlas.a"  \
+        LIBS="-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -lgfortran  -lc -lpthread -lm -lgcc" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libsatlas.so built wt gcc and all libs and no rpath" ; \
+        elif make GCCTRY outso="libsatlas.so" libas="liblapack.a libf77blas.a libcblas.a libatlas.a"  \
+        LIBS="-lc -lpthread -lm -lgcc" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libsatlas.so built wt gcc and all C libs" ; \
+        elif make LDTRY outso="libsatlas.so" libas="liblapack.a libf77blas.a libcblas.a libatlas.a"  \
+        LIBS="-lc -lpthread -lm -lgcc" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libsatlas.so built wt ld and -lc -lgcc" ; \
+        elif make GCCTRY_norp outso="libsatlas.so" libas="liblapack.a libf77blas.a libcblas.a libatlas.a"  \
+        LIBS="-lc -lpthread -lm -lgcc" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libsatlas.so built wt gcc and all C libs and no rpath" ; \
+        elif make GCCTRY outso="libsatlas.so" libas="liblapack.a libf77blas.a libcblas.a libatlas.a"  \
+        LIBS="-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -lgfortran  -lc -lpthread -lm" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libsatlas.so built wt gcc and all libs except -lgcc" ; \
+        elif make LDTRY outso="libsatlas.so" libas="liblapack.a libf77blas.a libcblas.a libatlas.a"  \
+        LIBS="-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -lgfortran  -lc -lpthread -lm" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libsatlas.so built wt all libs except -lgcc" ; \
+        elif make GCCTRY_norp outso="libsatlas.so" libas="liblapack.a libf77blas.a libcblas.a libatlas.a"  \
+        LIBS="-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -lgfortran  -lc -lpthread -lm" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libsatlas.so built wt gcc and all libs except -lgcc, no rpath" ; \
+        elif make GCCTRY outso="libsatlas.so" libas="liblapack.a libf77blas.a libcblas.a libatlas.a"  \
+        LIBS="-lc -lpthread -lm" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libsatlas.so built wt gcc and -lc" ; \
+        elif make LDTRY outso="libsatlas.so" libas="liblapack.a libf77blas.a libcblas.a libatlas.a"  \
+        LIBS="-lc -lpthread -lm" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libsatlas.so built wt ld and -lc" ; \
+        elif make GCCTRY_norp outso="libsatlas.so" libas="liblapack.a libf77blas.a libcblas.a libatlas.a"  \
+        LIBS="-lc -lpthread -lm" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libsatlas.so built wt gcc and -lc, no rpath" ; \
+        elif make LDTRY outso="libsatlas.so" libas="liblapack.a libf77blas.a libcblas.a libatlas.a"  \
+        LIBS="-lpthread -lm" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libsatlas.so built wt ld" ; \
+        elif make GCCTRY_norp outso="libsatlas.so" libas="liblapack.a libf77blas.a libcblas.a libatlas.a"  \
+        LIBS="-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -lgfortran  -lkernel32" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libsatlas.so built wt fortran and kernel32, no rpath" ; \
+        else \
+           make GCCTRY outso="libsatlas.so" libas="liblapack.a libf77blas.a libcblas.a libatlas.a"  \
+           LIBS="-lpthread -lm" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib" ; \
+        fi
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/lib'
+/usr/bin/x86_64-redhat-linux-gcc -O -fomit-frame-pointer -mavx -m64 -fPIC -m64 -fPIC -shared -o libsatlas.so  \
+           -Wl,"rpath-link /data/user/eesen/tools/ATLAS/build/install/lib" \
+           -Wl,--whole-archive liblapack.a libf77blas.a libcblas.a libatlas.a -Wl,--no-whole-archive -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -lgfortran  -lc -lpthread -lm -lgcc
+/usr/bin/ld: cannot find rpath-link /data/user/eesen/tools/ATLAS/build/install/lib: No such file or directory
+collect2: error: ld returned 1 exit status
+make[7]: *** [GCCTRY] Error 1
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/lib'
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/lib'
+ld -melf_x86_64 -shared -soname /data/user/eesen/tools/ATLAS/build/install/lib/libsatlas.so -o libsatlas.so \
+           -rpath-link /data/user/eesen/tools/ATLAS/build/install/lib  \
+           --whole-archive liblapack.a libf77blas.a libcblas.a libatlas.a --no-whole-archive -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -lgfortran  -lc -lpthread -lm -lgcc
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/lib'
+libsatlas.so built wt ld and all sys libs
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/lib'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/lib'
+make ptshared
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/lib'
+make TRYALL outso=libtatlas.so \
+                libas="libptlapack.a libptf77blas.a libptcblas.a libatlas.a" \
+                LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/lib'
+if make GCCTRY outso="libtatlas.so" libas="libptlapack.a libptf77blas.a libptcblas.a libatlas.a"  \
+        LIBS="-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -lgfortran  -lc -lpthread -lm -lgcc" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libtatlas.so built wt gcc and all libs" ; \
+        elif make LDTRY outso="libtatlas.so" libas="libptlapack.a libptf77blas.a libptcblas.a libatlas.a"  \
+        LIBS="-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -lgfortran  -lc -lpthread -lm -lgcc" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libtatlas.so built wt ld and all sys libs" ; \
+elif make GCCTRY_norp outso="libtatlas.so" libas="libptlapack.a libptf77blas.a libptcblas.a libatlas.a"  \
+        LIBS="-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -lgfortran  -lc -lpthread -lm -lgcc" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libtatlas.so built wt gcc and all libs and no rpath" ; \
+        elif make GCCTRY outso="libtatlas.so" libas="libptlapack.a libptf77blas.a libptcblas.a libatlas.a"  \
+        LIBS="-lc -lpthread -lm -lgcc" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libtatlas.so built wt gcc and all C libs" ; \
+        elif make LDTRY outso="libtatlas.so" libas="libptlapack.a libptf77blas.a libptcblas.a libatlas.a"  \
+        LIBS="-lc -lpthread -lm -lgcc" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libtatlas.so built wt ld and -lc -lgcc" ; \
+        elif make GCCTRY_norp outso="libtatlas.so" libas="libptlapack.a libptf77blas.a libptcblas.a libatlas.a"  \
+        LIBS="-lc -lpthread -lm -lgcc" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libtatlas.so built wt gcc and all C libs and no rpath" ; \
+        elif make GCCTRY outso="libtatlas.so" libas="libptlapack.a libptf77blas.a libptcblas.a libatlas.a"  \
+        LIBS="-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -lgfortran  -lc -lpthread -lm" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libtatlas.so built wt gcc and all libs except -lgcc" ; \
+        elif make LDTRY outso="libtatlas.so" libas="libptlapack.a libptf77blas.a libptcblas.a libatlas.a"  \
+        LIBS="-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -lgfortran  -lc -lpthread -lm" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libtatlas.so built wt all libs except -lgcc" ; \
+        elif make GCCTRY_norp outso="libtatlas.so" libas="libptlapack.a libptf77blas.a libptcblas.a libatlas.a"  \
+        LIBS="-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -lgfortran  -lc -lpthread -lm" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libtatlas.so built wt gcc and all libs except -lgcc, no rpath" ; \
+        elif make GCCTRY outso="libtatlas.so" libas="libptlapack.a libptf77blas.a libptcblas.a libatlas.a"  \
+        LIBS="-lc -lpthread -lm" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libtatlas.so built wt gcc and -lc" ; \
+        elif make LDTRY outso="libtatlas.so" libas="libptlapack.a libptf77blas.a libptcblas.a libatlas.a"  \
+        LIBS="-lc -lpthread -lm" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libtatlas.so built wt ld and -lc" ; \
+        elif make GCCTRY_norp outso="libtatlas.so" libas="libptlapack.a libptf77blas.a libptcblas.a libatlas.a"  \
+        LIBS="-lc -lpthread -lm" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libtatlas.so built wt gcc and -lc, no rpath" ; \
+        elif make LDTRY outso="libtatlas.so" libas="libptlapack.a libptf77blas.a libptcblas.a libatlas.a"  \
+        LIBS="-lpthread -lm" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libtatlas.so built wt ld" ; \
+        elif make GCCTRY_norp outso="libtatlas.so" libas="libptlapack.a libptf77blas.a libptcblas.a libatlas.a"  \
+        LIBS="-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -lgfortran  -lkernel32" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib"; then \
+           echo "libtatlas.so built wt fortran and kernel32, no rpath" ; \
+        else \
+           make GCCTRY outso="libtatlas.so" libas="libptlapack.a libptf77blas.a libptcblas.a libatlas.a"  \
+           LIBS="-lpthread -lm" LIBINSTdir="/data/user/eesen/tools/ATLAS/build/install/lib" ; \
+        fi
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/lib'
+/usr/bin/x86_64-redhat-linux-gcc -O -fomit-frame-pointer -mavx -m64 -fPIC -m64 -fPIC -shared -o libtatlas.so  \
+           -Wl,"rpath-link /data/user/eesen/tools/ATLAS/build/install/lib" \
+           -Wl,--whole-archive libptlapack.a libptf77blas.a libptcblas.a libatlas.a -Wl,--no-whole-archive -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -lgfortran  -lc -lpthread -lm -lgcc
+/usr/bin/ld: cannot find rpath-link /data/user/eesen/tools/ATLAS/build/install/lib: No such file or directory
+collect2: error: ld returned 1 exit status
+make[7]: *** [GCCTRY] Error 1
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/lib'
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/lib'
+ld -melf_x86_64 -shared -soname /data/user/eesen/tools/ATLAS/build/install/lib/libtatlas.so -o libtatlas.so \
+           -rpath-link /data/user/eesen/tools/ATLAS/build/install/lib  \
+           --whole-archive libptlapack.a libptf77blas.a libptcblas.a libatlas.a --no-whole-archive -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -lgfortran  -lc -lpthread -lm -lgcc
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/lib'
+libtatlas.so built wt ld and all sys libs
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/lib'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/lib'
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/lib'
+make[3]: Leaving directory `/data/user/eesen/tools/ATLAS/build'
+make[2]: Leaving directory `/data/user/eesen/tools/ATLAS/build/bin'
+
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*      FINISHED ATLAS3.10.0 INSTALL OF SECTION 5-2-1 ON 08/07/2019 AT 19:38   *
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+
+
+

@@ -27,7 +27,8 @@ all:  $(LIBFILE)
 ifeq ($(CUDA), true)
 
   #Default compute capability architectures we compile with
-  CUDA_ARCH=-gencode arch=compute_20,code=sm_20
+  #CUDA_ARCH=-gencode arch=compute_20,code=sm_20
+  CUDA_ARCH=
 
   #Get the CUDA Toolkit version (remove decimal point char)
   CUDA_VERSION=$(shell $(CUDATKDIR)/bin/nvcc -V | grep release | sed -e 's|.*release ||' -e 's|,.*||' -e 's|\.||')

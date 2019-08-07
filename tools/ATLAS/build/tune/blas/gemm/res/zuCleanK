@@ -1,0 +1,5 @@
+MULT  ICASE  FIXED  NB  NB0  NB1  NB2     MFLOP  ROUT
+3
+   1    230      1  56   49   28   16  10277.76  ATL_dmm14x1x56_sse2pABC_K.c
+   2    243      1  56   48   28   16  10734.16  ATL_dmm2x2x128_sse2.c
+   4    245      1  56   48   28   16  17326.88  ATL_dmm4x2x256_avx.c

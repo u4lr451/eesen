@@ -1,0 +1,1180 @@
+
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*       BEGAN ATLAS3.10.0 INSTALL OF SECTION 2-2-7 ON 08/07/2019 AT 13:19     *
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+
+
+
+make[2]: Entering directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/tune/blas/gemv ; make res/sMVNK.sum pre=s
+make[3]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemv'
+./xmvnksearch -p s
+
+      Read in L1 Cache size as = 32KB.
+
+Cases read in:
+ID=1 ROUT='ATL_gemvN_axpy.c' AUTH='R. Clint Whaley' TA='N' \
+   rankR=0 CacheElts=0 SSE=0 alignA=0 alignY=0 alignX=0 minM=0 minN=0 NU=16  \
+   MU=1 LDAMUL=0 PFTUNABLE=0 ALIGNX2A=0 ADDCFLAGS=0 GEMMBASED=0 AXPYBASED=1  \
+   ALLALIGNXY=0 LDYTOP=0 FNU=0 X87=0 
+ID=2 ROUT='ATL_sgemvN_8x4_sse.c' AUTH='R. Clint Whaley' TA='N' \
+   rankR=0 CacheElts=0 SSE=1 alignA=0 alignY=16 alignX=0 minM=0 minN=0  \
+   NU=4 MU=8 LDAMUL=16 PFTUNABLE=0 ALIGNX2A=1 ADDCFLAGS=0 GEMMBASED=0 AXPYBASED=1  \
+   ALLALIGNXY=0 LDYTOP=0 FNU=0 X87=0 
+ID=3 ROUT='ATL_gemvN_v6x8_vsx.c' AUTH='IBM' TA='N' \
+   rankR=0 CacheElts=0 SSE=0 alignA=0 alignY=0 alignX=0 minM=0 minN=0 NU=8  \
+   MU=24 LDAMUL=0 PFTUNABLE=0 ALIGNX2A=0 ADDCFLAGS=0 GEMMBASED=0 AXPYBASED=1  \
+   ALLALIGNXY=0 LDYTOP=0 FNU=0 X87=0   CFLAGS='-O3 -mvsx'  COMP='gcc'
+
+BEGIN BASIC KERNEL TESTS:
+   Kernel ATL_gemvN_axpy.c(1) passes basic test
+   Kernel ATL_sgemvN_8x4_sse.c(2) passes basic test
+   NUKING bad kernel ATL_gemvN_v6x8_vsx.c(3), MU=24, NU=8
+DONE BASIC KERNEL TESTS:
+
+
+Surviving cases:
+ID=1 ROUT='ATL_gemvN_axpy.c' AUTH='R. Clint Whaley' TA='N' \
+   rankR=0 CacheElts=0 SSE=0 alignA=0 alignY=0 alignX=0 minM=0 minN=0 NU=16  \
+   MU=1 LDAMUL=0 PFTUNABLE=0 ALIGNX2A=0 ADDCFLAGS=0 GEMMBASED=0 AXPYBASED=1  \
+   ALLALIGNXY=0 LDYTOP=0 FNU=0 X87=0 
+ID=2 ROUT='ATL_sgemvN_8x4_sse.c' AUTH='R. Clint Whaley' TA='N' \
+   rankR=0 CacheElts=0 SSE=1 alignA=0 alignY=16 alignX=0 minM=0 minN=0  \
+   NU=4 MU=8 LDAMUL=16 PFTUNABLE=0 ALIGNX2A=1 ADDCFLAGS=0 GEMMBASED=0 AXPYBASED=1  \
+   ALLALIGNXY=0 LDYTOP=0 FNU=0 X87=0 
+BEGIN NU/MU EXTRACT SEARCH, imf=1:
+
+BEGIN BASIC KERNEL TESTS:
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+DONE BASIC KERNEL TESTS:
+
+   900000:smvn_C.c (M=3000, N=2000, lda=3003) gets 3000.75 MFLOPS
+   900000:smvn_C.c (M=3000, N=2000, lda=3003) gets 3000.75 MFLOPS
+   900000:smvn_C.c (M=3000, N=2000, lda=3003) gets 3000.75 MFLOPS
+   900000:smvn_C.c (M=3000, N=2000, lda=3003) gets 3000.75 MFLOPS
+   900000:smvn_C.c (M=3000, N=1992, lda=3003) gets 2988.75 MFLOPS
+   900000:smvn_C.c (M=3000, N=2000, lda=3003) gets 3000.75 MFLOPS
+   900000:smvn_C.c (M=3000, N=2000, lda=3003) gets 3000.75 MFLOPS
+   900000:smvn_C.c (M=3000, N=1992, lda=3003) gets 2988.75 MFLOPS
+   900000:smvn_C.c (M=3000, N=2000, lda=3003) gets 1500.38 MFLOPS
+   900000:smvn_C.c (M=3000, N=2000, lda=3003) gets 3000.75 MFLOPS
+   900000:smvn_C.c (M=3000, N=2000, lda=3003) gets 3000.75 MFLOPS
+   900000:smvn_C.c (M=3000, N=2000, lda=3003) gets 3000.75 MFLOPS
+   900000:smvn_C.c (M=3000, N=1992, lda=3003) gets 2988.75 MFLOPS
+   900000:smvn_C.c (M=3000, N=2000, lda=3003) gets 3000.75 MFLOPS
+   900000:smvn_C.c (M=3000, N=2000, lda=3003) gets 3000.75 MFLOPS
+   900000:smvn_C.c (M=3000, N=1992, lda=3003) gets 1992.50 MFLOPS
+   mu=16, nu=1, mflop[1]=3000.75
+   mu=16, nu=2, mflop[1]=3000.75
+   mu=16, nu=4, mflop[1]=3000.75
+   mu=16, nu=8, mflop[1]=3000.75
+   mu=16, nu=12, mflop[1]=2988.75
+   mu=16, nu=16, mflop[1]=3000.75
+   mu=16, nu=20, mflop[1]=3000.75
+   mu=16, nu=24, mflop[1]=2988.75
+   mu=128, nu=1, mflop[1]=1500.38
+   mu=112, nu=2, mflop[1]=3000.75
+   mu=96, nu=4, mflop[1]=3000.75
+   mu=80, nu=8, mflop[1]=3000.75
+   mu=64, nu=12, mflop[1]=2988.75
+   mu=48, nu=16, mflop[1]=3000.75
+   mu=32, nu=20, mflop[1]=3000.75
+   mu=32, nu=24, mflop[1]=1992.50
+BEST GENERATED NU-TUNED KERNEL FOR imf=1: MU=16, NU=1, MF=3000.75
+
+BEGIN MU EXTRACT SEARCH, imf=1
+   NU=1, MU=16, mflop[1]=3000.75
+   900000:smvn_C.c (M=3000, N=2000, lda=3003) gets 1500.38 MFLOPS
+   NU=1, MU=32, mflop[1]=1500.38
+   900000:smvn_C.c (M=3000, N=2000, lda=3003) gets 2000.50 MFLOPS
+   NU=1, MU=1, mflop[1]=2000.50
+   900000:smvn_C.c (M=3000, N=2000, lda=3003) gets 3000.75 MFLOPS
+   NU=1, MU=2, mflop[1]=3000.75
+   900000:smvn_C.c (M=3000, N=2000, lda=3003) gets 3000.75 MFLOPS
+   NU=1, MU=4, mflop[1]=3000.75
+   900000:smvn_C.c (M=3000, N=2000, lda=3003) gets 3000.75 MFLOPS
+   NU=1, MU=8, mflop[1]=3000.75
+   900000:smvn_C.c (M=3000, N=2000, lda=3003) gets 1500.38 MFLOPS
+   NU=1, MU=12, mflop[1]=1500.38
+BEST MU-TUNED GENERATED KERNEL FOR imf=1: NU=1, MU=16, MF=3000.75
+
+BEGIN BASIC KERNEL TESTS:
+   Kernel smvn_C.c(900000) passes basic test
+DONE BASIC KERNEL TESTS:
+
+BEGIN NU/MU EXTRACT SEARCH, imf=1:
+
+BEGIN BASIC KERNEL TESTS:
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+DONE BASIC KERNEL TESTS:
+
+   900000:smvn_sse.c (M=3000, N=2000, lda=3003) gets 6001.50 MFLOPS
+   900000:smvn_sse.c (M=3000, N=2000, lda=3003) gets 6001.50 MFLOPS
+   900000:smvn_sse.c (M=3000, N=2000, lda=3003) gets 6001.50 MFLOPS
+   900000:smvn_sse.c (M=3000, N=2000, lda=3003) gets 6001.50 MFLOPS
+   900000:smvn_sse.c (M=3000, N=1992, lda=3003) gets 5977.50 MFLOPS
+   900000:smvn_sse.c (M=3000, N=2000, lda=3003) gets 4001.00 MFLOPS
+   900000:smvn_sse.c (M=3000, N=2000, lda=3003) gets 3000.75 MFLOPS
+   900000:smvn_sse.c (M=3000, N=2000, lda=3003) gets 6001.50 MFLOPS
+   900000:smvn_sse.c (M=3000, N=2000, lda=3003) gets 6001.50 MFLOPS
+   900000:smvn_sse.c (M=3000, N=1992, lda=3003) gets 5977.50 MFLOPS
+   mu=16, nu=1, mflop[1]=6001.50
+   mu=16, nu=2, mflop[1]=6001.50
+   mu=16, nu=4, mflop[1]=6001.50
+   mu=16, nu=8, mflop[1]=6001.50
+   mu=16, nu=12, mflop[1]=5977.50
+   mu=96, nu=1, mflop[1]=4001.00
+   mu=80, nu=2, mflop[1]=3000.75
+   mu=64, nu=4, mflop[1]=6001.50
+   mu=48, nu=8, mflop[1]=6001.50
+   mu=32, nu=12, mflop[1]=5977.50
+BEST GENERATED NU-TUNED KERNEL FOR imf=1: MU=16, NU=1, MF=6001.50
+
+BEGIN MU EXTRACT SEARCH, imf=1
+   NU=1, MU=16, mflop[1]=6001.50
+   900000:smvn_sse.c (M=3000, N=2000, lda=3003) gets 6001.50 MFLOPS
+   NU=1, MU=32, mflop[1]=6001.50
+BEST MU-TUNED GENERATED KERNEL FOR imf=1: NU=1, MU=16, MF=6001.50
+
+BEGIN BASIC KERNEL TESTS:
+   Kernel smvn_sse.c(900000) passes basic test
+DONE BASIC KERNEL TESTS:
+
+
+BEGIN L1-BLOCKED TUNING
+   900002:smvn_sse.c (M=3000, N=2000, lda=3003) gets 6001.50 MFLOPS
+   900001:smvn_C.c (M=3000, N=2000, lda=3003) gets 3000.75 MFLOPS
+   1:ATL_gemvN_axpy.c (M=3000, N=2000, lda=3003) gets 3000.75 MFLOPS
+
+TUNING PREFETCH INST, imf=0, BASELINE MFLOP=6001.50
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    A   DEF    16     1       6001.50
+    A   nta    16     1       6001.50
+    A    t0    16     1       6001.50
+    A    t1    16     1       6001.50
+    A    t2    16     1       6001.50
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    X   DEF    16     1       6001.50
+    X   nta    16     1       4001.00
+    X    t0    16     1       6001.50
+    X    t1    16     1       3000.75
+    X    t2    16     1       6001.50
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    Y   DEF    16     1       6001.50
+    Y   nta    16     1       6001.50
+    Y    t0    16     1       6001.50
+    Y    t1    16     1       6001.50
+    Y    t2    16     1       6001.50
+
+BEST MFLOP[0]=6001.50 (0.00 percent improvement)
+   cflags='-x assembler-with-cpp'
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'A', imf=0:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    A   DEF    16     1       3000.75
+    A    64    16     1       6001.50
+    A   256    16     1       6001.50
+    A   192    16     1       6001.50
+    A     0    16     1       4001.00
+BEST imf=0 PFADIST=128 (6001.50)
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'X', imf=0:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    X   DEF    16     1       6001.50
+    X    64    16     1       6001.50
+    X   256    16     1       6001.50
+    X   192    16     1       3000.75
+    X     0    16     1       4001.00
+DEFAULT imf=0 XDISTANCE IS BEST (6001.50)
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'Y', imf=0:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    Y   DEF    16     1       6001.50
+    Y    64    16     1       6001.50
+    Y   256    16     1       6001.50
+    Y   192    16     1       6001.50
+    Y     0    16     1       6001.50
+DEFAULT imf=0 YDISTANCE IS BEST (6001.50)
+
+PREFETCH DISTANCE TUNING imf=0 improved from 6001.50 to 4001.00 (-33.33 percent)
+DONE L1-BLOCKED TUNING, CHOSE 'smvn_sse.c' (4001.00)
+
+
+CACHE TUNING FOR 900002:'smvn_sse.c', MU=16 NU=1
+------------------------------------------
+     M       N     lda  percL1       mflop
+======  ======  ======  ======  ==========
+  3000    2000    3003      50    6001.50
+  3000    2000    3003     100    6001.50
+  3000    2000    3003      74    3000.75
+  3000    2000    3003      62    3000.75
+  3000    2000    3003      56    6001.50
+  3000    2000    3003      52    6001.50
+  3000    2000    3003      54    3000.75
+  3000    2000    3003      58    6001.50
+  3000    2000    3003      60    6001.50
+  3000    2000    3003      68    4001.00
+  3000    2000    3003      64    6001.50
+  3000    2000    3003      66    6001.50
+  3000    2000    3003      70    6001.50
+  3000    2000    3003      72    6001.50
+  3000    2000    3003      86    3000.75
+  3000    2000    3003      80    3000.75
+  3000    2000    3003      76    6001.50
+  3000    2000    3003      78    6001.50
+  3000    2000    3003      82    3000.75
+  3000    2000    3003      84    4001.00
+  3000    2000    3003      92    6001.50
+  3000    2000    3003      88    4001.00
+  3000    2000    3003      90    3000.75
+  3000    2000    3003      96    6001.50
+  3000    2000    3003      94    6001.50
+  3000    2000    3003      98    6001.50
+
+BEST CASE 50 percent of L1, MFLOP=6001.50
+
+
+BEGIN L2-BLOCKED TUNING
+   900002:smvn_sse.c (M=3000, N=2000, lda=3003) gets 6001.50 MFLOPS
+   900001:smvn_C.c (M=3000, N=2000, lda=3003) gets 3000.75 MFLOPS
+   1:ATL_gemvN_axpy.c (M=3000, N=2000, lda=3003) gets 6001.50 MFLOPS
+
+TUNING PREFETCH INST, imf=1, BASELINE MFLOP=6001.50
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    A   DEF    16     1       6001.50
+    A   nta    16     1       3000.75
+    A    t0    16     1       6001.50
+    A    t1    16     1       6001.50
+    A    t2    16     1       6001.50
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    X   DEF    16     1       6001.50
+    X   nta    16     1       6001.50
+    X    t0    16     1       6001.50
+    X    t1    16     1       6001.50
+    X    t2    16     1       6001.50
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    Y   DEF    16     1       6001.50
+    Y   nta    16     1       6001.50
+    Y    t0    16     1       3000.75
+    Y    t1    16     1       6001.50
+    Y    t2    16     1       6001.50
+
+BEST MFLOP[1]=6001.50 (0.00 percent improvement)
+   cflags='-x assembler-with-cpp -DPFIA=prefetcht0'
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'A', imf=1:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    A   DEF    16     1       6001.50
+    A    64    16     1       6001.50
+    A   256    16     1       6001.50
+    A   192    16     1       6001.50
+    A     0    16     1       6001.50
+DEFAULT imf=1 ADISTANCE IS BEST (6001.50)
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'X', imf=1:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    X   DEF    16     1       3000.75
+    X    64    16     1       6001.50
+    X   256    16     1       6001.50
+    X   192    16     1       6001.50
+    X     0    16     1       6001.50
+BEST imf=1 PFXDIST=128 (6001.50)
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'Y', imf=1:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    Y   DEF    16     1       6001.50
+    Y    64    16     1       6001.50
+    Y   256    16     1       6001.50
+    Y   192    16     1       6001.50
+    Y     0    16     1       3000.75
+DEFAULT imf=1 YDISTANCE IS BEST (6001.50)
+
+PREFETCH DISTANCE TUNING imf=1 improved from 6001.50 to 6001.50 (0.00 percent)
+DONE L2-BLOCKED TUNING, CHOSE 'smvn_sse.c' (6001.50)
+
+
+CACHE TUNING FOR 900002:'smvn_sse.c', MU=16 NU=1
+------------------------------------------
+     M       N     lda  percL1       mflop
+======  ======  ======  ======  ==========
+  3000    2000    3003     150    6001.50
+  3000    2000    3003     800    6001.50
+  3000    2000    3003     450    6001.50
+  3000    2000    3003     300    3000.75
+  3000    2000    3003     200    6001.50
+  3000    2000    3003     250    6001.50
+  3000    2000    3003     350    6001.50
+  3000    2000    3003     400    6001.50
+  3000    2000    3003     600    6001.50
+  3000    2000    3003     500    6001.50
+  3000    2000    3003     550    6001.50
+  3000    2000    3003     700    6001.50
+  3000    2000    3003     650    6001.50
+  3000    2000    3003     750    3000.75
+
+BEST CASE 150 percent of L1, MFLOP=6001.50
+
+BEST L1-blocked kernel:
+ID=900002 ROUT='smvn_sse.c' AUTH='R. Clint Whaley' TA='N' \
+   rankR=0 CacheElts=4096 SSE=3 alignA=0 alignY=16 alignX=16 minM=16 minN=1  \
+   NU=1 MU=16 LDAMUL=0 PFTUNABLE=1 ALIGNX2A=0 ADDCFLAGS=0 GEMMBASED=0 AXPYBASED=1  \
+   ALLALIGNXY=0 LDYTOP=0 FNU=1 X87=0  \
+   MFLOP=6.001500e+03,6.001500e+03  ASM=GAS_x8664 \
+     CFLAGS='-x assembler-with-cpp -DPFADIST=128' \
+     COMP='/usr/bin/x86_64-redhat-linux-gcc -O -fomit-frame-pointer -mavx -m64 -fPIC -m64 -fPIC'
+BEST L2-blocked kernel:
+ID=900002 ROUT='smvn_sse.c' AUTH='R. Clint Whaley' TA='N' \
+   rankR=0 CacheElts=12288 SSE=3 alignA=0 alignY=16 alignX=16 minM=16 minN=1  \
+   NU=1 MU=16 LDAMUL=0 PFTUNABLE=1 ALIGNX2A=0 ADDCFLAGS=0 GEMMBASED=0 AXPYBASED=1  \
+   ALLALIGNXY=0 LDYTOP=0 FNU=1 X87=0  \
+   MFLOP=6.001500e+03,6.001500e+03  ASM=GAS_x8664 \
+     CFLAGS='-x assembler-with-cpp -DPFIA=prefetcht0 -DPFXDIST=128' \
+     COMP='/usr/bin/x86_64-redhat-linux-gcc -O -fomit-frame-pointer -mavx -m64 -fPIC -m64 -fPIC'
+BEGIN NU/MU EXTRACT SEARCH, imf=4:
+
+BEGIN BASIC KERNEL TESTS:
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+DONE BASIC KERNEL TESTS:
+
+   900000:smvn_C.c (M=870, N=8, lda=875) gets 1626.90 MFLOPS
+   900000:smvn_C.c (M=870, N=8, lda=875) gets 2169.20 MFLOPS
+   900000:smvn_C.c (M=870, N=8, lda=875) gets 3253.80 MFLOPS
+   900000:smvn_C.c (M=870, N=8, lda=875) gets 3253.80 MFLOPS
+   900000:smvn_C.c (M=580, N=12, lda=588) gets 3248.00 MFLOPS
+   900000:smvn_C.c (M=435, N=16, lda=441) gets 3244.23 MFLOPS
+   900000:smvn_C.c (M=348, N=20, lda=357) gets 3253.10 MFLOPS
+   900000:smvn_C.c (M=290, N=24, lda=294) gets 3254.09 MFLOPS
+   900000:smvn_C.c (M=870, N=8, lda=875) gets 1626.90 MFLOPS
+   900000:smvn_C.c (M=870, N=8, lda=875) gets 1626.90 MFLOPS
+   900000:smvn_C.c (M=870, N=8, lda=875) gets 1626.90 MFLOPS
+   900000:smvn_C.c (M=870, N=8, lda=875) gets 1626.90 MFLOPS
+   900000:smvn_C.c (M=580, N=12, lda=588) gets 1624.00 MFLOPS
+   900000:smvn_C.c (M=435, N=16, lda=441) gets 1622.12 MFLOPS
+   900000:smvn_C.c (M=348, N=20, lda=357) gets 2168.74 MFLOPS
+   900000:smvn_C.c (M=290, N=24, lda=294) gets 3254.09 MFLOPS
+   mu=16, nu=1, mflop[4]=1626.90
+   mu=16, nu=2, mflop[4]=2169.20
+   mu=16, nu=4, mflop[4]=3253.80
+   mu=16, nu=8, mflop[4]=3253.80
+   mu=16, nu=12, mflop[4]=3248.00
+   mu=16, nu=16, mflop[4]=3244.23
+   mu=16, nu=20, mflop[4]=3253.10
+   mu=16, nu=24, mflop[4]=3254.09
+   mu=128, nu=1, mflop[4]=1626.90
+   mu=112, nu=2, mflop[4]=1626.90
+   mu=96, nu=4, mflop[4]=1626.90
+   mu=80, nu=8, mflop[4]=1626.90
+   mu=64, nu=12, mflop[4]=1624.00
+   mu=48, nu=16, mflop[4]=1622.12
+   mu=32, nu=20, mflop[4]=2168.74
+   mu=32, nu=24, mflop[4]=3254.09
+BEST GENERATED NU-TUNED KERNEL FOR imf=4: MU=16, NU=24, MF=3254.09
+
+BEGIN MU EXTRACT SEARCH, imf=4
+   NU=24, MU=16, mflop[4]=3254.09
+   900000:smvn_C.c (M=290, N=24, lda=294) gets 3254.09 MFLOPS
+   NU=24, MU=32, mflop[4]=3254.09
+   900000:smvn_C.c (M=290, N=24, lda=294) gets 1627.05 MFLOPS
+   NU=24, MU=1, mflop[4]=1627.05
+   900000:smvn_C.c (M=290, N=24, lda=294) gets 3254.09 MFLOPS
+   NU=24, MU=2, mflop[4]=3254.09
+   900000:smvn_C.c (M=290, N=24, lda=294) gets 3254.09 MFLOPS
+   NU=24, MU=4, mflop[4]=3254.09
+   900000:smvn_C.c (M=290, N=24, lda=294) gets 2169.39 MFLOPS
+   NU=24, MU=8, mflop[4]=2169.39
+   900000:smvn_C.c (M=290, N=24, lda=294) gets 3254.09 MFLOPS
+   NU=24, MU=12, mflop[4]=3254.09
+BEST MU-TUNED GENERATED KERNEL FOR imf=4: NU=24, MU=16, MF=3254.09
+
+BEGIN BASIC KERNEL TESTS:
+   Kernel smvn_C.c(900000) passes basic test
+DONE BASIC KERNEL TESTS:
+
+BEGIN NU/MU EXTRACT SEARCH, imf=4:
+
+BEGIN BASIC KERNEL TESTS:
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+DONE BASIC KERNEL TESTS:
+
+   900000:smvn_sse.c (M=870, N=8, lda=875) gets 6507.60 MFLOPS
+   900000:smvn_sse.c (M=870, N=8, lda=875) gets 6507.60 MFLOPS
+   900000:smvn_sse.c (M=870, N=8, lda=875) gets 13015.20 MFLOPS
+   900000:smvn_sse.c (M=870, N=8, lda=875) gets 13015.20 MFLOPS
+   900000:smvn_sse.c (M=580, N=12, lda=588) gets 6496.00 MFLOPS
+   900000:smvn_sse.c (M=870, N=8, lda=875) gets 6507.60 MFLOPS
+   900000:smvn_sse.c (M=870, N=8, lda=875) gets 6507.60 MFLOPS
+   900000:smvn_sse.c (M=870, N=8, lda=875) gets 8676.80 MFLOPS
+   900000:smvn_sse.c (M=870, N=8, lda=875) gets 13015.20 MFLOPS
+   900000:smvn_sse.c (M=580, N=12, lda=588) gets 6496.00 MFLOPS
+   mu=16, nu=1, mflop[4]=6507.60
+   mu=16, nu=2, mflop[4]=6507.60
+   mu=16, nu=4, mflop[4]=13015.20
+   mu=16, nu=8, mflop[4]=13015.20
+   mu=16, nu=12, mflop[4]=6496.00
+   mu=96, nu=1, mflop[4]=6507.60
+   mu=80, nu=2, mflop[4]=6507.60
+   mu=64, nu=4, mflop[4]=8676.80
+   mu=48, nu=8, mflop[4]=13015.20
+   mu=32, nu=12, mflop[4]=6496.00
+BEST GENERATED NU-TUNED KERNEL FOR imf=4: MU=16, NU=4, MF=13015.20
+
+BEGIN MU EXTRACT SEARCH, imf=4
+   NU=4, MU=16, mflop[4]=13015.20
+   900000:smvn_sse.c (M=870, N=8, lda=875) gets 13015.20 MFLOPS
+   NU=4, MU=32, mflop[4]=13015.20
+BEST MU-TUNED GENERATED KERNEL FOR imf=4: NU=4, MU=16, MF=13015.20
+
+BEGIN BASIC KERNEL TESTS:
+   Kernel smvn_sse.c(900000) passes basic test
+DONE BASIC KERNEL TESTS:
+
+BEGIN NU/MU EXTRACT SEARCH, imf=3:
+
+BEGIN BASIC KERNEL TESTS:
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+   Kernel smvn_C.c(900000) passes basic test
+DONE BASIC KERNEL TESTS:
+
+   900000:smvn_C.c (M=2048, N=16, lda=2051) gets 1622.02 MFLOPS
+   900000:smvn_C.c (M=2048, N=16, lda=2051) gets 1622.02 MFLOPS
+   900000:smvn_C.c (M=2048, N=16, lda=2051) gets 3244.03 MFLOPS
+   900000:smvn_C.c (M=2048, N=16, lda=2051) gets 3244.03 MFLOPS
+   900000:smvn_C.c (M=1365, N=24, lda=1372) gets 3277.36 MFLOPS
+   900000:smvn_C.c (M=2048, N=16, lda=2051) gets 1622.02 MFLOPS
+   900000:smvn_C.c (M=1638, N=20, lda=1645) gets 3290.74 MFLOPS
+   900000:smvn_C.c (M=1365, N=24, lda=1372) gets 3277.36 MFLOPS
+   900000:smvn_C.c (M=2048, N=16, lda=2051) gets 811.01 MFLOPS
+   900000:smvn_C.c (M=2048, N=16, lda=2051) gets 1622.02 MFLOPS
+   900000:smvn_C.c (M=2048, N=16, lda=2051) gets 1622.02 MFLOPS
+   900000:smvn_C.c (M=2048, N=16, lda=2051) gets 1622.02 MFLOPS
+   900000:smvn_C.c (M=1365, N=24, lda=1372) gets 3277.36 MFLOPS
+   900000:smvn_C.c (M=2048, N=16, lda=2051) gets 3244.03 MFLOPS
+   900000:smvn_C.c (M=1638, N=20, lda=1645) gets 1645.37 MFLOPS
+   900000:smvn_C.c (M=1365, N=24, lda=1372) gets 1638.68 MFLOPS
+   mu=16, nu=1, mflop[3]=1622.02
+   mu=16, nu=2, mflop[3]=1622.02
+   mu=16, nu=4, mflop[3]=3244.03
+   mu=16, nu=8, mflop[3]=3244.03
+   mu=16, nu=12, mflop[3]=3277.36
+   mu=16, nu=16, mflop[3]=1622.02
+   mu=16, nu=20, mflop[3]=3290.74
+   mu=16, nu=24, mflop[3]=3277.36
+   mu=128, nu=1, mflop[3]=811.01
+   mu=112, nu=2, mflop[3]=1622.02
+   mu=96, nu=4, mflop[3]=1622.02
+   mu=80, nu=8, mflop[3]=1622.02
+   mu=64, nu=12, mflop[3]=3277.36
+   mu=48, nu=16, mflop[3]=3244.03
+   mu=32, nu=20, mflop[3]=1645.37
+   mu=32, nu=24, mflop[3]=1638.68
+BEST GENERATED NU-TUNED KERNEL FOR imf=3: MU=16, NU=20, MF=3290.74
+
+BEGIN MU EXTRACT SEARCH, imf=3
+   NU=20, MU=16, mflop[3]=3290.74
+   900000:smvn_C.c (M=1638, N=20, lda=1645) gets 1645.37 MFLOPS
+   NU=20, MU=32, mflop[3]=1645.37
+   900000:smvn_C.c (M=1638, N=20, lda=1645) gets 1645.37 MFLOPS
+   NU=20, MU=1, mflop[3]=1645.37
+   900000:smvn_C.c (M=1638, N=20, lda=1645) gets 3290.74 MFLOPS
+   NU=20, MU=2, mflop[3]=3290.74
+   900000:smvn_C.c (M=1638, N=20, lda=1645) gets 3290.74 MFLOPS
+   NU=20, MU=4, mflop[3]=3290.74
+   900000:smvn_C.c (M=1638, N=20, lda=1645) gets 1645.37 MFLOPS
+   NU=20, MU=8, mflop[3]=1645.37
+   900000:smvn_C.c (M=1638, N=20, lda=1645) gets 3290.74 MFLOPS
+   NU=20, MU=12, mflop[3]=3290.74
+BEST MU-TUNED GENERATED KERNEL FOR imf=3: NU=20, MU=16, MF=3290.74
+
+BEGIN BASIC KERNEL TESTS:
+   Kernel smvn_C.c(900000) passes basic test
+DONE BASIC KERNEL TESTS:
+
+BEGIN NU/MU EXTRACT SEARCH, imf=3:
+
+BEGIN BASIC KERNEL TESTS:
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+   Kernel smvn_sse.c(900000) passes basic test
+DONE BASIC KERNEL TESTS:
+
+   900000:smvn_sse.c (M=2048, N=16, lda=2051) gets 6488.06 MFLOPS
+   900000:smvn_sse.c (M=2048, N=16, lda=2051) gets 12976.13 MFLOPS
+   900000:smvn_sse.c (M=2048, N=16, lda=2051) gets 8650.75 MFLOPS
+   900000:smvn_sse.c (M=2048, N=16, lda=2051) gets 6488.06 MFLOPS
+   900000:smvn_sse.c (M=1365, N=24, lda=1372) gets 6554.73 MFLOPS
+   900000:smvn_sse.c (M=2048, N=16, lda=2051) gets 6488.06 MFLOPS
+   900000:smvn_sse.c (M=2048, N=16, lda=2051) gets 6488.06 MFLOPS
+   900000:smvn_sse.c (M=2048, N=16, lda=2051) gets 12976.13 MFLOPS
+   900000:smvn_sse.c (M=2048, N=16, lda=2051) gets 6488.06 MFLOPS
+   900000:smvn_sse.c (M=1365, N=24, lda=1372) gets 6554.73 MFLOPS
+   mu=16, nu=1, mflop[3]=6488.06
+   mu=16, nu=2, mflop[3]=12976.13
+   mu=16, nu=4, mflop[3]=8650.75
+   mu=16, nu=8, mflop[3]=6488.06
+   mu=16, nu=12, mflop[3]=6554.73
+   mu=96, nu=1, mflop[3]=6488.06
+   mu=80, nu=2, mflop[3]=6488.06
+   mu=64, nu=4, mflop[3]=12976.13
+   mu=48, nu=8, mflop[3]=6488.06
+   mu=32, nu=12, mflop[3]=6554.73
+BEST GENERATED NU-TUNED KERNEL FOR imf=3: MU=16, NU=2, MF=12976.13
+
+BEGIN MU EXTRACT SEARCH, imf=3
+   NU=2, MU=16, mflop[3]=12976.13
+   900000:smvn_sse.c (M=2048, N=16, lda=2051) gets 6488.06 MFLOPS
+   NU=2, MU=32, mflop[3]=6488.06
+BEST MU-TUNED GENERATED KERNEL FOR imf=3: NU=2, MU=16, MF=12976.13
+
+BEGIN BASIC KERNEL TESTS:
+   Kernel smvn_sse.c(900000) passes basic test
+DONE BASIC KERNEL TESTS:
+
+   900008:smvn_sse.c (M=870, N=8, lda=875) gets 13015.20 MFLOPS
+   900007:smvn_C.c (M=348, N=20, lda=357) gets 3253.10 MFLOPS
+   900005:smvn_sse.c (M=870, N=8, lda=875) gets 13015.20 MFLOPS
+   900004:smvn_C.c (M=290, N=24, lda=294) gets 1627.05 MFLOPS
+   900002:smvn_sse.c (M=870, N=8, lda=875) gets 6507.60 MFLOPS
+   900001:smvn_C.c (M=870, N=8, lda=875) gets 1626.90 MFLOPS
+   1:ATL_gemvN_axpy.c (M=435, N=16, lda=441) gets 1622.12 MFLOPS
+
+TUNING PREFETCH INST, imf=4, BASELINE MFLOP=13015.20
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    A   DEF    16     2      13015.20
+    A   nta    16     2      17640.13
+    A    t0    16     2      18032.13
+    A    t1    16     2      16560.12
+    A    t2    16     2      17264.81
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    X   DEF    16     2      18032.13
+    X   nta    16     2      18032.13
+    X    t0    16     2      18032.13
+    X    t1    16     2      18032.13
+    X    t2    16     2      18032.13
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    Y   DEF    16     2      18032.13
+    Y   nta    16     2      17640.13
+    Y    t0    16     2      18032.13
+    Y    t1    16     2      18032.13
+    Y    t2    16     2      17640.13
+
+BEST MFLOP[4]=18032.13 (38.55 percent improvement)
+   cflags='-x assembler-with-cpp'
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'A', imf=4:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    A   DEF    16     2      18032.13
+    A    64    16     2      17640.13
+    A   256    16     2      17640.13
+    A   192    16     2      18032.13
+    A     0    16     2      16905.12
+DEFAULT imf=4 ADISTANCE IS BEST (18032.13)
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'X', imf=4:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    X   DEF    16     2      17640.13
+    X    64    16     2      18032.13
+    X   256    16     2      18032.13
+    X   192    16     2      18032.13
+    X     0    16     2      18032.13
+BEST imf=4 PFXDIST=128 (18032.13)
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'Y', imf=4:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    Y   DEF    16     2      18032.13
+    Y    64    16     2      18032.13
+    Y   256    16     2      17640.13
+    Y   192    16     2      17640.13
+    Y     0    16     2      18032.13
+DEFAULT imf=4 YDISTANCE IS BEST (18032.13)
+
+PREFETCH DISTANCE TUNING imf=4 improved from 18032.13 to 18032.13 (0.00 percent)
+   900008:smvn_sse.c (M=2048, N=16, lda=2051) gets 6488.06 MFLOPS
+   900007:smvn_C.c (M=1638, N=20, lda=1645) gets 3290.74 MFLOPS
+   900005:smvn_sse.c (M=2048, N=16, lda=2051) gets 6488.06 MFLOPS
+   900004:smvn_C.c (M=1365, N=24, lda=1372) gets 3277.36 MFLOPS
+   900002:smvn_sse.c (M=2048, N=16, lda=2051) gets 6488.06 MFLOPS
+   900001:smvn_C.c (M=2048, N=16, lda=2051) gets 1622.02 MFLOPS
+   1:ATL_gemvN_axpy.c (M=2048, N=16, lda=2051) gets 4325.38 MFLOPS
+
+TUNING PREFETCH INST, imf=3, BASELINE MFLOP=6488.06
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    A   DEF    16     2       6488.06
+    A   nta    16     2      16230.30
+    A    t0    16     2      16230.30
+    A    t1    16     2      13525.25
+    A    t2    16     2      13525.25
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    X   DEF    16     2      16230.30
+    X   nta    16     2      16230.30
+    X    t0    16     2      16230.30
+    X    t1    16     2      16230.30
+    X    t2    16     2      16230.30
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    Y   DEF    16     2      16230.30
+    Y   nta    16     2      16230.30
+    Y    t0    16     2      16230.30
+    Y    t1    16     2      16230.30
+    Y    t2    16     2      16230.30
+
+BEST MFLOP[3]=16230.30 (150.16 percent improvement)
+   cflags='-x assembler-with-cpp'
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'A', imf=3:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    A   DEF    16     2      16230.30
+    A    64    16     2      16230.30
+    A   256    16     2      16230.30
+    A   192    16     2      16230.30
+    A     0    16     2      16230.30
+DEFAULT imf=3 ADISTANCE IS BEST (16230.30)
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'X', imf=3:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    X   DEF    16     2      16230.30
+    X    64    16     2      16230.30
+    X   256    16     2      16230.30
+    X   192    16     2      16230.30
+    X     0    16     2      16230.30
+DEFAULT imf=3 XDISTANCE IS BEST (16230.30)
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'Y', imf=3:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    Y   DEF    16     2      16230.30
+    Y    64    16     2      16230.30
+    Y   256    16     2      16230.30
+    Y   192    16     2      16230.30
+    Y     0    16     2      16230.30
+DEFAULT imf=3 YDISTANCE IS BEST (16230.30)
+
+PREFETCH DISTANCE TUNING imf=3 improved from 16230.30 to 16230.30 (0.00 percent)
+   900008:smvn_sse.c (M=3000, N=2000, lda=3003) gets 6001.50 MFLOPS
+   900007:smvn_C.c (M=3000, N=2000, lda=3003) gets 3000.75 MFLOPS
+   900005:smvn_sse.c (M=3000, N=2000, lda=3003) gets 6001.50 MFLOPS
+   900004:smvn_C.c (M=3000, N=1992, lda=3003) gets 2988.75 MFLOPS
+   900002:smvn_sse.c (M=3000, N=2000, lda=3003) gets 3000.75 MFLOPS
+   900001:smvn_C.c (M=3000, N=2000, lda=3003) gets 3000.75 MFLOPS
+   1:ATL_gemvN_axpy.c (M=3000, N=2000, lda=3003) gets 6001.50 MFLOPS
+
+TUNING PREFETCH INST, imf=2, BASELINE MFLOP=6001.50
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    A   DEF    16     2       6001.50
+    A   nta    16     2       6001.50
+    A    t0    16     2       6001.50
+    A    t1    16     2       6001.50
+    A    t2    16     2       6001.50
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    X   DEF    16     2       6001.50
+    X   nta    16     2       3000.75
+    X    t0    16     2       3000.75
+    X    t1    16     2       6001.50
+    X    t2    16     2       6001.50
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    Y   DEF    16     2       6001.50
+    Y   nta    16     2       6001.50
+    Y    t0    16     2       6001.50
+    Y    t1    16     2       6001.50
+    Y    t2    16     2       6001.50
+
+BEST MFLOP[2]=6001.50 (0.00 percent improvement)
+   cflags='-x assembler-with-cpp -DPFIX=prefetcht1'
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'A', imf=2:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    A   DEF    16     2       6001.50
+    A    64    16     2       6001.50
+    A   256    16     2       6001.50
+    A   192    16     2       3000.75
+    A     0    16     2       3000.75
+DEFAULT imf=2 ADISTANCE IS BEST (6001.50)
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'X', imf=2:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    X   DEF    16     2       6001.50
+    X    64    16     2       3000.75
+    X   256    16     2       6001.50
+    X   512    16     2       6001.50
+    X   320    16     2       6001.50
+    X   384    16     2       6001.50
+    X   448    16     2       6001.50
+    X     0    16     2       3000.75
+DEFAULT imf=2 XDISTANCE IS BEST (6001.50)
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'Y', imf=2:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    Y   DEF    16     2       6001.50
+    Y    64    16     2       6001.50
+    Y   256    16     2       6001.50
+    Y   192    16     2       6001.50
+    Y     0    16     2       6001.50
+DEFAULT imf=2 YDISTANCE IS BEST (6001.50)
+
+PREFETCH DISTANCE TUNING imf=2 improved from 6001.50 to 6001.50 (0.00 percent)
+
+Best out-of-cache kernel:
+ID=900002 ROUT='smvn_sse.c' AUTH='R. Clint Whaley' TA='N' \
+   rankR=0 CacheElts=4096 SSE=3 alignA=0 alignY=16 alignX=16 minM=16 minN=1  \
+   NU=1 MU=16 LDAMUL=0 PFTUNABLE=1 ALIGNX2A=0 ADDCFLAGS=0 GEMMBASED=0 AXPYBASED=1  \
+   ALLALIGNXY=0 LDYTOP=0 FNU=1 X87=0  \
+   MFLOP=6.001500e+03,6.001500e+03  ASM=GAS_x8664 \
+     CFLAGS='-x assembler-with-cpp -DPFADIST=128' \
+     COMP='/usr/bin/x86_64-redhat-linux-gcc -O -fomit-frame-pointer -mavx -m64 -fPIC -m64 -fPIC'
+
+BEGIN RESTRICTED OUT-OF-CACHE TUNING
+   900009:smvn_sse.c (M=3000, N=2000, lda=3008) gets 6001.50 MFLOPS
+   900006:smvn_sse.c (M=3000, N=2000, lda=3008) gets 6001.50 MFLOPS
+   900003:smvn_sse.c (M=3000, N=2000, lda=3008) gets 6001.50 MFLOPS
+   2:ATL_sgemvN_8x4_sse.c (M=3000, N=2000, lda=3008) gets 6001.50 MFLOPS
+
+TUNING PREFETCH INST, imf=0, BASELINE MFLOP=6001.50
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    A   DEF    16     2       6001.50
+    A   nta    16     2       6001.50
+    A    t0    16     2       3000.75
+    A    t1    16     2       6001.50
+    A    t2    16     2       6001.50
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    X   DEF    16     2       6001.50
+    X   nta    16     2       6001.50
+    X    t0    16     2       6001.50
+    X    t1    16     2       6001.50
+    X    t2    16     2       6001.50
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    Y   DEF    16     2       6001.50
+    Y   nta    16     2       3000.75
+    Y    t0    16     2       6001.50
+    Y    t1    16     2       6001.50
+    Y    t2    16     2       6001.50
+
+BEST MFLOP[0]=6001.50 (0.00 percent improvement)
+   cflags='-x assembler-with-cpp'
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'A', imf=0:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    A   DEF    16     2       3000.75
+    A    64    16     2       6001.50
+    A   256    16     2       3000.75
+    A   192    16     2       6001.50
+    A     0    16     2       6001.50
+BEST imf=0 PFADIST=128 (6001.50)
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'X', imf=0:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    X   DEF    16     2       6001.50
+    X    64    16     2       6001.50
+    X   256    16     2       6001.50
+    X   192    16     2       6001.50
+    X     0    16     2       3000.75
+DEFAULT imf=0 XDISTANCE IS BEST (6001.50)
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'Y', imf=0:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    Y   DEF    16     2       6001.50
+    Y    64    16     2       6001.50
+    Y   256    16     2       6001.50
+    Y   192    16     2       6001.50
+    Y     0    16     2       3000.75
+DEFAULT imf=0 YDISTANCE IS BEST (6001.50)
+
+PREFETCH DISTANCE TUNING imf=0 improved from 6001.50 to 3000.75 (-50.00 percent)
+NO RESTRICTED OUT-OF-CACHE KERNEL USED.
+
+BEGIN RESTRICTED L1-BLOCKED TUNING
+   900009:smvn_sse.c (M=3000, N=2000, lda=3008) gets 3000.75 MFLOPS
+   900006:smvn_sse.c (M=3000, N=2000, lda=3008) gets 6001.50 MFLOPS
+   900003:smvn_sse.c (M=3000, N=2000, lda=3008) gets 6001.50 MFLOPS
+   2:ATL_sgemvN_8x4_sse.c (M=3000, N=2000, lda=3008) gets 6001.50 MFLOPS
+
+TUNING PREFETCH INST, imf=0, BASELINE MFLOP=6001.50
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    A   DEF    16     4       6001.50
+    A   nta    16     4       3000.75
+    A    t0    16     4       6001.50
+    A    t1    16     4       6001.50
+    A    t2    16     4       6001.50
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    X   DEF    16     4       6001.50
+    X   nta    16     4       6001.50
+    X    t0    16     4       6001.50
+    X    t1    16     4       6001.50
+    X    t2    16     4       6001.50
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    Y   DEF    16     4       6001.50
+    Y   nta    16     4       6001.50
+    Y    t0    16     4       6001.50
+    Y    t1    16     4       6001.50
+    Y    t2    16     4       6001.50
+
+BEST MFLOP[0]=6001.50 (0.00 percent improvement)
+   cflags='-x assembler-with-cpp -DPFIY=prefetchnta'
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'A', imf=0:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    A   DEF    16     4       6001.50
+    A    64    16     4       6001.50
+    A   256    16     4       6001.50
+    A   192    16     4       6001.50
+    A     0    16     4       6001.50
+DEFAULT imf=0 ADISTANCE IS BEST (6001.50)
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'X', imf=0:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    X   DEF    16     4       6001.50
+    X    64    16     4       3000.75
+    X   256    16     4       6001.50
+    X   512    16     4       6001.50
+    X   320    16     4       6001.50
+    X   384    16     4       6001.50
+    X   448    16     4       6001.50
+    X     0    16     4       6001.50
+DEFAULT imf=0 XDISTANCE IS BEST (6001.50)
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'Y', imf=0:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    Y   DEF    16     4       6001.50
+    Y    64    16     4       6001.50
+    Y   256    16     4       3000.75
+    Y   192    16     4       3000.75
+    Y     0    16     4       3000.75
+DEFAULT imf=0 YDISTANCE IS BEST (6001.50)
+
+PREFETCH DISTANCE TUNING imf=0 improved from 6001.50 to 3000.75 (-50.00 percent)
+NO RESTRICTED L1-BLOCKED KERNEL USED.
+
+BEGIN RESTRICTED in-L1 TUNING
+   900009:smvn_sse.c (M=870, N=8, lda=880) gets 13015.20 MFLOPS
+   900006:smvn_sse.c (M=870, N=8, lda=880) gets 13015.20 MFLOPS
+   900003:smvn_sse.c (M=870, N=8, lda=880) gets 6507.60 MFLOPS
+   2:ATL_sgemvN_8x4_sse.c (M=870, N=8, lda=880) gets 6507.60 MFLOPS
+
+TUNING PREFETCH INST, imf=4, BASELINE MFLOP=13015.20
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    A   DEF    16     2      13015.20
+    A   nta    16     2      15910.71
+    A    t0    16     2      15910.70
+    A    t1    16     2      15310.30
+    A    t2    16     2      15310.30
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    X   DEF    16     2      15910.71
+    X   nta    16     2      15910.70
+    X    t0    16     2      15910.70
+    X    t1    16     2      15910.70
+    X    t2    16     2      15910.70
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    Y   DEF    16     2      15910.70
+    Y   nta    16     2      15910.71
+    Y    t0    16     2      15910.70
+    Y    t1    16     2      15604.73
+    Y    t2    16     2      15910.71
+
+BEST MFLOP[4]=15910.71 (22.25 percent improvement)
+   cflags='-x assembler-with-cpp -DPFIA=prefetchnta'
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'A', imf=4:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    A   DEF    16     2      15910.71
+    A    64    16     2      15604.73
+    A   256    16     2      15910.70
+    A   512    16     2      15910.71
+    A   576    16     2      15604.73
+    A   640    16     2      15910.70
+    A   704    16     2      15910.70
+    A   768    16     2      15604.73
+    A   832    16     2      15604.73
+    A   896    16     2      15604.73
+    A   960    16     2      15604.73
+    A     0    16     2      15910.70
+DEFAULT imf=4 ADISTANCE IS BEST (15910.71)
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'X', imf=4:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    X   DEF    16     2      15910.71
+    X    64    16     2      15910.71
+    X   256    16     2      15910.71
+    X   192    16     2      15910.70
+    X     0    16     2      15910.70
+DEFAULT imf=4 XDISTANCE IS BEST (15910.71)
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'Y', imf=4:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    Y   DEF    16     2      15910.70
+    Y    64    16     2      15910.70
+    Y   256    16     2      15910.70
+    Y   192    16     2      15910.70
+    Y     0    16     2      15910.71
+BEST imf=4 PFYDIST=0 (15910.71)
+
+PREFETCH DISTANCE TUNING imf=4 improved from 15910.71 to 15910.71 (0.00 percent)
+NO RESTRICTED L1-BLOCKED KERNEL USED.
+
+BEGIN RESTRICTED in-L2 TUNING
+   900009:smvn_sse.c (M=2048, N=16, lda=2056) gets 12976.13 MFLOPS
+   900006:smvn_sse.c (M=2048, N=16, lda=2056) gets 12976.13 MFLOPS
+   900003:smvn_sse.c (M=2048, N=16, lda=2056) gets 6488.06 MFLOPS
+   2:ATL_sgemvN_8x4_sse.c (M=2048, N=16, lda=2056) gets 6488.06 MFLOPS
+
+TUNING PREFETCH INST, imf=3, BASELINE MFLOP=12976.13
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    A   DEF    16     2      12976.13
+    A   nta    16     2      20287.87
+    A    t0    16     2      20287.87
+    A    t1    16     2      13525.25
+    A    t2    16     2      16230.30
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    X   DEF    16     2      20287.87
+    X   nta    16     2      16230.30
+    X    t0    16     2      16230.30
+    X    t1    16     2      16230.30
+    X    t2    16     2      20287.87
+
+   OP  PREF    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    Y   DEF    16     2      20287.87
+    Y   nta    16     2      16230.30
+    Y    t0    16     2      20287.87
+    Y    t1    16     2      20287.87
+    Y    t2    16     2      20287.87
+
+BEST MFLOP[3]=20287.87 (56.35 percent improvement)
+   cflags='-x assembler-with-cpp'
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'A', imf=3:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    A   DEF    16     2      20287.87
+    A    64    16     2      16230.30
+    A   256    16     2      20287.87
+    A   512    16     2      16230.30
+    A   320    16     2      20287.87
+    A   384    16     2      20287.87
+    A   448    16     2      20287.87
+    A     0    16     2      16230.30
+DEFAULT imf=3 ADISTANCE IS BEST (20287.87)
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'X', imf=3:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    X   DEF    16     2      16230.30
+    X    64    16     2      20287.87
+    X   256    16     2      16230.30
+    X   192    16     2      16230.30
+    X     0    16     2      20287.87
+BEST imf=3 PFXDIST=128 (20287.87)
+
+TUNING PREFETCH DISTANCE FOR OPERAND 'Y', imf=3:
+   OP  DIST    MU    NU         MFLOP
+   ==  ====  ====  ====  ============
+    Y   DEF    16     2      20287.87
+    Y    64    16     2      20287.87
+    Y   256    16     2      16230.30
+    Y   192    16     2      20287.87
+    Y     0    16     2      20287.87
+DEFAULT imf=3 YDISTANCE IS BEST (20287.87)
+
+PREFETCH DISTANCE TUNING imf=3 improved from 20287.87 to 20287.87 (0.00 percent)
+KERNEL CHOSEN:
+ID=900009 ROUT='smvn_sse.c' AUTH='R. Clint Whaley' TA='N' \
+   rankR=1 CacheElts=12288 SSE=3 alignA=16 alignY=16 alignX=16 minM=16  \
+   minN=2 NU=2 MU=16 LDAMUL=16 PFTUNABLE=1 ALIGNX2A=0 ADDCFLAGS=0 GEMMBASED=0  \
+   AXPYBASED=1 ALLALIGNXY=0 LDYTOP=0 FNU=1 X87=0  \
+   MFLOP=3.000750e+03,0.000000e+00,0.000000e+00,2.028787e+04,1.301520e+04 \
+     ASM=GAS_x8664  CFLAGS='-x assembler-with-cpp -DPFXDIST=128' \
+     COMP='/usr/bin/x86_64-redhat-linux-gcc -O -fomit-frame-pointer -mavx -m64 -fPIC -m64 -fPIC'
+DONE RESTRICTED in-L2 TUNING.
+make smvninstall
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemv'
+mkdir smvnoutd
+rm -f smvnoutd/*
+if [ -s "/data/user/eesen/tools/ATLAS/build/src/blas/gemv/Make_smvn" ]; then \
+           cd  /data/user/eesen/tools/ATLAS/build/src/blas/gemv ; make -f Make_smvn killall ; \
+           rm -f /data/user/eesen/tools/ATLAS/build/src/blas/gemv/Make_smvn ; \
+        fi
+./xmvnhgen -p s -F res/sMVNK.sum -d smvnoutd
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemv'
+/data/user/eesen/tools/ATLAS/build/bin/xextract -b /data/user/eesen/tools/ATLAS/build/..//tune/blas/gemv/atlas-l2g.base order=clmajor \
+                           rout=mvn_sse nu=1 type=SREAL -def MU 1 \
+                            -o EXTDIR/smvn_sse.c
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemv'
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemv'
+/data/user/eesen/tools/ATLAS/build/bin/xextract -b /data/user/eesen/tools/ATLAS/build/..//tune/blas/gemv/atlas-l2g.base order=clmajor \
+                           rout=mvn_sse nu=2 type=SREAL -def MU 1 \
+                           -def ALIGNED 1 -o EXTDIR/smvn_sse.c
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemv'
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemv'
+/data/user/eesen/tools/ATLAS/build/bin/xextract -b /data/user/eesen/tools/ATLAS/build/..//tune/blas/gemv/atlas-l2g.base order=clmajor \
+                           rout=mvn_sse nu=2 type=SREAL -def MU 1 \
+                            -o EXTDIR/smvn_sse.c
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemv'
+cp -f smvnoutd/Make_smvn /data/user/eesen/tools/ATLAS/build/src/blas/gemv/.
+cp smvnoutd/*.c /data/user/eesen/tools/ATLAS/build/src/blas/gemv/.
+cp -f smvnoutd/*.h /data/user/eesen/tools/ATLAS/build/include/.
+if [ -s "xccobj.exe" ] ; then \
+   cp -f xccobj.exe /data/user/eesen/tools/ATLAS/build/src/blas/gemv/. ; \
+elif [ -s "xccobj" ]; then \
+           cp -f xccobj /data/user/eesen/tools/ATLAS/build/src/blas/gemv/. ; \
+        fi
+touch /data/user/eesen/tools/ATLAS/build/..//include/atlas_mv.h
+rm -f smvnoutd/* ; rmdir smvnoutd
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemv'
+make[3]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemv'
+cp /data/user/eesen/tools/ATLAS/build/tune/blas/gemv/res/sMVNK.sum INSTALL_LOG/.
+make[2]: Leaving directory `/data/user/eesen/tools/ATLAS/build/bin'
+
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*      FINISHED ATLAS3.10.0 INSTALL OF SECTION 2-2-7 ON 08/07/2019 AT 13:25   *
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+
+
+

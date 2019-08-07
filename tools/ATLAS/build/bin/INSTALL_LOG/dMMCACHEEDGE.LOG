@@ -1,0 +1,80 @@
+
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*       BEGAN ATLAS3.10.0 INSTALL OF SECTION 2-1-2 ON 08/07/2019 AT 12:20     *
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+
+
+
+make[2]: Entering directory `/data/user/eesen/tools/ATLAS/build/bin'
+cd /data/user/eesen/tools/ATLAS/build/tune/blas/gemm ; make res/atlas_cacheedge.h pre=d
+make[3]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+make dRunFindCE
+make[4]: Entering directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make dlib
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make auxillib dcleanuplib dusergemm
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+cd /data/user/eesen/tools/ATLAS/build/src/auxil ; make lib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+make[7]: Nothing to be done for `lib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/auxil'
+cd KERNEL ; make -f dMakefile dlib
+make[7]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm/KERNEL'
+make[7]: Nothing to be done for `dlib'.
+make[7]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm/KERNEL'
+make[6]: Nothing to be done for `dusergemm'.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make -j 56 dlib.grd
+make[6]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[6]: `dlib.grd' is up to date.
+make[6]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -c -DDREAL -o dfindCE.o /data/user/eesen/tools/ATLAS/build/..//tune/blas/gemm/findCE.c
+cd /data/user/eesen/tools/ATLAS/build/src/blas/gemm ; make ATL_dFindCE_mm.o pre=d typ=DREAL
+make[5]: Entering directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+/usr/bin/x86_64-redhat-linux-gcc -o ATL_dFindCE_mm.o -c -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -DDREAL -DFindingCE -I./ /data/user/eesen/tools/ATLAS/build/..//src/blas/gemm/ATL_gemm.c
+make[5]: Leaving directory `/data/user/eesen/tools/ATLAS/build/src/blas/gemm'
+/usr/bin/x86_64-redhat-linux-gcc -DL2SIZE=4194304 -I/data/user/eesen/tools/ATLAS/build/include -I/data/user/eesen/tools/ATLAS/build/..//include -I/data/user/eesen/tools/ATLAS/build/..//include/contrib -DAdd_ -DF77_INTEGER=int -DStringSunStyle -DATL_OS_Linux -DATL_ARCH_UNKNOWNx86 -DATL_CPUMHZ=2401 -DATL_AVXMAC -DATL_AVX -DATL_SSE3 -DATL_SSE2 -DATL_SSE1 -DATL_USE64BITS -DATL_GAS_x8664 -m64 -DATL_DYLIBS -DATL_NCPU=56 -O -fomit-frame-pointer -mavx -m64 -fPIC -o xdfindCE dfindCE.o \
+                   /data/user/eesen/tools/ATLAS/build/src/blas/gemm/ATL_dFindCE_mm.o /data/user/eesen/tools/ATLAS/build/lib/libatlas.a -lpthread -lm
+/data/user/eesen/tools/ATLAS/build/bin/ATLrun.sh /data/user/eesen/tools/ATLAS/build/tune/blas/gemm xdfindCE -f res/atlas_cacheedge.h
+TA  TB       M       N       K   alpha    beta  CacheEdge       TIME    MFLOPS
+==  ==  ======  ======  ======  ======  ======  =========  =========  ========
+
+ T   N     112    3080    9362    1.00    1.00          0      0.348  18560.43
+ T   N     112    3080    9362    1.00    1.00         32     -2.000      0.00
+ T   N     112    3080    9362    1.00    1.00         64     -2.000      0.00
+ T   N     112    3080    9362    1.00    1.00        128      0.352  18349.52
+ T   N     112    3080    9362    1.00    1.00        256      0.348  18560.43
+ T   N     112    3080    9362    1.00    1.00        512      0.352  18349.52
+ T   N     112    3080    9362    1.00    1.00       1024      0.352  18349.52
+ T   N     112    3080    9362    1.00    1.00       2048      0.356  18143.35
+ T   N     112    3080    9362    1.00    1.00       4096      0.348  18560.43
+ T   N     112    3080    9362    1.00    1.00       8192      0.356  18143.35
+
+Initial CE=256KB, mflop=18560.43
+
+ T   N     112    3080    9362    1.00    1.00        192      0.348  18560.43
+ T   N     112    3080    9362    1.00    1.00        384      0.352  18349.52
+
+Best CE=256KB, mflop=18560.43
+cp -f res/atlas_cacheedge.h /data/user/eesen/tools/ATLAS/build/include/atlas_cacheedge.h
+make[4]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+make[3]: Leaving directory `/data/user/eesen/tools/ATLAS/build/tune/blas/gemm'
+cp /data/user/eesen/tools/ATLAS/build/tune/blas/gemm/res/atlas_cacheedge.h /data/user/eesen/tools/ATLAS/build/include/.
+cp /data/user/eesen/tools/ATLAS/build/tune/blas/gemm/res/atlas_cacheedge.h INSTALL_LOG/.
+make[2]: Leaving directory `/data/user/eesen/tools/ATLAS/build/bin'
+
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+*      FINISHED ATLAS3.10.0 INSTALL OF SECTION 2-1-2 ON 08/07/2019 AT 12:20   *
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+
+
+

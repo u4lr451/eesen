@@ -1,0 +1,27 @@
+========
+#step 1: download essen and install subversion and nvcc
+cd /data/user/ && git clone https://github.com/srvk/eesen.git 
+yum install -y subversion nvcc
+
+#step 2: install tools and SRILM
+#change tools/Makefile atlas3.8.3.tar.gz to atlas3.10.0.tar.bz2. just copy linux_cuda9.0_install/tools.Makefile to tools/Makefile
+cd /data/user/eesen/tools && make -j16 && echo "install main succ"
+cd /data/user/eesen/tools && sh install_srilm.sh && echo "install main succ"
+
+#step 3: install ATLAS
+echo "GOVERNOR=\"performance\"" >>/etc/sysconfig/cpuspeed
+cd /data/user/eesen/tools 
+test -f atlas3.10.0.tar.bz2 || wget https://jaist.dl.sourceforge.net/project/math-atlas/Stable/3.10.0/atlas3.10.0.tar.bz2  || exit 1
+test -f lapack-3.8.0.tar.gz || wget http://www.netlib.org/lapack/lapack-3.8.0.tar.gz || exit 1
+tar -xjf atlas3.10.0.tar.bz2 \
+&& mkdir -p ATLAS/build  \
+&& cd ATLAS/build \
+&& ../configure --prefix=`pwd`/install -Ss flapack /data/user/eesen/tools/lapack-3.8.0.tgz --shared \
+&& make && make install && echo "install atlas succ"
+
+#step 4: install essen
+cd /data/user/eesen/src
+#edit gpucompute/Makefile line 30 comment #CUDA_ARCH=-gencode arch=compute_20,code=sm_20 and add CUDA_ARCH=
+sed -i 's|CUDA_ARCH=-gencode arch=compute_20,code=sm_20|CUDA_ARCH=|g' gpucompute/Makefile
+./configure --shared --cudatk-dir=/usr/local/cuda && make depend && make
+
